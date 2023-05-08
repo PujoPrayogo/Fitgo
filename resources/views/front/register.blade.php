@@ -38,10 +38,35 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-6"style="padding-top: 10vh;">
-                <div class="container bg-dark rounded" style="padding-top: 10vh; padding-bottom: 10vh;">
+            <div class="col-6" style="padding-top: 10vh;">
+                <h1 class="fw-bold text-white" style="font-size: 60px;">&nbsp;Getting Started</h1>
+                <p class="text-white">&emsp;&emsp;let's build our dream body!</p>
+            </div>
+            <div class="col-6"></div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="container bg-dark rounded" style="padding-top: 5vh; padding-bottom: 5vh;">
                     <form>
-                        <h1 class="fs-bold text-white" style="padding-bottom: 5vh;">Register Account</h1>
+                        <div class="mb-3">
+                            <label for="exampleInputFirstName1" class="form-label text-white">First Name</label>
+                            <input type="text" class="form-control" id="exampleInputFirstName1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputLastName1" class="form-label text-white">Last Name</label>
+                            <input type="text" class="form-control" id="exampleInputLastName1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputBirth1" class="form-label text-white">Birth</label>
+                            <input type="date" class="form-control" id="exampleInputBirth1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputGender1" class="form-label text-white">Gender</label><br>
+                            <input type="radio" id="male" name="gender" value="Male">
+                            <label for="male" class="text-white">Male</label> &emsp;
+                            <input type="radio" id="female" name="gender" value="Female">
+                            <label for="female" class="text-white">Female</label><br>
+                        </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label text-white">Email address</label>
                             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
