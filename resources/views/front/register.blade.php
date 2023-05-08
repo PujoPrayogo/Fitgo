@@ -57,7 +57,7 @@
                             <input type="text" class="form-control" id="exampleInputLastName1">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputBirth1" class="form-label text-white">Birth</label>
+                            <label for="exampleInputBirth1" class="form-label text-white">Date of Birth</label>
                             <input type="date" class="form-control" id="exampleInputBirth1">
                         </div>
                         <div class="mb-3">
