@@ -1,0 +1,285 @@
+  
+/* .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 90px 0 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    z-index: 99;
+  }
+  
+  @media (max-width: 767.98px) {
+    .sidebar {
+      top: 11.5rem;
+      padding: 0;
+    }
+  }
+  
+  .navbar {
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .1);
+  }
+  
+  @media (min-width: 767.98px) {
+    .navbar {
+      top: 0;
+      position: sticky;
+      z-index: 999;
+    }
+  }
+  
+  .sidebar .nav-link {
+    color: #333;
+  }
+  
+  .sidebar .nav-link.active {
+    color: #0d6efd;
+  } */
+
+  #WebNavBrand{
+    padding-left: 5vw;
+  }
+  /* .hero{
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    &::before {  
+      content: "";
+      background-image: url('https://wallpapercave.com/wp/wp4250303.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.75;
+    }
+  } */
+  
+  .hero { 
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  h1{
+    font-family: Arial, sans-serif;
+    font-size: 14rem;
+  }
+  
+  /* form css */
+  .formStyle { 
+    background-color: #000000;
+    padding: 20px; 
+    width: 360px; 
+    margin-bottom: 20px; 
+    border-bottom-width: 1px; 
+    border-bottom-style: solid; 
+    border-bottom-color: #ecf0f1; 
+    border-top-style: none; 
+    border-right-style: none; 
+    border-left-style: none; 
+    font-size: 1em;
+    font-weight: 100;
+    color: #ffffff;
+  }
+  
+  .block {
+    display: block;
+    width: 100%;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    padding: 14px 28px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .block:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  
+  ::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: white;
+   opacity: 1;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: white;
+   opacity: 1;
+  }
+  
+  /* rounded in login.html */
+  .button-rounded {
+    display: block;
+    border-radius: 25px;
+    width: 100%;
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+    padding: 14px 28px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+  }
+  /* rounded in register.html */
+  .button-rounded2 {
+    display: block;
+    border-radius: 25px;
+    width: 75%;
+    border: 2px solid white;
+    background-color:transparent;
+    color: white;
+    padding: 14px 28px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+  }
+  /* dropdown */
+  
+  .dropdown{
+    margin: auto;
+  }
+  
+  .styled-select{
+    margin: auto;
+  }
+  select {
+    margin: auto;
+    padding-left: 25%;
+    border-radius: 25px;
+    width: 75%;
+    border: 1px solid white;
+    padding: 14px 28px;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+    appearance: none;
+    background: white;
+  }
+  
+  option {
+    background:white;
+    font-size: 20px;
+    padding: 8px 28px;
+  }
+  /* dropdown menu resgister2.html 
+  
+  
+  .box {
+    position: relative;
+  }
+  .btn-dropdown {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background: white;
+    color: black;
+    font-size: 1.25rem;
+    outline: none;
+    cursor: pointer;
+  }
+  .btn-dropdown::after {
+    display: inline-block;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 8px;
+    height: 8px;
+    margin-left: 10px;
+    border-right: 2px solid #FFF;
+    border-bottom: 2px solid #FFF;
+    vertical-align: 4px;
+    content: '';
+  }
+  .btn-dropdown:hover {
+    opacity: .9;
+  }
+  .nav-dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, .1);
+    background-color: #fff;
+  }
+  .nav-dropdown ul {
+    list-style-type: none;
+  }
+  .nav-dropdown ul li {
+    padding: 8px 0;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .nav-dropdown ul li a {
+    display: block;
+    color: #3d3935;
+    text-decoration: none;
+  }
+  .nav-dropdown ul li:hover {
+    background-color: #6666e2;
+  }
+  .nav-dropdown ul li:hover a {
+    color: #fff;
+  }
+  .nav-dropdown.is-open {
+    display: block;
+  }
+  .btn-dropdown.is-open::after {
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    vertical-align: middle;
+  }
+  @media screen and (max-width: 480px) {
+    #container {
+      align-items: flex-start;
+    }
+  } */
+  
+  /* .formButton {
+    float: center;
+      background-color:#ffffff;
+      display:inline-block;
+      color:#000000;
+      font-size:28px;
+      font-weight: 500;
+      padding:6px 24px;
+    margin-top: 15px;
+      text-decoration:none;
+    position: center;
+  }
+  
+  .formButton:hover {
+      background-color: #000000;
+    color:#ffffff;
+  }
+  
+  .formButton:active {
+      position:relative;
+      top:3px;
+  }
+      
+   */  
