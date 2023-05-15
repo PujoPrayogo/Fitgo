@@ -40,7 +40,7 @@
         <div class="container" >
             <div class="row">
                 <div class="col-12">
-                    <h1 class="fw-bold text-white text-center" style="font-size: 60px;"><span style="color: blue;">Sign Up</span> to your<br>Journey.</h1>
+                    <h1 class="fw-bold text-white text-center" style="font-size: 60px;">Fill in <span style="color: blue;">your data.</span></h1>
                 </div>
             </div>
             <div class="row">
@@ -50,17 +50,41 @@
                         <div>
                         <form>
                             <div class="mb-3">
-                                <input type="text" class="formStyle" placeholder="Username" id="exampleInputUsername1">
+                                <input type="number" class="formStyle" placeholder="Weight (Kg)" id="exampleInputWeight1">
                             </div>
                             <div class="mb-3">
-                                <input type="email" class="formStyle" placeholder="Email"id="exampleInputEmail1">
+                                <input type="number" class="formStyle" placeholder="Height (Cm)"id="exampleInputHeight1">
                             </div>
                             <div class="mb-3">
-                                <input type="password" class="formStyle" placeholder="Password" id="exampleInputPassword1">
+                                <input type="text" class="formStyle" placeholder="Gender" id="exampleInputGender1">
                             </div>
                             <div class="mb-3">
-                                <input type="password" class="formStyle" placeholder="Confirm Password" id="exampleInputConfirmPassword1">
+                                <input type="number" class="formStyle" placeholder="Age" id="exampleInputAge1">
                             </div>
+                            <center>
+                            <div class="dropdown" style="padding-bottom: 5%;">
+                                <div class="styled-select">
+                                    <select id="select" name="select" placeholder="Tech">
+                                    <option value=""><center>Body Goal</center></option>
+                                    <option value=""><center></center></option>
+                                    <option value=""><center></center></option>
+                                    <option value=""><center></center></option>
+                                    <option value=""><center></center></option>
+                                    </select>
+                                </div>
+                            </div>
+                            </center>
+                                <!-- <div class="box" aria-haspopup="true">
+                                    <button id="btn-dropdown" class="btn-dropdown">Body Goal</button>
+                                    <nav id="nav-dropdown" class="nav-dropdown">
+                                      <ul>
+                                        <li><a href="#">Menu 1</a></li>
+                                        <li><a href="#">Menu 2</a></li>
+                                        <li><a href="#">Menu 3</a></li>
+                                      </ul>
+                                    </nav>
+                                  </div> -->
+                            
                             
                             
                             <a href="register2.html" class="button-rounded2" style="text-decoration:none">Continue</a>

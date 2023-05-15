@@ -11,9 +11,9 @@
 </head>
 
 <body background="assets/img/img-home.png">
-    <nav class="navbar navbar-expand-lg bg-dark">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand text-white fw-bold" href="index.html" style="font-size: 27px;">FITGO</a>
+            <a class="navbar-brand text-white fw-bold" href="landingPage.html" id="WebNavBrand" style="font-size: 27px;">FITGO</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -22,7 +22,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-link active">
-                        <a class="nav-link active text-white" href="index.html">Home</a>
+                        <a class="nav-link active text-white" href="landingPage.html">Home</a>
                     </li>
                     <li class="nav-link active">
                         <a class="nav-link text-white" href="/about">About</a>
@@ -35,19 +35,18 @@
             </div>
         </div>
     </nav>
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-6" style="padding-top: 20vh; padding-left: 10vh;">
-                <h1 class="fw-bold text-white" style="font-size: 60px;"> FITGO</h1>
+    <div class="container-fluid hero" style="background-image: url('https://wallpapercave.com/wp/wp4250339.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-12" style="padding-top: 5%; text-align: center;">
+                    <h1 class="fw-bold text-white" style="font-size: 60px;"> Hello<br><span style="color:blue">User</span>,<br>Let's Be Fit<br>Together</h1>
+                </div>
             </div>
-            <div class="col-6"></div>
-        </div>
-        <div class="row">
-            <div class="col-6" style="padding-top: 5vh; padding-left: 10vh;">
-                <p class="text-white fs-3">Nutrition Intake Tracker</p> 
+            <div class="row">
+                <div class="col-12" style="padding-top: 20%;text-align: center">
+                    <p class="text-white fs-4">Click to continue...</p> 
+                </div>
             </div>
-            <div class="col-6"></div>
         </div>
     </div>
     
