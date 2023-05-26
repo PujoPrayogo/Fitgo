@@ -229,7 +229,7 @@
                                 /*========== SIDEBAR ASIDE ==========*/
         main {
             display: grid;
-            grid-template-columns: 8rem 42rem auto;
+            grid-template-columns: 6rem 46rem auto;
             gap: 2rem;
             width: 96%;
             margin: 1rem auto 4rem;
@@ -301,6 +301,137 @@
             color: var(--color-gray-dark);
         }
 
+                                    /*========== UPDATE FORM ==========*/
+        .update-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: none;
+
+            transform: translate(-50%, -50%);
+            background: var(--color-dark);
+            width: 410px;
+            padding: 30px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+        }
+
+        #show:checked ~ .update-container {
+            display: block;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+        .show-btn {
+            background: var(--color-dark);
+            color: white;
+            padding: 0.3rem 1rem;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: 500;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: all 300ms ease;
+        }
+
+        .show-btn:hover {
+            background: var(--color-gray-dark);
+        }
+
+        .update-container .update-close-btn {
+            position: absolute;
+            color: var(--color-gray-light);
+            right: 20px;
+            top: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 250ms ease;
+        }
+
+        .update-container .update-close-btn:hover {
+            color: var(--color-light);
+            transform: rotate(180deg);
+        }
+
+        .update-container .text {
+            font-size: 35px;
+            font-weight: 600;
+            text-align: center;
+            color: var(--color-light);
+        }
+
+        .update-container .text-question {
+            color: white;
+        }
+
+        .update-container form {
+            margin-top: -20px;
+        }
+
+        .update-container form .data {
+            height: 45px;
+            width: 100%;
+            margin: 40px 0;
+        }
+
+        form .data label {
+            font-size: 18px;
+        }
+
+        form .data input {
+            height: 100%;
+            width: 100%;
+            padding-left: 10px;
+            font-size: 17px;
+            border: 1px solid white;
+        }
+
+        form .data input:focus {
+            border-color: var(--color-gray-dark);
+            border-bottom-width: 2px;
+        }
+
+        form .cal-question {
+            color: white;
+        }
+
+        form .btn {
+            margin: 30px 0;
+            height: 45px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }        
+
+        form .btn .inner {
+            height: 100%;
+            width: 300%;
+            position: absolute;
+            left: -100%;
+            z-index: -1;
+            background: -webkit-linear-gradient(right, 
+                var(--color-gray-light), var(--color-light), 
+                var(--color-gray-light), var(--color-light));
+            transition: all 0.4s;
+        }
+
+        form .btn:hover .inner {
+            left: 0;
+        }
+    
+        form .btn  button{
+            height: 100%;
+            width: 100%;
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
         /* CARDS*/
         main section.middle .header {
             display: flex;
@@ -329,6 +460,7 @@
 
         main section.middle .cards .card:hover {
             box-shadow: none;
+            
         }
 
         main section.middle .cards .card:nth-child(1) {
@@ -386,7 +518,8 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 1rem;
             justify-content: space-between;
-            margin-top: 2rem;
+            margin-top: 3rem;
+            text-align: center;
         }
 
         main .daily-intake .goal {
@@ -403,48 +536,46 @@
             gap: 2rem;
         }
 
-        main .your-goals .goals {
+        main .your-goals .badges {
             display: flex;
             gap: 1rem;
             align-self: center;
             flex-wrap: wrap;
             max-width: 100%;
+            color: var(--color-dark);
         }
 
-        main .your-goals .goal span{
+        main .your-goals .badge span {
             width: 7px;
             height: 7px;
             border-radius: 50%;
         }
 
-        main .your-goals .goal {
-            padding: 0.5rem var(--card-padding);
+        main .your-goals .badge .goal {
+            color: var(--color-dark);
+            display: flex;
+            gap: 1rem;
+            align-self: center;
+        }
+
+        main .your-goals .badge {
+            padding: 0.6rem var(--card-padding);
             background: var(--color-white);
             border-radius: var(--border-radius-2);
             display: flex;
-            align-items: center;
+            align-self: center;
             gap: 1rem;
-            transition: all 300ms ease;
         }
 
-        main .your-goals .goal:hover {
-            box-shadow: 0 0 1.5rem var(--color-gray-light);
-            cursor: pointer;
-        }
-
-        main .your-goals .goal:first-child span {
+        main .your-goals .badge span {
             display: flex;
             align-self: center;
             justify-content: center;
             height: fit-content;
-            font-size: 1.5rem;
         }
 
-        main .your-goals .goal div{
-            display: flex;
-            gap: 2rem;
-            align-self: center;
-        }
+
+
 
                             /*===== ANALYTICS CHART =====*/
         canvas#chart {
@@ -472,6 +603,7 @@
             align-items: center;
             padding: var(--card-padding);
             padding-bottom: 0;
+            text-align: center;
         }
 
         main section.right .recent-activities .recent-header a{
@@ -539,10 +671,38 @@
                     </div>
                 </div>
             </nav>
-                                    <!--===== TODAYS TARGET =====-->
+                                    <!--===== TODAYS TARGET =====--> 
             <div class="todays-target">
                 <h1>Today's Target</h1>
-                <input type="date">
+                
+                                <!--========== UPDATE FORM ==========-->
+                <div class="center">
+                    <input type="checkbox" id="show">
+                    <label for="show" class="show-btn">Update</label>
+                    <div class="update-container">
+                        <label for="show" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
+                        <div class="text text">Update</div>
+                        <form action="#">
+                            <div class="data">
+                                <label for="update-activity" class="text-question">Activity</label>
+                                <input type="text" id="update-activity" name="update-activity">
+                            </div>
+                            <p class="text-question">Calories</p>
+                            <label for="cal-add" class="cal-question">Add</label>
+                            <input type="radio" id="cal-add" name="cal-type" value="cal-add">
+                            <label for="cal-add" class="cal-question">Burn</label>
+                            <input type="radio" id="cal-burn" name="cal-type" value="cal-burn">
+                            <div class="data">
+                                <label for="update-calorie" class="text-question">Calories</label>
+                                <input type="text" id="update-calorie">
+                            </div>
+                            <div class="btn">
+                                <div class="inner"></div>
+                                <button type="submit">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
 
                                 <!--========== CARDS TODAYS TARGET ==========-->
@@ -613,34 +773,31 @@
                 </div>
             </div>
 
+
             <div class="your-goals">
+                <span class="material-icons-sharp">auto_awesome</span>
                 <h2>Your Goals</h2>
-                <div class="goals">
+                <!-- BADGE -->
+                <div class="badge">
                     <div class="goal">
-                        <span class="material-icons-sharp">add</span>
-                    </div>
-                    <div class="goal">
-                        <span class="bg-primary"></span>
-                        <div>
-                            <h5>Training</h5>
-                            <h4>50$</h4>
-                        </div>
-                    </div>
-                    <div class="goal">
-                        <span class="bg-danger"></span>
-                        <div>
-                            <h5>Training</h5>
-                            <h4>50$</h4>
-                        </div>
-                    </div>
-                    <div class="goal">
-                        <span class="bg-success"></span>
-                        <div>
-                            <h5>Training</h5>
-                            <h4>50$</h4>
-                        </div>
+                        <span class="material-icons-sharp">scale</span>
+                        <h3 class="goal-title">Lose 6kg</h3>
+                        <h3 style="color: orange;">50%</h3>
                     </div>
                 </div>
+                <!-- BADGE -->
+                <div class="badge">
+                    <div class="goal">
+                        <span class="material-icons-sharp">fitness_center</span>
+                        <h3 class="goal-title">Train 4 Days/week</h3>
+                        <h3 style="color: greenyellow;">75%</h3>
+                    </div>
+                </div>
+            </div>
+
+
+
+
             </div>
         </section>
         <!--========== RIGHT ==========-->
@@ -653,7 +810,6 @@
             <div class="recent-activities">
                 <div class="recent-header">
                     <h1>Recent Activities</h1>
-                    <a href="#"><span class="material-icons-sharp">add_circle</span></a>
                 </div>
                                         <!--===== ACTIVITY 1 =====-->
                 <div class="activity">
@@ -687,23 +843,6 @@
                     <div class="calories">
                         <h4>280 KCal</h4>
                         <small class="danger">Added</small>
-                    </div>
-                </div>
-                                        <!--===== ACTIVITY 3 =====-->
-                <div class="activity">
-                    <img src="https://cdn-icons-png.flaticon.com/512/92/92767.png">
-                    <h4>Jogging</h4>
-                    <div class="object">
-                        <p>32 Mins</p>
-                        <small class="text-muted">300ml</small>
-                    </div>
-                    <div class="time">
-                        <p>9.14pm</p>
-                        <small class="text-muted">23/5</small>
-                    </div>
-                    <div class="calories">
-                        <h4>350 KCal</h4>
-                        <small class="success">Burned</small>
                     </div>
                 </div>
             </div>
