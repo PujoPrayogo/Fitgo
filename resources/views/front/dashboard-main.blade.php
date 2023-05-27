@@ -351,6 +351,7 @@
 
         .show-btn:hover {
             background: var(--color-gray-dark);
+            border-radius: 10%;
         }
 
         .update-container .update-close-btn {
@@ -534,7 +535,7 @@
         }
 
         main section.middle .card .top .left img {
-            width: 5rem;
+            width: 6.5rem;
             padding: 0.4rem;
         }
 
@@ -546,20 +547,22 @@
         main .daily-intake {
             display: grid; 
             grid-template-columns: repeat(4, 1fr);
-            gap: 1rem;
-            justify-content: space-between;
-            margin-top: 3rem;
+            justify-content: center; /* Change to center */
+            align-items: center; /* Add this line */
+            margin-top: 2.5rem;
             text-align: center;
+            border-radius: 10px;
         }
 
         main .daily-intake .goal {
             padding: 0.6rem var(--card-padding);
-            border-radius: var(--card-border-radius);
             justify-content: center;
+            display: flex; /* Add this line */
+            flex-direction: column; /* Add this line */
         }
 
         main .daily-intake .goal:nth-child(1) {
-            background: var(--color-purple-light);
+            background: var(--color-danger-light);
         }
 
         main .daily-intake .goal:nth-child(2) {
@@ -567,13 +570,17 @@
         }
 
         main .daily-intake .goal:nth-child(3) {
+            background: var(--color-purple-light);
+        }
+
+        main .daily-intake .goal:nth-child(4) {
             background: var(--color-primary-light);
         }
 
 
                                 /*========== YOUR GOALS ==========*/
         main .your-goals {
-            margin-top: 2rem;
+            margin-top: 1.5rem;
             display: flex;
             align-self: center;
             gap: 2rem;
@@ -588,18 +595,17 @@
         main .your-goals .badge .goal {
             color: var(--color-light);
             display: flex;
-            gap: 1rem;
+            gap: 1.15rem;
             align-self: center;
         }
 
         main .your-goals .badge {
             padding: 0.6rem var(--card-padding);
-            background: var(--color-white);
             border-radius: var(--border-radius-2);
             display: flex;
             align-self: center;
-            gap: 1rem;
             background: var(--color-dark);
+            box-shadow: 0 0.5rem 1.5rem rgba( 0, 0, 0, 0.1);
         }
 
         main .your-goals .badge span {
@@ -751,12 +757,12 @@
                         
                     </div>
                     <div class="middle">
-                        <h1>1200</h1>
+                        <h1 style="font-size: 2.5rem;">1200</h1>
                         
                     </div>
                     <div class="bottom">
                         <div class="left">
-                            <h4>KCal left</h4>
+                            <h4 style="font-size: 1.2rem; color: var(--color-gray-dark);">KCal left</h4>
                         </div>
                     </div>
                 </div>
@@ -770,12 +776,12 @@
                         
                     </div>
                     <div class="middle">
-                        <h1>BACK</h1>
+                        <h1 style="font-size: 2.5rem;">BACK</h1>
                         
                     </div>
                     <div class="bottom">
                         <div class="left">
-                            <h4>Workout</h4>
+                            <h4 style="font-size: 1.2rem; color: var(--color-gray-dark);">Workout</h4>
                         </div>
                         <div class="right">
 
@@ -787,14 +793,14 @@
             <div class="daily-intake">
                                 <!-- CALORIES -->
                 <div class="goal">
-                    <h3>2200kcal</h3>
+                    <h2>2200kcal</h2>
                     <h5>Calories</h5>
                 </div>
 
                 <!-- PROTEIN -->
                 <div class="goal">
                     <div>
-                        <h3>120gr</h3>
+                        <h2>120gr</h2>
                         <h5>Protein</h5>
                     </div>
                 </div>
@@ -802,8 +808,16 @@
                 <!-- WATER -->
                 <div class="goal">
                     <div>
-                        <h3>2.5L</h3>
+                        <h2>2.5L</h2>
                         <h5>Water</h5>
+                    </div>
+                </div>
+
+                <!-- SLEEP -->
+                <div class="goal">
+                    <div>
+                        <h2>6 Hours</h2>
+                        <h5>Sleep</h5>
                     </div>
                 </div>
             </div>
@@ -817,7 +831,7 @@
                     <div class="goal">
                         <span class="material-icons-sharp">scale</span>
                         <h3 class="goal-title">Lose 6kg</h3>
-                        <h3 style="color: orange;">50%</h3>
+                        <h3 style="color: var(--color-warning);">50%</h3>
                     </div>
                 </div>
                 <!-- BADGE -->
@@ -825,7 +839,16 @@
                     <div class="goal">
                         <span class="material-icons-sharp">fitness_center</span>
                         <h3 class="goal-title">Train 4 Days/week</h3>
-                        <h3 style="color: greenyellow;">75%</h3>
+                        <h3 style="color: yellowgreen;">75%</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="your-goals" style="margin-top: 0.5rem;">
+                <div class="badge" style="padding-bottom: 0px; margin-top: 0px;background: var(--color-purple); box-shadow: 0 0.5rem 1.5rem rgba( 0, 0, 0, 0.1);">
+                    <div class="goal">
+                        <h4 class="goal-title" style="font-size: 1.1rem; color: white; ">"I've failed over and over and over again in my life 
+                            and that is why I succeed."<br> - Mike Tyson</h4>
                     </div>
                 </div>
             </div>
@@ -891,26 +914,39 @@
         new Chart(chart, {
             type: 'line',
             data: {
-                labels: ['-6 Weeks', '-5 Weeks', '-4 Weeks', '-3 weeks',
-                    '-2 Weeks', 'Last Week', 'Current'],
+                labels: ['-6', '-5', '-4', '-3', '-2', 'Last', 'Current'],
                 datasets: [
                     {
-                        label: 'Weight (Kg)',
-                        data: [72.5, 71.5, 71.7, 71, 70.5, 70.2, 69],
-                        backgroundColor: ['black', 'black', 'black', 'black', 'black', 'black', 'blue'],
-                        borderColor: ['black', 'black', 'black', 'black', 'black', 'black', 'blue'],
+                        label: 'Weight',
+                        data: [72.5, 71, 71.2, 70, 68, 67.2, 66.5],
+                        backgroundColor: ['black', 'black', 'black', 'black', 'black', 'black', 'rgb(160, 99, 245)'],
+                        borderColor: ['black', 'black', 'black', 'black', 'black', 'black', 'rgb(160, 99, 245)'],
                         borderWidth: 2
                     },
     
                     {
                         label: "Weight before",
                         data: [],
-                        borderColor: 'blue',
+                        borderColor: 'rgb(160, 99, 245)',
                         borderWidth: 2
                     }
                 ]
             },
             options: {
+                scales: {
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Kg'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Weeks'
+                        }
+                    }
+                },
                 plugins: {
                     title: {
                         display: true,
@@ -926,12 +962,12 @@
                                 labels[1].text = 'Current: ' + chart.data.datasets[0].data[6].toFixed(2) + ' Kgs';
                                 labels.push({
                                     text: 'Last 6 Weeks: ' + (chart.data.datasets[0].data[6] - chart.data.datasets[0].data[0]).toFixed(2) + ' Kgs',
-                                    fillStyle: 'green',
-                                    strokeStyle: 'green',
+                                    fillStyle: 'yellowgreen',
+                                    strokeStyle: 'yellowgreen',
                                     lineWidth: 2
                                 });
-                                labels[1].fillStyle = 'blue';
-                                labels[1].strokeStyle = 'blue';
+                                labels[1].fillStyle = 'rgb(160, 99, 245)';
+                                labels[1].strokeStyle = 'rgb(160, 99, 245)';
                                 return labels;
                             }
                         }
@@ -941,5 +977,6 @@
             }
         })
     </script>
+    
 </body>
 </html>

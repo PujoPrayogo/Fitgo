@@ -232,58 +232,74 @@
             grid-template-columns: 6rem 46rem auto;
             gap: 2rem;
             width: 96%;
-            margin: 1rem auto 4rem;
         }
 
-        main aside {
+        /*========== SIDEBAR ASIDE ==========*/
+        main aside{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 88vh;
+            height: 100vh;
+            width: 4rem;
         }
-            /* Mobile Only */
+        /* cuma di mobile*/
         main aside button#close-btn {
             display: none;
         }
 
-        main aside .sidebar a {
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-top: 2rem;
+        }
+
+        main aside .sidebar a{
             display: flex;
             align-items: center;
             gap: 1.2rem;
-            height: 4.2rem;
-            color: var(--color-gray-light);
+            height: 4rem;
+            color: var(--color-gray-dark);
             position: relative;
         }
 
         main aside .sidebar a span {
             font-size: 1.7rem;
-            margin-left: 3rem;
-            transition: all 300ms ease;
+            margin-left: auto;
+            margin-right: auto;
+            transition: all 150ms ease;
+            display: flex;
+            justify-content: center;
         }
 
-        main aside .sidebar a.active {
-            background: var(--color-white);
-            color: var(--color-primary);
+        main aside .sidebar a.active{
+            background: var(--color-gray-light);
+            color: var(--color-white);
+            border-radius: 10px;
         }
 
         main aside .sidebar a.active:before {
-            content: '';
+            content: "";
             width: 6px;
             height: 100%;
             position: absolute;
-            background: var(--color-primary);
         }
 
         main aside .sidebar a:hover {
             color: var(--color-primary);
+            background: var(--color-gray-light);
+            transition: all 250ms ease;
+            border-radius: 10px;
         }
 
-        main aside .sidebar a:hover span {
-            margin-left: 2rem;
-        }
-
-        main aside .sidebar h4 {
-            font-weight: 500;
+        main aside .updates a{
+            display: block;
+            width: 100%;
+            background: var(--color-primary);
+            color: var(--color-white);
+            border-radius: var(--border-radius-1);
+            padding: 0.8rem 0;
+            margin-top: 2rem;
         }
 
 
@@ -310,15 +326,50 @@
 
             transform: translate(-50%, -50%);
             background: var(--color-dark);
-            width: 410px;
-            padding: 30px;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+            width: auto;
+            padding: 5rem;
+            box-shadow: 0 25px 30px rgba(0, 0, 0, 1);
             z-index: 999;
         }
+        .update-container table {
+            margin-top: 2rem;
+            width: 100%;
+        }
+        .update-container table a{
+            color: var(--color-light);
+        }
 
-        #show:checked ~ .update-container {
+        .update-container th{
+            font-size: 2.2rem;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .update-container td {
+            font-size: 1.4rem;
+            color: var(--color-light);
+        }
+
+        #show-arms:checked ~ .update-container {
             display: block;
         }
+
+        #show-chest:checked ~ .update-container {
+            display: block;
+        }
+
+        #show-full:checked ~ .update-container {
+            display: block;
+        }
+
+        #show-legs:checked ~ .update-container {
+            display: block;
+        }
+
+        #show-back:checked ~ .update-container {
+            display: block;
+        }
+        
 
         #show2:checked ~ .update-container {
             display: block;
@@ -336,18 +387,33 @@
             display: none;
         }
         .show-btn {
-            background: var(--color-dark);
+            background: none;
             color: white;
             padding: 0.3rem 1rem;
             font-size: 16px;
             cursor: pointer;
             font-weight: 500;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             transition: all 300ms ease;
         }
 
-        .show-btn:hover {
-            background: var(--color-gray-dark);
+        .show-arms-btn:hover {
+            box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .show-chest-btn:hover {
+            box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .show-full-btn:hover {
+            box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .show-legs-btn:hover {
+            box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .show-back-btn:hover {
+            box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.1);
         }
 
         .show2-btn:hover {
@@ -470,12 +536,20 @@
             gap: 1.5rem;
         }
 
+        .card-title {
+            font-size: 1.45rem;
+        }
+
+        .card-title-nutrition {
+            font-size: 2.2rem;
+        }
+
         main section.middle .cards .card {
             background: linear-gradient(--color-white, --color-gray-light);
             padding: var(--card-padding);
             border-radius: var(--card-border-radius);
             color: var(--color-dark);
-            height: 17rem;
+            height: 15.2rem;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -534,6 +608,10 @@
 
         main section.middle .card .top .right img{
             width: 3.5rem;
+        }
+
+        .right {
+            margin-top: 2.4rem;
         }
 
                                         /*========== DAILY INTAKE ===========*/
@@ -685,24 +763,26 @@
                                     <!--===== END OF NAVBAR =====-->
 
     <main>
-        <aside>
-            <button id="close-btn">
-                <span class="material-icons-sharp">close</span>
-            </button>
-
-            <div class="sidebar">
-                <img src="https://1000logos.net/wp-content/uploads/2016/10/Amazon-Logo-768x480.png" class="logo">
-                <a href="dashboard-main22.html">
-                    <span class="material-icons-sharp">home</span>
-                </a>
-                <a href="#" class="active">
-                    <span class="material-icons-sharp">fitness_center</span>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">tune</span>
-                </a>
+        <div class="col-sm-auto bg-dark sticky-top" style="background-color: black; color: white;">
+            <div class="d-flex flex-sm-column flex-row flex-nowrap bg-dark align-items-center sticky-top">
+                    <!-- SIDEBAR  -->
+                <aside>
+                    <button id="close-btn">
+                        <span class="material-icons-outlined">close</span>
+                    </button>
+                    <div class="sidebar">
+                        <a href="#">
+                            <span class="material-icons-outlined">home</span>
+                        </a>
+                        <a href="#" class="active">
+                            <span class="material-icons-outlined">fitness_center</span>
+                        </a>
+                        <a href="#">
+                            <span class="material-icons-outlined">tune</span>
+                        </a>
+                </aside>
             </div>
-        </aside>
+        </div>
                                 <!--========== MIDDLE ==========-->
         <section class="middle">
             <nav >
@@ -723,7 +803,7 @@
                 </div>
             </nav>
                                     <!--===== TODAYS TARGET =====--> 
-            <div class="todays-target">
+            <div class="todays-target" style="margin-top: 3rem;">
                 <h1>Workout Menu</h1>
                 
                                 <!--========== UPDATE FORM ==========-->
@@ -733,9 +813,8 @@
             <div class="cards">
                 <!-- CARD 1-->
                 <div class="center">
-                    <input type="checkbox" id="show">
-                    <label for="show" class="show-btn">
-                        <div class="card bg-dark" style="min-width: 100%;width: auto; min-height: 100%;background-color: black;border-radius:6px;" >
+                    <input type="checkbox" id="show-arms">
+                    <label for="show-arms" class="show-btn card bg-dark" style="min-width: 100%;width: auto; min-height: 100%;background-color: black;border-radius:6px;">
                             <div class="row no-gutters">
                                 <div class="col-6">
                                     <img src="https://media1.popsugar-assets.com/files/thumbor/oStCU38qB6hu1AHCJ5CyLBQ6TAY/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2019/02/27/986/n/1922729/6982a2275c7711f34ee2e8.35687035_/i/Why-Women-Work-Out.jpg" class="card-img" alt="..." style="height:100%;">
@@ -748,30 +827,55 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
                     </label>
                     <div class="update-container">
-                        <label for="show" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
-                        <div class="text text">Update Workout</div>
-                        <form action="#">
-                            <div class="data">
-                                <label for="update-excercise-arms-and-shoulder" class="text-question">Excercise</label>
-                                <input type="text" id="update-excercise-arms-and-shoulder">
-                            </div>
-                            <div class="btn">
-                                <div class="inner"></div>
-                                <button type="submit">Update</button>
-                            </div>
-                        </form>
+                        <label for="show-arms" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
+                        <div class="text text">Arm & Shoulders Workout <a href="#" style="color: white;"><span class="material-icons-sharp">help</span></a></div>
+                        <table>
+                            <tr>
+                              <th>Exercises</th>
+                              <th>Sets</th>
+                              <th>Reps</th>
+                            </tr>
+                            <tr>
+                              <td>1.  <a href="https://www.tiktok.com/@delonixsen/video/7232138041597431066?q=cara%20shoulder%20press&t=1685225923734">Shoulder Press</a></td>
+                              <td>2</td>
+                              <td>6-10</td>
+                            </tr>
+                            <tr>
+                              <td>2. <a href="https://www.tiktok.com/@davinyonathan_/video/7126802671620738330?q=cara%20bicep%20curl&t=1685225483697">Biceps Curl</a></td>
+                              <td>3</td>
+                              <td>6-12</td>
+                            </tr>
+                            <tr>
+                              <td>3. <a href="https://www.tiktok.com/@itsismailm/video/7204051963619609882?q=cara%20lateral%20raise&t=1685225540545">Lateral Raise</a></td>
+                              <td>3</td>
+                              <td>6-15</td>
+                            </tr>
+                            <tr>
+                              <td>4. <a href="https://www.tiktok.com/@enriquedustin/video/7235587509051198725?q=cara%20triceps%20pushdown&t=1685225579300">Triceps Pushdown</a></td>
+                              <td>3</td>
+                              <td>6-12</td>
+                            </tr>
+                            <tr>
+                              <td>5. <a href="https://www.tiktok.com/@petermiljak/video/7222056950404549893?q=cara%20rear%20delts%20fly&t=1685225619939">Rear Delts</a> Fly</td>
+                              <td>3</td>
+                              <td>6-10</td>
+                            </tr>
+                            <tr>
+                              <td>6. <a href="https://www.tiktok.com/@petermiljak/video/7203523591130877190?q=cara%20hammer%20curl&t=1685225689625">Hammer Curl</a></td>
+                              <td>2-3</td>
+                              <td>6-10</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
-                
                 
                 <!-- CARD 2 -->
                 <div class="card" style="min-width: 100%;width: auto; min-height: 100%;background-image: url('https://wallaland.com/wp-content/uploads/wallpapers/art/illustration/Emoji/Wallaland%20Emoji%20Fire.jpg');border-radius:6px;background-position-y: 65%; background-position-x: 50%; background-size: cover;">
                     <div class="row no-gutters my-auto">
                         <div class="col-4 text-white my-auto mx-auto ">
-                            <p class="text-center my-auto">300</p>
+                            <h1 class="text-center my-auto">300</h1>
                         </div>
                         <div class="col-8" >
                             <div class="card-body text-white">
@@ -786,48 +890,67 @@
             <div class="cards">
                 <!-- CARD CHEST & TRICEPS -->
                 <div class="center">
-                    <input type="checkbox" id="show">
-                    <label for="show" class="show-btn">
-                        <div class="card bg-dark" style="min-width: 100%;width: auto; min-height: 100%;background-color: black;border-radius:6px;" >
-                            <div class="row no-gutters">
+                    <input type="checkbox" id="show-chest">
+                    <label for="show-chest" class="show-btn card bg-dark" style="min-width: 100%;width: auto; min-height: 100%;background-color: black;border-radius:6px;">
+                        <div class="row no-gutters">
                                 <div class="col-6">
                                     <div class="card-body text-white">
                                         <h5 class="card-title">Chest & <br> Triceps</h5>
-                                        <p class="card-text">6 Excercises</p>
+                                        <p class="card-text">5 Excercises</p>
                                     </div>
                                 </div>
                                 <div class="col-6" >
                                     <img src="https://i1.wp.com/lovekarmapassion.com/wp-content/uploads/2020/06/250063-1600x1067-exercising.jpg?fit=1600%2C1067&ssl=1" class="card-img" alt="..." style="height: 100%;object-fit: cover;">
                                 </div>
                             </div>
-                        </div>
                     </label>
                     <div class="update-container">
-                        <label for="show" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
-                        <div class="text text">Update Workout</div>
-                        <form action="#">
-                            <div class="data">
-                                <label for="update-excercise-arms-and-shoulder" class="text-question">Excercise</label>
-                                <input type="text" id="update-excercise-arms-and-shoulder">
-                            </div>
-                            <div class="btn">
-                                <div class="inner"></div>
-                                <button type="submit">Update</button>
-                            </div>
-                        </form>
+                        <label for="show-chest" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
+                        <div class="text text">Chest & Triceps Workout <a href="#" style="color: white;"><span class="material-icons-sharp">help</span></a></div>
+                        <table>
+                            <tr>
+                              <th>Exercises</th>
+                              <th>Sets</th>
+                              <th>Reps</th>
+                            </tr>
+                            <tr>
+                              <td>1. <a href="https://www.tiktok.com/@ucan.fit/video/7183707661702073626?q=cara%20bench%20press&t=1685225287594">Bench Press</a></td>
+                              <td>3</td>
+                              <td>5-8</td>
+                            </tr>
+                            <tr>
+                              <td>2. <a href="https://www.tiktok.com/@itsismailm/video/7204051963619609882?q=cara%20lateral%20raise&t=1685225540545">Lateral Raise</a></td>
+                              <td>3</td>
+                              <td>6-12</td>
+                            </tr>
+                            <tr>
+                              <td>3. <a href="https://www.tiktok.com/@ucan.fit/video/7194794679056010522?q=cara%20chest%20fly&t=1685226031028">Chest Fly</a></td>
+                              <td>3</td>
+                              <td>6-12</td>
+                            </tr>
+                            <tr>
+                              <td>4. <a href="https://www.tiktok.com/@delonixsen/video/7232138041597431066?q=cara%20shoulder%20press&t=1685225923734">Shoulder Press</a></td>
+                              <td>2</td>
+                              <td>6-12</td>
+                            </tr>
+                            <tr>
+                              <td>5. <a href="https://www.tiktok.com/@enriquedustin/video/7235587509051198725?q=cara%20triceps%20pushdown&t=1685225579300">Triceps Pushdown</a></td>
+                              <td>3</td>
+                              <td>6-12</td>
+                            </tr>
+                          </table>
                     </div>
                 </div>
 
                 <!-- FULL BODY -->
                 <div class="center">
-                    <input type="checkbox" id="show">
-                    <label for="show" class="show-btn">
-                        <div class="card bg-dark" style="min-width: 100%;width: auto; min-height: 100%;background-color: black;border-radius:6px;" >
+                    <input type="checkbox" id="show-full">
+                    <label for="show-full" class="show-btn card bg-dark" style="min-width: 100%;width: auto; min-height: 100%;background-color: black;border-radius:6px;">
                             <div class="row no-gutters">
                                 <div class="col-6">
                                     <div class="card-body text-white">
                                         <h5 class="card-title">Full <br>body</h5>
-                                        <p class="card-text">&nbsp;</p>
+                                        <p class="card-text">6 Excercises</p>
                                         <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                                     </div>
                                 </div>
@@ -835,21 +958,47 @@
                                     <img src="https://www.theindustry.fashion/wp-content/uploads/2023/02/David-B-Gymshark1.jpg" class="card-img" alt="..." style="object-fit: cover;height: 100%;min-height: 118px;">
                                 </div>
                             </div>
-                        </div>
                     </label>
                     <div class="update-container">
-                        <label for="show" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
-                        <div class="text text">Update Workout</div>
-                        <form action="#">
-                            <div class="data">
-                                <label for="update-excercise-arms-and-shoulder" class="text-question">Excercise</label>
-                                <input type="text" id="update-excercise-arms-and-shoulder">
-                            </div>
-                            <div class="btn">
-                                <div class="inner"></div>
-                                <button type="submit">Update</button>
-                            </div>
-                        </form>
+                        <label for="show-full" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
+                        <div class="text text">Full Body Workout <a href="#" style="color: white;"><span class="material-icons-sharp">help</span></a></div>
+                        <table>
+                            <tr>
+                              <th>Exercises</th>
+                              <th>Sets</th>
+                              <th>Reps</th>
+                            </tr>
+                            <tr>
+                                <td>1. <a href="https://www.tiktok.com/@ucan.fit/video/7183707661702073626?q=cara%20bench%20press&t=1685225287594">Bench Press</a></td>
+                                <td>3</td>
+                                <td>5-8</td>
+                            </tr>
+                            <tr>
+                              <td>2. <a href="https://www.tiktok.com/@just.smoll/video/7193678534794218779?q=cara%20squat&t=1685226350839">Barbell/Dumbbell Squat</a></td>
+                              <td>3</td>
+                              <td>5-8</td>
+                            </tr>
+                            <tr>
+                              <td>3. <a href="https://www.tiktok.com/@neveres_id/video/7190603734978694427?q=cara%20lat%20pulldown&t=1685226404862">Lat Pulldown</a></td>
+                              <td>3</td>
+                              <td>6-12</td>
+                            </tr>
+                            <tr>
+                                <td>4. <a href="https://www.tiktok.com/@enriquedustin/video/7235587509051198725?q=cara%20triceps%20pushdown&t=1685225579300">Triceps Pushdown</a></td>
+                                <td>3</td>
+                                <td>6-12</td>
+                            </tr>
+                            <tr>
+                                <td>5. <a href="https://www.tiktok.com/@davinyonathan_/video/7126802671620738330?q=cara%20bicep%20curl&t=1685225483697">Biceps Curl</a></td>
+                                <td>3</td>
+                                <td>6-12</td>
+                            </tr>
+                            <tr>
+                              <td>6. <a href="https://www.tiktok.com/@windysonora/video/7200692918980529435?q=cara%20bulgarian%20split%20squat&t=1685226585277">Bulgarian Split Squat</a></td>
+                              <td>2-3</td>
+                              <td>6-12</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -857,14 +1006,13 @@
             <div class="cards">
                 <!-- LEGS -->
                 <div class="center">
-                    <input type="checkbox" id="show">
-                    <label for="show" class="show-btn">
-                        <div class="card bg-dark" style="min-width: 100%;width: auto; min-height: 100%;background-color: black;border-radius:6px;" >
+                    <input type="checkbox" id="show-legs">
+                    <label for="show-legs" class="show-btn card bg-dark" style="min-width: 100%;width: auto; min-height: 100%;background-color: black;border-radius:6px;">
                             <div class="row no-gutters">
                                 <div class="col-6">
                                     <div class="card-body text-white">
                                         <h5 class="card-title">&nbsp;<br>Legs</h5>
-                                        <p class="card-text">&nbsp;</p>
+                                        <p class="card-text">5 Excercises</p>
                                         <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                                     </div>
                                 </div>
@@ -872,35 +1020,55 @@
                                     <img src="https://blogscdn.thehut.net/app/uploads/sites/478/2015/12/shutterstock_1185036889-3-min_1637338671.jpg" class="card-img" alt="..." style="object-fit: cover;height: 100%;min-height: 118px; object-position: 70% ;">
                                 </div>
                             </div>
-                        </div>
                     </label>
                     <div class="update-container">
-                        <label for="show" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
-                        <div class="text text">Update Workout</div>
-                        <form action="#">
-                            <div class="data">
-                                <label for="update-excercise-arms-and-shoulder" class="text-question">Excercise</label>
-                                <input type="text" id="update-excercise-arms-and-shoulder">
-                            </div>
-                            <div class="btn">
-                                <div class="inner"></div>
-                                <button type="submit">Update</button>
-                            </div>
-                        </form>
+                        <label for="show-legs" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
+                        <div class="text text">Legs Workout <a href="#" style="color: white;"><span class="material-icons-sharp">help</span></a></div>
+                        <table>
+                            <tr>
+                              <th>Exercises</th>
+                              <th>Sets</th>
+                              <th>Reps</th>
+                            </tr>
+                            <tr>
+                                <td>1. <a href="https://www.tiktok.com/@just.smoll/video/7193678534794218779?q=cara%20squat&t=1685226350839">Barbell/Dumbbell Squat</a></td>
+                                <td>3</td>
+                                <td>5-8</td>
+                            </tr>
+                            <tr>
+                              <td>2. <a href="https://www.tiktok.com/@seazny/video/7185401608036027674?q=cara%20legs%20curl&t=1685226753526">Legs curl</a></td>
+                              <td>3</td>
+                              <td>6-12</td>
+                            </tr>
+                            <tr>
+                              <td>3. <a href="https://www.tiktok.com/@vinnie.hasan/video/7185338468136963355?q=cara%20legs%20extension&t=1685226688095">Legs Extension</a></td>
+                              <td>3</td>
+                              <td>6-15</td>
+                            </tr>
+                            <tr>
+                              <td>4. <a href="https://www.tiktok.com/@windysonora/video/7200692918980529435?q=cara%20bulgarian%20split%20squat&t=1685226585277">Bulgarian Split Squat</a></td>
+                              <td>2-3</td>
+                              <td>6-10</td>
+                            </tr>
+                            <tr>
+                              <td>5. <a href="https://www.tiktok.com/@reinaldy.atmanegara/video/7162368644163407105?q=cara%20calf%20raise%20&t=1685226850375">Calves Raise</a> Fly</td>
+                              <td>2-3</td>
+                              <td>6-15</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
 
 
                 <!-- BACK & BICEPS -->
                 <div class="center">
-                    <input type="checkbox" id="show">
-                    <label for="show" class="show-btn">
-                        <div class="card bg-dark" style="min-width: 100%;width: auto; min-height: 100%;background-color: black;border-radius:6px;" >
+                    <input type="checkbox" id="show-back">
+                    <label for="show-back" class="show-btn card bg-dark" style="min-width: 100%;width: auto; min-height: 100%;background-color: black;border-radius:6px;">
                             <div class="row no-gutters">
                                 <div class="col-6">
                                     <div class="card-body text-white">
                                         <h5 class="card-title">Back &<br> Biceps</h5>
-                                        <p class="card-text">&nbsp;</p>
+                                        <p class="card-text">6 Excercises</p>
                                         <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                                     </div>
                                 </div>
@@ -908,29 +1076,50 @@
                                     <img src="https://www.shape.com/thmb/O1oRN3A8IGIQjMRatW5gnAYHd5E=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/resistance-band-exercises-for-back-promo-d2f13ed8527549679f2fb7b4bddcd5b4.jpg" class="card-img" alt="..." style="object-fit: cover;height: 100%;min-height: 118px; object-position: 30% ;">
                                 </div>
                             </div>
-                        </div>
                     </label>
                     <div class="update-container">
-                        <label for="show" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
-                        <div class="text text">Update Workout</div>
-                        <form action="#">
-                            <div class="data">
-                                <label for="update-excercise-arms-and-shoulder" class="text-question">Excercise</label>
-                                <input type="text" id="update-excercise-arms-and-shoulder">
-                            </div>
-                            <div class="btn">
-                                <div class="inner"></div>
-                                <button type="submit">Update</button>
-                            </div>
-                        </form>
+                        <label for="show-back" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
+                        <div class="text text">Back & Biceps Workout <a href="#" style="color: white;"><span class="material-icons-sharp">help</span></a></div>
+                        <table>
+                            <tr>
+                              <th>Exercises</th>
+                              <th>Sets</th>
+                              <th>Reps</th>
+                            </tr>
+                            <tr>
+                                <td>1. <a href="https://www.tiktok.com/@neveres_id/video/7190603734978694427?q=cara%20lat%20pulldown&t=1685226404862">Lat Pulldown</a></td>
+                                <td>3</td>
+                                <td>6-12</td>
+                            </tr>
+                            <tr>
+                              <td>2. <a href="https://www.tiktok.com/@just.smoll/video/7225957033101643034?q=cara%20cable%20row&t=1685227015059">Cable/Dumbbell Rows</a></td>
+                              <td>3</td>
+                              <td>6-12</td>
+                            </tr>
+                            <tr>
+                                <td>3. <a href="https://www.tiktok.com/@davinyonathan_/video/7126802671620738330?q=cara%20bicep%20curl&t=1685225483697">Biceps Curl</a></td>
+                                <td>3-4</td>
+                                <td>6-12</td>
+                            </tr>
+                            <tr>
+                              <td>4. <a href="https://www.tiktok.com/@megafit.id/video/7233741947586825478?q=cara%20face%20pull&t=1685227210892">Face pull</a></td>
+                              <td>3-4</td>
+                              <td>6-12</td>
+                            </tr>
+                            <tr>
+                                <td>5. <a href="https://www.tiktok.com/@petermiljak/video/7203523591130877190?q=cara%20hammer%20curl&t=1685225689625">Hammer Curl</a></td>
+                                <td>3</td>
+                                <td>6-12</td>
+                              </tr>
+                            <tr>
+                              <td>6. (Opsional)<a href="https://www.tiktok.com/@beanieguylifting/video/7133535418305432859?q=cara%20single%20arm%20lat%20pulldown&t=1685227359432">Single arm lat-pulldown</a></td>
+                              <td>2-3</td>
+                              <td>6-12</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
-
-
-
-
-
         </div>
         </section>
         <!--========== RIGHT ==========-->
@@ -942,7 +1131,7 @@
 
             <!--===== CALORIES AND PROTEIN =====-->
             
-                    <div class="card py-2 my-2" style="min-width: 100%;width: auto; background-color: black;border-radius:6px;" >
+                    <div class="card py-2 my-2" style="min-width: 90%;width: auto; background-color: black;border-radius:6px;" >
                         <div class="row no-gutters">
                             <div class="col-12" >
                                 <div class="card-body text-white text-center">
@@ -964,7 +1153,7 @@
                         <div class="row no-gutters">
                             <div class="col-6">
                                 <div class="card-body text-white" style="height:100%">
-                                    <h5 class="card-title">Breakfast</h5>
+                                    <h5 class="card-title-nutrition">Breakfast</h5>
                                     <p class="card-text">Bubur Ayam</p>
                                     <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                                 </div>
@@ -998,11 +1187,11 @@
             <div class="center">
                 <input type="checkbox" id="show3">
                 <label for="show3" class="show-btn">
-                    <div class="card py-2 my-2" style=" background-color: black;border-radius:6px;" >
+                    <div class="card py-2 my-2" style="min-width: 100%;width: auto; background-color: black;border-radius:6px;" >
                         <div class="row no-gutters">
                             <div class="col-6">
                                 <div class="card-body text-white" style="height:100%">
-                                    <h5 class="card-title">Dinner</h5>
+                                    <h5 class="card-title-nutrition">Dinner</h5>
                                     <p class="card-text">Chicken Pasta</p>
                                     <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                                 </div>
@@ -1042,7 +1231,7 @@
                         <div class="row no-gutters">
                             <div class="col-6">
                                 <div class="card-body text-white">
-                                    <h5 class="card-title">Lunch</h5>
+                                    <h5 class="card-title-nutrition">Lunch</h5>
                                     <p class="card-text">Grilled</p>
                                     <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                                 </div>
@@ -1071,11 +1260,6 @@
                     </form>
                 </div>
             </div>
-
-
-
-
-
         </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
