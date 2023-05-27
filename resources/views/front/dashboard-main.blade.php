@@ -225,65 +225,80 @@
         nav .profile-area button {
             display: none;
         }
-
-                                /*========== SIDEBAR ASIDE ==========*/
+        
         main {
             display: grid;
             grid-template-columns: 6rem 46rem auto;
             gap: 2rem;
-            width: 96%;
-            margin: 1rem auto 4rem;
+            width: 100%;
         }
-
-        main aside {
+        
+        /*========== SIDEBAR ASIDE ==========*/
+        main aside{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 88vh;
+            height: 100vh;
+            width: 4rem;
         }
-            /* Mobile Only */
+        /* cuma di mobile*/
         main aside button#close-btn {
             display: none;
         }
 
-        main aside .sidebar a {
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-top: 2rem;
+        }
+
+        main aside .sidebar a{
             display: flex;
             align-items: center;
             gap: 1.2rem;
-            height: 4.2rem;
-            color: var(--color-gray-light);
+            height: 4rem;
+            color: var(--color-gray-dark);
             position: relative;
         }
 
         main aside .sidebar a span {
             font-size: 1.7rem;
-            margin-left: 3rem;
-            transition: all 300ms ease;
+            margin-left: auto;
+            margin-right: auto;
+            transition: all 150ms ease;
+            display: flex;
+            justify-content: center;
         }
 
-        main aside .sidebar a.active {
-            background: var(--color-white);
-            color: var(--color-primary);
+        main aside .sidebar a.active{
+            background: var(--color-gray-light);
+            color: var(--color-white);
+            border-radius: 10px;
         }
 
         main aside .sidebar a.active:before {
-            content: '';
+            content: "";
             width: 6px;
             height: 100%;
             position: absolute;
-            background: var(--color-primary);
         }
 
         main aside .sidebar a:hover {
             color: var(--color-primary);
+            background: var(--color-gray-light);
+            transition: all 250ms ease;
+            border-radius: 10px;
         }
 
-        main aside .sidebar a:hover span {
-            margin-left: 2rem;
-        }
-
-        main aside .sidebar h4 {
-            font-weight: 500;
+        main aside .updates a{
+            display: block;
+            width: 100%;
+            background: var(--color-primary);
+            color: var(--color-white);
+            border-radius: var(--border-radius-1);
+            padding: 0.8rem 0;
+            margin-top: 2rem;
         }
 
 
@@ -340,7 +355,7 @@
 
         .update-container .update-close-btn {
             position: absolute;
-            color: var(--color-gray-light);
+            color: var(--color-white);
             right: 20px;
             top: 15px;
             font-size: 18px;
@@ -349,7 +364,7 @@
         }
 
         .update-container .update-close-btn:hover {
-            color: var(--color-light);
+            color: var(--color-white);
             transform: rotate(180deg);
         }
 
@@ -357,11 +372,19 @@
             font-size: 35px;
             font-weight: 600;
             text-align: center;
-            color: var(--color-light);
+            color: var(--color-white);
         }
 
         .update-container .text-question {
             color: white;
+        }
+
+        .update-container #cal-add {
+            text-align: center;
+        }
+
+        .update-container .calorie-question {
+            text-align: center;
         }
 
         .update-container form {
@@ -373,6 +396,13 @@
             width: 100%;
             margin: 40px 0;
         }
+
+        .update-container form .data:nth-child(2) {
+            height: 45px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
 
         form .data label {
             font-size: 18px;
@@ -524,9 +554,22 @@
 
         main .daily-intake .goal {
             padding: 0.6rem var(--card-padding);
-            background: var(--color-white);
             border-radius: var(--card-border-radius);
+            justify-content: center;
         }
+
+        main .daily-intake .goal:nth-child(1) {
+            background: var(--color-purple-light);
+        }
+
+        main .daily-intake .goal:nth-child(2) {
+            background: var(--color-success-light);
+        }
+
+        main .daily-intake .goal:nth-child(3) {
+            background: var(--color-primary-light);
+        }
+
 
                                 /*========== YOUR GOALS ==========*/
         main .your-goals {
@@ -536,15 +579,6 @@
             gap: 2rem;
         }
 
-        main .your-goals .badges {
-            display: flex;
-            gap: 1rem;
-            align-self: center;
-            flex-wrap: wrap;
-            max-width: 100%;
-            color: var(--color-dark);
-        }
-
         main .your-goals .badge span {
             width: 7px;
             height: 7px;
@@ -552,7 +586,7 @@
         }
 
         main .your-goals .badge .goal {
-            color: var(--color-dark);
+            color: var(--color-light);
             display: flex;
             gap: 1rem;
             align-self: center;
@@ -565,6 +599,7 @@
             display: flex;
             align-self: center;
             gap: 1rem;
+            background: var(--color-dark);
         }
 
         main .your-goals .badge span {
@@ -574,16 +609,15 @@
             height: fit-content;
         }
 
-
-
-
                             /*===== ANALYTICS CHART =====*/
         canvas#chart {
             background: var(--color-white);
             max-width: 100%;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             border-radius: var(--card-border-radius);
             padding: var(--card-padding);
+            margin-top: 2rem;
+            margin-right: 2rem;
         }
 
                         /*========== RECENT ACTIVITIES ==========*/
@@ -591,10 +625,11 @@
             background: var(--color-white);
             border-radius: var(--card-border-radius);
             box-shadow: 0 0.5rem 1.5rem rgba( 0, 0, 0, 0.1);
+            margin-right: 2rem;
         }
 
         main section.right .recent-activities img {
-            width: 4rem;
+            width: 3.5rem;
         }
 
         main section.right .recent-activities .recent-header {
@@ -630,28 +665,28 @@
     </style>
 </head>
 <body>
-                                    <!--===== WELCOME BACK MAMAT ======-->
-                                    <!--===== END OF NAVBAR =====-->
-
     <main>
-        <aside>
-            <button id="close-btn">
-                <span class="material-icons-sharp">close</span>
-            </button>
-
-            <div class="sidebar">
-                <img src="https://1000logos.net/wp-content/uploads/2016/10/Amazon-Logo-768x480.png" class="logo">
-                <a href="#" class="active">
-                    <span class="material-icons-sharp">home</span>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">fitness_center</span>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">tune</span>
-                </a>
+            <div class="col-sm-auto bg-dark sticky-top" style="background-color: black; color: white;">
+                <div class="d-flex flex-sm-column flex-row flex-nowrap bg-dark align-items-center sticky-top">
+                        <!-- SIDEBAR  -->
+                    <aside>
+                        <button id="close-btn">
+                            <span class="material-icons-outlined">close</span>
+                        </button>
+                        <div class="sidebar">
+                            <a href="#" class="active">
+                                <span class="material-icons-outlined">home</span>
+                            </a>
+                            <a href="#">
+                                <span class="material-icons-outlined">fitness_center</span>
+                            </a>
+                            <a href="#">
+                                <span class="material-icons-outlined">tune</span>
+                            </a>
+                    </aside>
+                </div>
             </div>
-        </aside>
+        
                                 <!--========== MIDDLE ==========-->
         <section class="middle">
             <nav >
@@ -687,13 +722,13 @@
                                 <label for="update-activity" class="text-question">Activity</label>
                                 <input type="text" id="update-activity" name="update-activity">
                             </div>
-                            <p class="text-question">Calories</p>
+                            <h2 class="text-question calorie-question">Calories</h2>
                             <label for="cal-add" class="cal-question">Add</label>
                             <input type="radio" id="cal-add" name="cal-type" value="cal-add">
-                            <label for="cal-add" class="cal-question">Burn</label>
+                            <label for="cal-burn" class="cal-question">Burn</label>
                             <input type="radio" id="cal-burn" name="cal-type" value="cal-burn">
                             <div class="data">
-                                <label for="update-calorie" class="text-question">Calories</label>
+                                <label for="update-calorie" class="text-question">Amount (KCal)</label>
                                 <input type="text" id="update-calorie">
                             </div>
                             <div class="btn">
