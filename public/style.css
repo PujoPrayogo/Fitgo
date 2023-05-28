@@ -154,6 +154,19 @@
     text-align: center;
     margin: auto;
   }
+
+  /* rounded in dashboard-intake.blade.php */
+.button-rounded3 {
+  display: block;
+  border-radius: 25px;
+  width: 100%;
+  border: 2px solid white;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  cursor: pointer;
+  text-align: center;
+}
   /* dropdown */
   
   .dropdown{
