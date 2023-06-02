@@ -5,11 +5,15 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+
 
 class AuthController extends Controller
 {
-    function register(Request $request){
+
+
+    public function register(Request $request){
 
         $validator = Validator::make($request->all(), [
             'name' => 'required',
@@ -42,5 +46,32 @@ class AuthController extends Controller
             'data' => $success
         ]);
 
+    }
+
+    public function login(Request $request){
+        if (Auth::attempt([
+            'email'=>$request->email,
+            'password'=>$request->password
+        ])){
+            $auth = Auth::user();
+            $user = User::where('email',$request->email)->first();
+            $success['token'] = $user->createToken('auth_token')->plainTextToken;
+            $success['name'] = $auth->name;
+            $success['email'] = $auth->email;
+
+            return response()->json([
+                'status'=>true,
+                'massage'=> "login sukses",
+                'data' => $success
+            ]);
+
+        }
+        else{
+            return response()->json([
+                'status'=>false,
+                'massage'=> "login gagal",
+                'data' => null
+            ]);
+        }
     }
 }
