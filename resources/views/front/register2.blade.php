@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
     <script src="assets/js/script.js"></script> 
     <title>Fitgo</title>
 </head>
@@ -50,16 +50,16 @@
                         <div>
                         <form>
                             <div class="mb-3">
-                                <input type="number" class="formStyle" placeholder="Weight (Kg)" id="exampleInputWeight1">
+                                <input type="number" class="formStyle" placeholder="Weight (Kg)" id="exampleInputWeight1" name='weight'>
                             </div>
                             <div class="mb-3">
-                                <input type="number" class="formStyle" placeholder="Height (Cm)"id="exampleInputHeight1">
+                                <input type="number" class="formStyle" placeholder="Height (Cm)"id="exampleInputHeight1" name='height'>
                             </div>
                             <div class="mb-3">
-                                <input type="text" class="formStyle" placeholder="Gender" id="exampleInputGender1">
+                                <input type="text" class="formStyle" placeholder="Gender" id="exampleInputGender1" name='gender'>
                             </div>
                             <div class="mb-3">
-                                <input type="number" class="formStyle" placeholder="Age" id="exampleInputAge1">
+                                <input type="number" class="formStyle" placeholder="Age" id="exampleInputAge1" name='age'>
                             </div>
                             <center>
                             <div class="dropdown" style="padding-bottom: 5%;">

@@ -49,31 +49,6 @@ class SessionController extends Controller
             return redirect()->to('fitgo/'.$user)->with('success', 'Berhasil Login');
         }
 
-        
-
-    //     Session::flash('email', $request->email);
-    //     $request->validate([
-    //         'email'=>'required',
-    //         "password" => 'required',
-    //     ],[
-    //         'email.required'=>'email perlu diisi',
-    //         "password.required" => 'password perlu diisi',
-    //     ]
-    // );
-
-    //     $infologin = [
-    //         "email" => $request->email,
-    //         "password" => $request->password,
-    //     ];
-
-    //     if(Auth::attempt($infologin)){
-    //         return redirect("landingPage")->with("success", "berhasil login");
-    //     }else{
-    //         return redirect("sesi")->withErrors("username dan password yang dimasukan tidak valid");
-    //     }
-
-
-
     }
 
     function logout(){
@@ -82,7 +57,7 @@ class SessionController extends Controller
     }
 
     function register(){
-        return view("front/register");
+        return view("front/register2");
     }
 
     function create(Request $request){
@@ -133,6 +108,48 @@ class SessionController extends Controller
     // }else{
     //     return redirect("sesi")->withErrors("username dan password yang dimasukan tidak valid");
     // }
+        $email = $request->email;
+        $password = $request->password;
+        $name = $request->name;
+        $confirm_password = $request->password;
+        $weight = $request->weight;
+        $height = $request->height;
+        $gender = $request->gender;
+        $age = $request->age;
+        $body_goals = $request->select;
+
+        $infoRegister = [
+            "name" => $name, 
+            "email" => $email,
+            "password" => $password,
+            "age" => $age, 
+            "bodyweight" => $weight, 
+            "height" => $height, 
+            "bodygoals" => $body_goals, 
+            "gender" => $gender, 
+
+        ];
+
+        $client = new Client();
+        $url = "http://127.0.0.1:8000/api/register";
+        $response = $client->request('POST', $url, [
+            'headers'=>['content-type'=>'application/json'],
+            'body'=>json_encode($infoRegister)
+        ]);
+        $content = $response->getBody()->getContents();
+        $contentArray = json_decode($content, true);
+
+        if($contentArray["status"] != true) {
+            $error = $contentArray['massage'];
+            print_r($contentArray);
+
+            return redirect()->to('sesi/register')->withErrors($error)->withInput();
+
+        } else{
+            print_r($contentArray);
+            return redirect()->to('sesi/login')->with('success', 'Berhasil Register, Silahkan Login');
+        }
+
 
         
 
