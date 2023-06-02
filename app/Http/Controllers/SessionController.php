@@ -17,26 +17,28 @@ class SessionController extends Controller
 
     function login(Request $request){
 
-        Session::flash('email', $request->email);
-        $request->validate([
-            'email'=>'required',
-            "password" => 'required',
-        ],[
-            'email.required'=>'email perlu diisi',
-            "password.required" => 'password perlu diisi',
-        ]
-    );
+    //     Session::flash('email', $request->email);
+    //     $request->validate([
+    //         'email'=>'required',
+    //         "password" => 'required',
+    //     ],[
+    //         'email.required'=>'email perlu diisi',
+    //         "password.required" => 'password perlu diisi',
+    //     ]
+    // );
 
-    $infologin = [
-        "email" => $request->email,
-        "password" => $request->password,
-    ];
+    // $infologin = [
+    //     "email" => $request->email,
+    //     "password" => $request->password,
+    // ];
 
-    if(Auth::attempt($infologin)){
-        return redirect("landingPage")->with("success", "berhasil login");
-    }else{
-        return redirect("sesi")->withErrors("username dan password yang dimasukan tidak valid");
-    }
+    // if(Auth::attempt($infologin)){
+    //     return redirect("landingPage")->with("success", "berhasil login");
+    // }else{
+    //     return redirect("sesi")->withErrors("username dan password yang dimasukan tidak valid");
+    // }
+
+    return view('front/login');
 
     }
 
@@ -46,7 +48,7 @@ class SessionController extends Controller
     }
 
     function register(){
-        return view("front/register2");
+        return view("front/register");
     }
 
     function create(Request $request){

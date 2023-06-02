@@ -21,6 +21,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'age',
+        'bodyweight',
+        'height',
+        'bodygoals',
     ];
 
     /**
@@ -41,4 +45,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function user_weight_overtime(){
+        return $this->belongsToMany(user_weight_overtime::class, "user_weight_overtime")->withTimestamps();
+    }
 }
