@@ -48,7 +48,8 @@
                 <div class="col-4">
                     <div class="container rounded-2" style="background-color:black;padding-top: 5vh; padding-bottom: 5vh; opacity: 0.8;">
                         <div>
-                            <form action="">
+                            <form action="sesi/login" method = "POST">
+                            @csrf
                               <input type="email" name="email" class="formStyle" placeholder="Email" required />
                               <input type="password" name="password" class="formStyle" placeholder="Password" required />
                               <button class="block">LOGIN</button>
@@ -71,7 +72,7 @@
             <div class="row" style="padding-top: 25px;">
                 <div class="col-4"></div>
                 <div class="col-4">
-                    <a href="register.html" class="button-rounded" style="text-decoration:none">I'm new.</a>
+                    <a href="{{url("sesi/register")}}" class="button-rounded" style="text-decoration:none">I'm new.</a>
                 </div>
                 <div class="col-4"></div>
             </div>

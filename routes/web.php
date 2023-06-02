@@ -15,10 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('/', MainController::class);
+
 
 Route::get("sesi", [SessionController::class, "index"]);
-Route::get("/sesi/login", [SessionController::class, "login"]);
-Route::get("/sesi/logout", [SessionController::class, "logout"]);
-Route::post("/sesi/create", [SessionController::class, "create"]);
-Route::get("/sesi/register", [SessionController::class, "register"]);
+Route::post("sesi/login", [SessionController::class, "login"]);
+Route::get("sesi/logout", [SessionController::class, "logout"]);
+Route::post("sesi/create", [SessionController::class, "create"]);
+Route::get("sesi/register", [SessionController::class, "register"]);
+
+Route::get("fitgo/{user}", [MainController::class, "index"]);
+Route::get("/", [SessionController::class, "index"]);

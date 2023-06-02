@@ -11,7 +11,7 @@ class MainController extends Controller
      */
     public function index()
     {
-        return view("front/landingPage");
+        return view("front/dashboard-main");
     }
 
     /**
