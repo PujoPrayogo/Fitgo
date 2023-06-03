@@ -48,6 +48,6 @@ class User extends Authenticatable
     ];
 
     public function user_weight_overtime(){
-        return $this->belongsToMany(user_weight_overtime::class, "user_weight_overtime")->withTimestamps();
+        return $this->hasMany(user_weight_overtime::class, "user_weight_overtime")->withTimestamps();
     }
 }

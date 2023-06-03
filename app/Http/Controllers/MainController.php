@@ -3,15 +3,44 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class MainController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($id)
     {
-        return view("front/dashboard-main");
+        $today = Carbon::now();
+        switch ($today->dayOfWeek) {
+        case Carbon::MONDAY:
+            $workout = 'Back';
+            break;
+        case Carbon::TUESDAY:
+            $workout = 'Chest';
+            break;
+        case Carbon::WEDNESDAY:
+            $workout = 'Leg';
+            break;
+        case Carbon::THURSDAY:
+            $workout = 'Rest';
+            break;
+        case Carbon::FRIDAY:
+            $workout = 'Back';
+            break;
+        case Carbon::SATURDAY:
+            $workout = 'Chest';
+            break;
+        case Carbon::SUNDAY:
+            $workout = 'Leg';
+            break;
+        default:
+            $workout = 'No workout scheduled';
+            break;
+        }
+        $Kcal = 1000;
+        return view("front/dashboard-main", compact('workout', 'Kcal'));
     }
 
     /**

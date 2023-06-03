@@ -9,11 +9,11 @@ Mamat
 @endsection
 
 @section('target-kcal')
-1200
+{{$Kcal}}
 @endsection
 
 @section('target-workout')
-Back
+{{$workout}}
 @endsection
 
 @section('daily-cal')
