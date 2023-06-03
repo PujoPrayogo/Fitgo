@@ -55,7 +55,7 @@
                                         <p class="text-white">></p>
                                     </div>
                                 </div>
-                            </div>
+                            </div>   
                         </div>
                     </div>
                 </div>
@@ -73,38 +73,4 @@
                                     </div>
                                     <div class="col-10">
                                         <p>&nbsp;Contact Us</p>
-                                    </div>
-                                    <div class="col-1">
-                                        <p class="text-white">></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="row">
-                                    <div class="col-1">
-                                        <img src="...">
-                                    </div>
-                                    <div class="col-10">
-                                        <p>&nbsp;Privacy Policy</p>
-                                    </div>
-                                    <div class="col-1">
-                                        <p class="text-white">></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-                <div class="col-6">
-
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-</body>
-
-</html>
+                                    </
