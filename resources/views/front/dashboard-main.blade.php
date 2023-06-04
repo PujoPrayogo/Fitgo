@@ -13,11 +13,11 @@ Mamat
 
                                         //DAILY GOAL (yang 2)
 @section('target-kcal')
-{{$Kcal}}
+2000
 @endsection
 
 @section('target-workout')
-{{$workout}}
+back
 @endsection
 
 

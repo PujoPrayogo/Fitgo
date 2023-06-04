@@ -26,7 +26,7 @@ class SessionController extends Controller
 
         $infologin = [
             "email" => $email,
-            "password" => $password,
+            "password" => $password
         ];
 
         $client = new Client();
@@ -67,12 +67,6 @@ class SessionController extends Controller
         $email = $request->email;
         $password = $request->password;
         $name = $request->name;
-
-        $data = [
-        'name'=> $email,
-        'email'=> $name,
-        'password'=> $password,
-    ];
 
         if($request->password == $request->confirm_password){
             return view("front/register2")->with('email', $email)->with('password', $password)->with('name', $name);
@@ -125,10 +119,6 @@ class SessionController extends Controller
             return redirect()->to('sesi')->with('success', 'Berhasil Register, Silahkan Login');
         }
 
-       
-
-
-        
     }
 
 }

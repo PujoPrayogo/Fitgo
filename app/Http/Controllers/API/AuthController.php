@@ -55,45 +55,15 @@ class AuthController extends Controller
             'password'=>$request->password
         ])){
 
-            $today = Carbon::now();
-            switch ($today->dayOfWeek) {
-            case Carbon::MONDAY:
-                $workout = 'Back';
-                break;
-            case Carbon::TUESDAY:
-                $workout = 'Chest';
-                break;
-            case Carbon::WEDNESDAY:
-                $workout = 'Leg';
-                break;
-            case Carbon::THURSDAY:
-                $workout = 'Rest';
-                break;
-            case Carbon::FRIDAY:
-                $workout = 'Back';
-                break;
-            case Carbon::SATURDAY:
-                $workout = 'Chest';
-                break;
-                case Carbon::SUNDAY:
-                $workout = 'Leg';
-                break;
-            default:
-                $workout = 'No workout scheduled';
-                break;
-            }
-
             $auth = Auth::user();
-            $user = $request->user();
-            $success['token'] = $user->createToken('auth_token')->plainTextToken;
+            // $user = $request->user();
+            // $success['token'] = $user->createToken('auth_token')->plainTextToken;
             $success['name'] = $auth->name;
             $success['email'] = $auth->email;
-            $success['bmr'] = (66.5 + ($auth->bodyweight)*13.7) + (5*($auth->height) - (6.8 * ($auth->age)));
-            $success['protein'] = (($auth->bodyweight)*0.8);
-            $success['air'] = (($auth->bodyweight)*30);
-            $success['workout'] = $workout;
-
-
+            // $success['bmr'] = (66.5 + ($auth->bodyweight)*13.7) + (5*($auth->height) - (6.8 * ($auth->age)));
+            // $success['protein'] = (($auth->bodyweight)*0.8);
+            // $success['air'] = (($auth->bodyweight)*30);
+            // $success['workout'] = $workout;
             return response()->json([
                 'status'=>true,
                 'massage'=> "login sukses",

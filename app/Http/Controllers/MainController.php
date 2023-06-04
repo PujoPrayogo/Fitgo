@@ -15,16 +15,16 @@ class MainController extends Controller
      */
     public function index()
     {
-        $client = new Client();
-        $url = "http://127.0.0.1:8001/api/user";
-        $response = $client->request('GET', $url);
-        $content = $response->getBody()->getContents();
-        $contentArray = json_decode($content, true);
-        $data = $contentArray['data'];
+        // $client = new Client();
+        // $url = "http://127.0.0.1:8001/api/user";
+        // $response = $client->request('GET', $url);
+        // $content = $response->getBody()->getContents();
+        // $contentArray = json_decode($content, true);
+        // $data = $contentArray['data'];
 
-        // return view('fitgo/{$name}', ['data'=>$data]);
+        return view('front/dashboard-main');
 
-        return $data;
+        // return $data;
 
 
 
