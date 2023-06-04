@@ -201,8 +201,8 @@
             <div class="your-goals" style="margin-top: 0.5rem;">
                 <div class="badge" style="padding-bottom: 0px; margin-top: 0px;background: var(--color-purple); box-shadow: 0 0.5rem 1.5rem rgba( 0, 0, 0, 0.1);">
                     <div class="goal">
-                        <h4 class="goal-title" style="font-size: 1.1rem; color: white; ">"I've failed over and over and over again in my life 
-                            and that is why I succeed."<br> - Mike Tyson</h4>
+                        <h4 class="goal-title" style="font-size: 1.1rem; color: white; ">"@yield('quote')"<br>
+                            - @yield('quote-speaker')</h4>
                     </div>
                 </div>
             </div>
@@ -223,6 +223,7 @@
                 <div class="recent-header">
                     <h1>Recent Activities</h1>
                 </div>
+                <div class="recent-activity-top-divider"></div>
                                         <!--===== ACTIVITY 1 =====-->
                 <div class="activity">
                     <img src="https://cdn.icon-icons.com/icons2/2796/PNG/512/drink_glass_icon_178118.png">
@@ -254,6 +255,57 @@
                     </div>
                     <div class="calories">
                         <h4>@yield('recent-calories-2') KCal</h4>
+                        <small class="danger">Added</small>
+                    </div>
+                </div>
+                                        <!--===== ACTIVITY 3 =====-->
+                <div class="activity">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4669/4669353.png">
+                    <h4>@yield('recent-activity-3')</h4>
+                    <div class="object">
+                        <p></p>
+                        <small class="text-muted">@yield('recent-activity-amount-3')</small>
+                    </div>
+                    <div class="time">
+                        <p>@yield('recent-time-3')</p>
+                        <small class="text-muted">23/5</small>
+                    </div>
+                    <div class="calories">
+                        <h4>@yield('recent-calories-3') KCal</h4>
+                        <small class="danger">Added</small>
+                    </div>
+                </div>
+                                        <!--===== ACTIVITY 4 =====-->
+                <div class="activity">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4669/4669353.png">
+                    <h4>@yield('recent-activity-4')</h4>
+                    <div class="object">
+                        <p></p>
+                        <small class="text-muted">@yield('recent-activity-amount-4')</small>
+                    </div>
+                    <div class="time">
+                        <p>@yield('recent-time-4')</p>
+                        <small class="text-muted">23/5</small>
+                    </div>
+                    <div class="calories">
+                        <h4>@yield('recent-calories-4') KCal</h4>
+                        <small class="danger">Added</small>
+                    </div>
+                </div>
+                                        <!--===== ACTIVITY 5 =====-->
+                <div class="activity">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4669/4669353.png">
+                    <h4>@yield('recent-activity-5')</h4>
+                    <div class="object">
+                        <p></p>
+                        <small class="text-muted">@yield('recent-activity-amount-5')</small>
+                    </div>
+                    <div class="time">
+                        <p>@yield('recent-time-5')</p>
+                        <small class="text-muted">23/5</small>
+                    </div>
+                    <div class="calories">
+                        <h4>@yield('recent-calories-5') KCal</h4>
                         <small class="danger">Added</small>
                     </div>
                 </div>
