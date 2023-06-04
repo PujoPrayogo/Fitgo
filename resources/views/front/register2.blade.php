@@ -11,7 +11,10 @@
     <title>Fitgo</title>
 </head>
 
+
+
 <body>
+    
     <nav class="navbar navbar-expand-lg bg-dark navbar-fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand text-white fw-bold" href="landingPage.html" id="WebNavBrand" style="font-size: 27px;">FITGO</a>
@@ -30,8 +33,8 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <a class="nav-link active text-white" href="login.html">Login</a>
-                    <a class="btn btn-outline-primary text-white" href="register.html">Register</a>
+                    <a class="nav-link active text-white" href="{{'sesi'}}">Login</a>
+                    <a class="btn btn-outline-primary text-white" href="{{'sesi/register'}}">Register</a>
                 </form>
             </div>
         </div>
@@ -46,9 +49,14 @@
             <div class="row">
                 <div class="col-4"></div>
                 <div class="col-4">
+                    
                     <div class="container rounded-2" style="background-color:black;padding-top: 5vh;  padding-bottom:25px; opacity: 0.8;">
                         <div>
-                        <form>
+                        <form action="create" method="POST">
+                        @csrf
+                        <input type="hidden" name="email" value="{{$email}}">
+                        <input type="hidden" name="password" value="{{$password}}">
+                        <input type="hidden" name="name" value="{{$name}}">
                             <div class="mb-3">
                                 <input type="number" class="formStyle" placeholder="Weight (Kg)" id="exampleInputWeight1" name='weight'>
                             </div>
@@ -61,8 +69,11 @@
                             <div class="mb-3">
                                 <input type="number" class="formStyle" placeholder="Age" id="exampleInputAge1" name='age'>
                             </div>
+                            <div class="mb-3">
+                                <input type="number" class="formStyle" placeholder="bodygoals" id="exampleInputAge1" name='bodygoals'>
+                            </div>
                             <center>
-                            <div class="dropdown" style="padding-bottom: 5%;">
+                            {{-- <div class="dropdown" style="padding-bottom: 5%;">
                                 <div class="styled-select">
                                     <select id="select" name="select" placeholder="Tech">
                                     <option value=""><center>Body Goal</center></option>
@@ -72,7 +83,8 @@
                                     <option value=""><center></center></option>
                                     </select>
                                 </div>
-                            </div>
+                            </div> --}}
+                           
                             </center>
                                 <!-- <div class="box" aria-haspopup="true">
                                     <button id="btn-dropdown" class="btn-dropdown">Body Goal</button>
@@ -87,7 +99,9 @@
                             
                             
                             
-                            <a href="register2.html" class="button-rounded2" style="text-decoration:none">Continue</a>
+                            <button name="submit" type="submit" class="btn btn-primary">
+                                Register
+                            </button>
                         </form>
                     </div>
                 </div>

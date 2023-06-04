@@ -2,45 +2,32 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\user_weight_overtime;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Auth;
 
 class MainController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index($id)
+    public function index()
     {
-        $today = Carbon::now();
-        switch ($today->dayOfWeek) {
-        case Carbon::MONDAY:
-            $workout = 'Back';
-            break;
-        case Carbon::TUESDAY:
-            $workout = 'Chest';
-            break;
-        case Carbon::WEDNESDAY:
-            $workout = 'Leg';
-            break;
-        case Carbon::THURSDAY:
-            $workout = 'Rest';
-            break;
-        case Carbon::FRIDAY:
-            $workout = 'Back';
-            break;
-        case Carbon::SATURDAY:
-            $workout = 'Chest';
-            break;
-        case Carbon::SUNDAY:
-            $workout = 'Leg';
-            break;
-        default:
-            $workout = 'No workout scheduled';
-            break;
-        }
-        $Kcal = 1000;
-        return view("front/dashboard-main", compact('workout', 'Kcal'));
+        $client = new Client();
+        $url = "http://127.0.0.1:8001/api/user";
+        $response = $client->request('GET', $url);
+        $content = $response->getBody()->getContents();
+        $contentArray = json_decode($content, true);
+        $data = $contentArray['data'];
+
+        // return view('fitgo/{$name}', ['data'=>$data]);
+
+        return $data;
+
+
+
     }
 
     /**

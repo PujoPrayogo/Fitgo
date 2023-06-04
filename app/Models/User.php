@@ -50,4 +50,8 @@ class User extends Authenticatable
     public function user_weight_overtime(){
         return $this->hasMany(user_weight_overtime::class, "user_weight_overtime")->withTimestamps();
     }
+
+    public function daily_activities(){
+        return $this->hasMany(daily_activities::class, "daily_activities")->withTimestamps();
+    }
 }

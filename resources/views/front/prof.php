@@ -73,4 +73,5 @@
                                     </div>
                                     <div class="col-10">
                                         <p>&nbsp;Contact Us</p>
-                                    </
+                                    </div>  
+</body>

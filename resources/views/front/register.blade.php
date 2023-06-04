@@ -12,6 +12,19 @@
 </head>
 
 <body>
+
+    @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $item)
+                        <li>{{$item}}</li>
+                    @endforeach
+                </ul>
+            </div>
+                
+    @endif
+    
+    
     <nav class="navbar navbar-expand-lg bg-dark navbar-fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand text-white fw-bold" href="landingPage.html" id="WebNavBrand" style="font-size: 27px;">FITGO</a>
@@ -30,12 +43,14 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <a class="nav-link active text-white" href="login.html">Login</a>
-                    <a class="btn btn-outline-primary text-white" href="register.html">Register</a>
+                    <a class="nav-link active text-white" href="{{'sesi'}}">Login</a>
+                    <a class="btn btn-outline-primary text-white" href="{{'sesi/register'}}">Register</a>
                 </form>
             </div>
         </div>
     </nav>
+    
+    
     <div class="container-fluid hero" style="background-image: url('https://wallpapercave.com/wp/wp4250294.jpg');">
         <div class="container" >
             <div class="row">
@@ -48,22 +63,23 @@
                 <div class="col-4">
                     <div class="container rounded-2" style="background-color:black;padding-top: 5vh;  padding-bottom:25px; opacity: 0.8;">
                         <div>
-                        <form>
+                        <form action='/sesi/register_continue' method="post">
+                            @csrf
                             <div class="mb-3">
-                                <input type="text" class="formStyle" placeholder="Username" id="exampleInputUsername1" name='name'>
+                                <input type="text" class="formStyle" placeholder="Username" id="name" name='name'>
                             </div>
                             <div class="mb-3">
-                                <input type="email" class="formStyle" placeholder="Email"id="exampleInputEmail1" name= 'email'>
+                                <input type="email" class="formStyle" placeholder="Email"id="email" name= 'email'>
                             </div>
                             <div class="mb-3">
-                                <input type="password" class="formStyle" placeholder="Password" id="exampleInputPassword1" name='password'>
+                                <input type="password" class="formStyle" placeholder="Password" id="password" name='password'>
                             </div>
                             <div class="mb-3">
-                                <input type="password" class="formStyle" placeholder="Confirm Password" id="exampleInputConfirmPassword1" name='confirm_password'>
+                                <input type="password" class="formStyle" placeholder="Confirm Password" id="confirm_password" name='confirm_password'>
                             </div>
                             
                             
-                            <a href="register2.html" class="button-rounded2" style="text-decoration:none">Continue</a>
+                            <button name="submit" type="submit" class="btn btn-primary">continue</button>
                         </form>
                     </div>
                 </div>

@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Session;
 
 class SessionController extends Controller
 {
+
     function index(){
         
         return view("front/login");
@@ -57,66 +58,40 @@ class SessionController extends Controller
     }
 
     function register(){
-        return view("front/register2");
+        return view("front/register");
     }
 
-    function create(Request $request){
-    //     Session::flash('email', $request->email);
-    //     Session::flash('name', $request->name);
-    //     Session::flash('age', $request->age);
-    //     Session::flash('bodyweight', $request->bodyweight);
-    //     Session::flash('height', $request->height);
-    //     $request->validate([
-    //         'name' => 'required',
-    //         'email'=>'required|email|unique:users',
-    //         'age'=>'required',
-    //         'bodyweight'=>'required',
-    //         'height'=>'required',
-    //         "password" => 'required|min:6',
-    //     ],[
-    //         'name.required'=>'nama perlu diisi',
-    //         'email.required'=>'email perlu diisi',
-    //         'email.email' => 'silahkan masukkan email yang valid',
-    //         'email.unique' => 'email sudah pernah digunakan silahkan pilih email yang lain',
-    //         'age.required'=>'umur perlu diisi',
-    //         'bodyweight.required'=>'berat badan perlu diisi',
-    //         'height.required'=>'tinggi badan perlu diisi',
-    //         "password.required" => 'password perlu diisi',
-    //         'password.min' => "minimal karaketer password adalah 6 karakter"
-    //     ]
-    // );
 
-    // $data = [
-    //     'name'=>$request->name,
-    //     'email'=>$request->email,
-    //     'age'=>$request->email,
-    //     'bodyweight'=>$request->email,
-    //     'height'=>$request->email,
-    //     'password'=>Hash::make($request->password),
+    function register_continue(Request $request){
 
-    // ];
-
-    // User::create($data);
-
-    // $infologin = [
-    //     "email" => $request->email,
-    //     "password" => $request->password,
-    // ];
-
-    // if(Auth::attempt($infologin)){
-    //     return redirect("landingPage")->with("success", Auth::user()->name."berhasil login");
-    // }else{
-    //     return redirect("sesi")->withErrors("username dan password yang dimasukan tidak valid");
-    // }
         $email = $request->email;
         $password = $request->password;
         $name = $request->name;
-        $confirm_password = $request->password;
+
+        $data = [
+        'name'=> $email,
+        'email'=> $name,
+        'password'=> $password,
+    ];
+
+        if($request->password == $request->confirm_password){
+            return view("front/register2")->with('email', $email)->with('password', $password)->with('name', $name);
+
+        }else{
+            return redirect('sesi/register')->with('fail', 'Silahkan masukkan ulang password');
+        }
+        
+    }
+
+    function create(Request $request){
+        $email = $request->email;
+        $password = $request->password;
+        $name =  $request->name;
         $weight = $request->weight;
         $height = $request->height;
         $gender = $request->gender;
         $age = $request->age;
-        $body_goals = $request->select;
+        $body_goals = $request->bodygoals;
 
         $infoRegister = [
             "name" => $name, 
@@ -147,12 +122,13 @@ class SessionController extends Controller
 
         } else{
             print_r($contentArray);
-            return redirect()->to('sesi/login')->with('success', 'Berhasil Register, Silahkan Login');
+            return redirect()->to('sesi')->with('success', 'Berhasil Register, Silahkan Login');
         }
+
+       
 
 
         
-
     }
 
 }
