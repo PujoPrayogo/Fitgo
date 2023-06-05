@@ -46,11 +46,11 @@
         
                                 <!--========== MIDDLE ==========-->
         <section class="middle">
-            <nav >
+            <nav>
                 <div class="container">
                     <div class="profile-area">
                         <div class="greetings-title">
-                            Welcome back,<span class="greetings-name">@yield('profile-name').</span>
+                            Welcome back,<span class="greetings-name" style="text-transform: capitalize">@yield('profile-name').</span>
                         </div>
                         <div class="profile">
                             <div class="profile-photo">
@@ -148,7 +148,7 @@
             <div class="daily-intake">
                                 <!-- CALORIES -->
                 <div class="goal">
-                    <h2>@yield('daily-cal')</h2>
+                    <h2>@yield('daily-cal')kcal</h2>
                     <h5>Calories</h5>
                 </div>
 
@@ -218,7 +218,7 @@
                     <div class="center">
                         <input type="checkbox" id="show2">
                         <label for="show2" class="show-btn2">
-                            <canvas id="chart" style="width: 1029px; height:300px">
+                            <canvas id="chart" onclick="toggleMenu()" style="width: 1029px; height:300px">
                             </canvas>
                         </label>
                         <div class="update-container2">
@@ -236,17 +236,21 @@
                             </div>
                         </form>
                         </div>
+                        <div class="weight-update-container" id="subMenu">
+                            <form action="#" class="weight-update-form">
+                                <div class="data">
+                                    <label for="update-weight" class="text-question">Current Weight (Kg)</label>
+                                    <input type="text" id="update-weight" name="update-weight">
+                                </div>
+                                <div class="btn">
+                                    <div class="inner"></div>
+                                    <button type="submit">Update</button>
+                                </div>
+                            </form>
+                        </div>
+                
                     </div>
 
-                    <div class="weight-update-container">
-                        <form action="#" class="weight-update-form">
-                            <div class="data">
-                                <label for="update-weight" class="text-question">Current Weight</label>
-                                <input type="text" id="update-weight" name="update-weight">
-                            </div>
-                        </form>
-                    </div>
-            
                                     <!--========== RECENT ACTIVITIES ==========-->
             <div class="recent-activities">
                 <div class="recent-header">
@@ -288,6 +292,13 @@
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+
+        let subMenu = document.getElementById("subMenu");
+
+        function toggleMenu(){
+            subMenu.classList.toggle("open-menu");
+        }
+
         const chart = document.querySelector("#chart").getContext('2d');
     
         // CREATE NEW CHART INSTANCE
