@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\IntakeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -34,3 +35,5 @@ Route::get("fitgo/{user}", [MainController::class, "index"]);
 
 
 
+//INTAKE CONTROLLER
+Route::get("fitgo/intake/{user}", [IntakeController::class, "index"]);
