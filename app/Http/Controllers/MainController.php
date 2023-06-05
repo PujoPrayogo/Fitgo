@@ -28,6 +28,7 @@ class MainController extends Controller
         $id = $data->id;
 
         $data_activity = daily_activities::where("user_id", $id)->orderBy('time', 'desc')->get();
+        $data_weight = user_weight_overtime::where("user_id", $id)->orderBy('created_at', 'desc')->get();
         $kcalsum = daily_activities::where("user_id", $id)->sum('kcal');
 
         
@@ -56,7 +57,7 @@ class MainController extends Controller
             'bmi'=> $bmi,
         ];
 
-        return view('front/dashboard-main', ['data'=> $data], ['data_activity'=> $data_activity]);
+        return view('front/dashboard-main', ['data'=> $data], ['data_activity'=> $data_activity], ['data_weight'=> $data_weight]);
         }else{
             return "not authorized";
         }
