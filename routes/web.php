@@ -21,7 +21,6 @@ use Illuminate\Support\Facades\Auth;
 
 //SESSION CONTROLLER
 Route::get("/", [SessionController::class, "index"]);
-Route::get("sesi", [SessionController::class, "index"]);
 Route::get("sesi/register", [SessionController::class, "register"]);
 Route::post("sesi/register_continue", [SessionController::class, "register_continue"]);
 
@@ -30,9 +29,9 @@ Route::post("sesi/create", [SessionController::class, "create"]);
 Route::post("login", [SessionController::class, "login"]);
 
 //MAIN CONTROLLER
-Route::get("fitgo/{user}", [MainController::class, "index"]);
-
-
+Route::get("fitgo/{token}", [MainController::class, "index"])-> middleware('auth:sanctum');
+Route::post("fitgo/{token}", [MainController::class, "create"])-> middleware('auth:sanctum');
+Route::delete('fitgo/{id}', [MainController::class, "destroy"])-> middleware('auth:sanctum');
 
 
 //INTAKE CONTROLLER

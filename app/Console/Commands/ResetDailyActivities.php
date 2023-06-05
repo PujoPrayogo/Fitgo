@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Models\daily_activities;
 use Illuminate\Console\Command;
 
 class ResetDailyActivities extends Command
@@ -11,14 +12,14 @@ class ResetDailyActivities extends Command
      *
      * @var string
      */
-    protected $signature = 'app:reset-daily-activities';
-
+    // protected $signature = 'app:reset-daily-activities';
+    protected $signature = 'activities:reset';
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Reset daily activities';
 
     /**
      * Execute the console command.
@@ -26,5 +27,8 @@ class ResetDailyActivities extends Command
     public function handle()
     {
         //
+        daily_activities::whereDate('created_at', '<', now()->startOfDay())->delete();
+
+        $this->info('Daily activities have been reset.');
     }
 }

@@ -29,6 +29,8 @@ class SessionController extends Controller
             "password" => $password
         ];
 
+    if (Auth::attempt($infologin)){
+
         $client = new Client();
         $url = "http://127.0.0.1:8000/api/login";
         $response = $client->request('POST', $url, [
@@ -42,19 +44,23 @@ class SessionController extends Controller
             $error = $contentArray['massage'];
             print_r($contentArray);
 
-            return redirect()->to('sesi')->withErrors($error)->withInput();
+            return redirect()->to('/')->withErrors($error)->withInput();
 
         } else{
             print_r($contentArray);
-            $token = $contentArray['data']['token'];
-            return redirect()->to('fitgo/'.$token)->with('success', 'Berhasil Login');
+            $user_data = Auth::user();
+            $name = $user_data->name;
+            return redirect()->to('fitgo/'.$name)->with('success', 'Berhasil Login');
         }
+    }else{
+        return redirect()->to('/');
+    }
 
     }
 
     function logout(){
         Auth::logout();
-        return redirect("sesi")->with("success", "berhasil logout");
+        return redirect("/")->with("success", "berhasil logout");
     }
 
     function register(){
@@ -116,7 +122,7 @@ class SessionController extends Controller
 
         } else{
             print_r($contentArray);
-            return redirect()->to('sesi')->with('success', 'Berhasil Register, Silahkan Login');
+            return redirect()->to('/')->with('success', 'Berhasil Register, Silahkan Login');
         }
 
     }
