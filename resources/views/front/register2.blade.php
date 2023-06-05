@@ -369,10 +369,10 @@
                             <center>
                             <div class="dropdown" style="padding-bottom: 5%;">
                                 <div class="styled-select">
-                                    <select id="select" name="select" placeholder="Gender">
+                                    <select id="select" name="gender" placeholder="Gender">
                                     <option value=""><center>Gender</center></option>
-                                    <option value="" name="male"><center>Male</center></option>
-                                    <option value="" name="female"><center>Female</center></option>
+                                    <option value="Male" name="gender"><center>Male</center></option>
+                                    <option value="Female" name="gender"><center>Female</center></option>
                                     </select>
                                 </div>
                             </div>
@@ -386,10 +386,10 @@
                             <center>
                             <div class="dropdown" style="padding-bottom: 5%;">
                                 <div class="styled-select">
-                                    <select id="select" name="select" placeholder="Body-Goals">
+                                    <select id="select" name="bodygoals" placeholder="Body-Goals">
                                     <option value=""><center>Body Goal</center></option>
-                                    <option value="" id="goal" name="gain-weight"><center>Gain Weight</center></option>
-                                    <option value="" id="goal" name="lose-weight"><center>Lose Weight</center></option>
+                                    <option value="Gain Weight" id="goal" name="bodygoals"><center>Gain Weight</center></option>
+                                    <option value="Lose Weight" id="goal" name="bodygoals"><center>Lose Weight</center></option>
                                     </select>
                                 </div>
                             </div>
