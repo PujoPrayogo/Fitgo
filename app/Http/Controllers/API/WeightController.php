@@ -33,11 +33,8 @@ class WeightController extends Controller
      */
     public function store(Request $request)
     {
-        try {
-        
-   
-        $user = Auth::user();
-        $data = new user_weight_overtime;
+
+        $data_weight = new user_weight_overtime();
 
         $rules = [
             'weight_atm'=> "required",
@@ -52,19 +49,16 @@ class WeightController extends Controller
             ]);
         }
 
+        $data_weight->weight_atm = $request->weight_atm;
+        $data_weight->user_id = $request->user_id;
 
-        $data->user_id = $user->id;
-        $data->weight_atm = $request->weight_atm;
-
-        $post = $data->save();
+        $post =  $data_weight->save();
 
         return response()->json([
             'status' => true,
             'massage'=> 'sukses memasukkan data'
         ]);
-    }catch(Exception $e){
-        return $user->id;
-    }
+    
     }
 
     /**
@@ -80,7 +74,37 @@ class WeightController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data_weight = user_weight_overtime::find($id);
+
+        if(empty($data_weight)){
+            return response()->json([
+                'status'=>false,
+                'massage'=>'data tidak ditemukan'
+            ]);
+        }
+
+        $rules = [
+            'weight_atm'=> "required",
+        ];
+
+        $validator = Validator::make($request->all(), $rules);
+        if ($validator->fails()) {
+            return response()->json([
+                "status"=>false,
+                'massage'=>'gagal update data',
+                'data'=> $validator->errors()
+            ], 400);
+        }
+
+        $data_weight->weight_atm = $request->weight_atm;
+        $data_weight->user_id = $request->user_id;
+       
+        $post = $data_weight->save();
+
+        return response()->json([
+            'status' => true,
+            'massage'=> 'sukses update data'
+        ]);
     }
 
     /**

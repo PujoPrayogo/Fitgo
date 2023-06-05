@@ -148,7 +148,7 @@
             <div class="daily-intake">
                                 <!-- CALORIES -->
                 <div class="goal">
-                    <h2>@yield('daily-cal')kcal</h2>
+                    <h2>@yield('daily-cal')</h2>
                     <h5>Calories</h5>
                 </div>
 
