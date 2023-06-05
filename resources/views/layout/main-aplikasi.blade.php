@@ -215,8 +215,28 @@
         <section class="right">
                     <!--========== WEIGHT CHART ==========-->
             
-            <canvas id="chart">
-            </canvas>
+                    <div class="center">
+                        <input type="checkbox" id="show2">
+                        <label for="show2" class="show-btn2">
+                            <canvas id="chart" style="width: 1029px; height:513px">
+                            </canvas>
+                        </label>
+                        <div class="update-container2">
+                            <label for="show2" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
+                        <div class="text text">Update Weight</div>
+                        <form action="{token}" method='POST'>
+                        @csrf
+                            <div class="data">
+                                <label for="update-activity" class="text-question">Update Weight</label>
+                                <input type="number" id="update-weight" name="activity_weight">
+                            </div>
+                            <div class="btn">
+                                <div class="inner"></div>
+                                <button type="submit">Update</button>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
             
                                     <!--========== RECENT ACTIVITIES ==========-->
             <div class="recent-activities">
