@@ -39,9 +39,7 @@
 <body>
     <div class="container">
         <div class="profile-picture">
-            <a href="@yield('profile-picture')">
-                <img src="@yield('profile-picture')" alt="Profile Picture" width="200">
-            </a>
+            <img src="@yield('profile-picture')" alt="Profile Picture" width="200">
         </div>
         <div class="username">
             @yield('username')
