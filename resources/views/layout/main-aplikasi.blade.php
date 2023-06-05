@@ -185,7 +185,7 @@
                 <div class="badge goals-card">
                     <div class="goal">
                         <span class="material-icons-sharp">scale</span>
-                        <h3 class="goal-title">@yield('your-goals-weight-type') @yield('your-goals-weight-amount')</h3>
+                        <h3 class="goal-title">@yield('your-goals-weight-type') @yield('your-goals-weight-amount')Kg</h3>
                     </div>
                 </div>
                 <!-- BADGE -->
