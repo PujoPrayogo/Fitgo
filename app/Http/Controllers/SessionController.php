@@ -42,12 +42,12 @@ class SessionController extends Controller
             $error = $contentArray['massage'];
             print_r($contentArray);
 
-            return redirect()->to('sesi/login')->withErrors($error)->withInput();
+            return redirect()->to('sesi')->withErrors($error)->withInput();
 
         } else{
             print_r($contentArray);
-            $user = $contentArray['data']['name'];
-            return redirect()->to('fitgo/'.$user)->with('success', 'Berhasil Login');
+            $token = $contentArray['data']['token'];
+            return redirect()->to('fitgo/'.$token)->with('success', 'Berhasil Login');
         }
 
     }

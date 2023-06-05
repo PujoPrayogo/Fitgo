@@ -6,25 +6,30 @@ use App\Models\user_weight_overtime;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use GuzzleHttp\Client;
+use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
+use Psr\Http\Message\RequestInterface;
 
 class MainController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request, $token)
     {
-        // $client = new Client();
-        // $url = "http://127.0.0.1:8001/api/user";
-        // $response = $client->request('GET', $url);
-        // $content = $response->getBody()->getContents();
-        // $contentArray = json_decode($content, true);
-        // $data = $contentArray['data'];
+        
+        $client = new Client();
+        $user_token = $token;
+        $response = $client->request('GET', 'http://127.0.0.1:8000/api/user', [
+            'headers' => [
+                'Authorization' => 'Bearer ' . $user_token,
+                'Accept' => 'application/json',
+            ],
+        ]);
+        $data = json_decode($response->getBody(), true);
 
-        return view('front/dashboard-main');
-
-        // return $data;
+        return response()->json($data);
 
 
 

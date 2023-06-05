@@ -56,14 +56,10 @@ class AuthController extends Controller
         ])){
 
             $auth = Auth::user();
-            // $user = $request->user();
-            // $success['token'] = $user->createToken('auth_token')->plainTextToken;
+            $user = $request->user();
+            $success['token'] = $user->createToken('auth-sanctum')->plainTextToken;
             $success['name'] = $auth->name;
             $success['email'] = $auth->email;
-            // $success['bmr'] = (66.5 + ($auth->bodyweight)*13.7) + (5*($auth->height) - (6.8 * ($auth->age)));
-            // $success['protein'] = (($auth->bodyweight)*0.8);
-            // $success['air'] = (($auth->bodyweight)*30);
-            // $success['workout'] = $workout;
             return response()->json([
                 'status'=>true,
                 'massage'=> "login sukses",
@@ -77,6 +73,25 @@ class AuthController extends Controller
                 'massage'=> "login gagal",
                 'data' => null
             ]);
+        }
+    }
+
+    public function logout(Request $request){
+        dd($request->user());
+    }
+
+    public function userDetails(Request $request)
+    {
+
+        $user = $request->user();
+
+        if (Auth::sanctum()->checkToken($request)) {
+
+            $userDetails = $user->only('name', 'email');
+
+            return response()->json($userDetails);
+        } else {
+            return response()->json(['error' => 'Unauthorized'], 401);
         }
     }
 }

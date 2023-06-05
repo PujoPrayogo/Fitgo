@@ -48,7 +48,7 @@
                 <div class="col-4">
                     <div class="container rounded-2" style="background-color:black;padding-top: 5vh; padding-bottom: 5vh; opacity: 0.8;">
                         <div>
-                            <form action="sesi/login" method = "POST">
+                            <form action="login" method = "POST">
                             @csrf
                               <input type="email" name="email" class="formStyle" placeholder="Email" required />
                               <input type="password" name="password" class="formStyle" placeholder="Password" required />
