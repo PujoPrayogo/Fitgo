@@ -10,5 +10,5 @@ class daily_activities extends Model
     use HasFactory;
 
     protected $table = "daily_activities";
-    protected $fillable = ["activity_name", "activity_amount", "time","kcal"];
+    protected $fillable = ["user_id", "activity_name", "activity_amount", "time","kcal"];
 }

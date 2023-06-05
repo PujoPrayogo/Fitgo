@@ -53,7 +53,6 @@
                               <input type="email" name="email" class="formStyle" placeholder="Email" required />
                               <input type="password" name="password" class="formStyle" placeholder="Password" required />
                               <button class="block">LOGIN</button>
-                              <!-- <a href="#" class="formButton">Subscribe</a> -->
                             </form>
                         </div>
                         <!-- <form>

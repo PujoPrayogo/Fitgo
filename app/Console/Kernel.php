@@ -7,13 +7,18 @@ use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
 class Kernel extends ConsoleKernel
 {
+    // protected $commands = [
+    // ResetDailyActivities::class,
+    // ];
     /**
      * Define the application's command schedule.
      */
     protected function schedule(Schedule $schedule): void
     {
         // $schedule->command('inspire')->hourly();
+        // $schedule->command('activities:reset')->dailyAt('00:00');
     }
+    
 
     /**
      * Register the commands for the application.

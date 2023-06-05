@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\AuthController;
+use App\Http\Controllers\Api\RecentActivitiesController;
 use App\Http\Controllers\API\WeightController;
 use App\Http\Controllers\MainController;
 use Illuminate\Http\Request;
@@ -28,4 +29,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('login', [AuthController::class, 'login']);
 Route::post('register', [AuthController::class, 'register']);
 Route::post('insert_weight', [WeightController::class, 'store']);
-Route::get('user_details', [AuthController::class, "userDetails"]);
+
+
+Route::post('store', [RecentActivitiesController::class, 'store']);
+Route::delete('delete/{id}', [RecentActivitiesController::class, 'destroy']);

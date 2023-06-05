@@ -74,14 +74,15 @@
                     <div class="update-container">
                         <label for="show" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
                         <div class="text text">Update</div>
-                        <form action="#">
+                        <form action="{token}" method='POST'>
+                        @csrf
                             <div class="data">
                                 <label for="update-activity" class="text-question">Activity</label>
-                                <input type="text" id="update-activity" name="update-activity">
+                                <input type="text" id="update-activity" name="activity_name">
                             </div>
                             <div class="data">
                                 <label for="activity-amount" class="text-question">Activity Amount:</label>
-                                <input type="text" id="activity-amount" name="activity-amount"><br>
+                                <input type="text" id="activity-amount" name="activity_amount"><br>
                             </div>  
                             <div class="data">
                                 <label for="time" class="text-question">Time:</label>
@@ -89,7 +90,7 @@
                             </div>
                             <div class="data">
                                 <label for="update-calorie" class="text-question">Calories</label>
-                                <input type="text" id="update-calorie">
+                                <input type="text" id="kcal" name="kcal">
                             </div>
                             <div class="btn">
                                 <div class="inner"></div>
@@ -162,7 +163,7 @@
                 <!-- WATER -->
                 <div class="goal">
                     <div>
-                        <h2>@yield('daily-intake-water')L</h2>
+                        <h2>@yield('daily-intake-water') L</h2>
                         <h5>Water</h5>
                     </div>
                 </div>
@@ -170,8 +171,8 @@
                 <!-- SLEEP -->
                 <div class="goal">
                     <div>
-                        <h2>6 Hours</h2>
-                        <h5>Sleep</h5>
+                        <h2>@yield('BMI')</h2>
+                        <h5>BMI</h5>
                     </div>
                 </div>
             </div>
@@ -184,7 +185,7 @@
                 <div class="badge goals-card">
                     <div class="goal">
                         <span class="material-icons-sharp">scale</span>
-                        <h3 class="goal-title">@yield('your-goals-weight-type') @yield('your-goals-weight-amount')kg</h3>
+                        <h3 class="goal-title">@yield('your-goals-weight-type') @yield('your-goals-weight-amount')</h3>
                     </div>
                 </div>
                 <!-- BADGE -->
@@ -224,90 +225,35 @@
                 </div>
                 <div class="recent-activity-top-divider"></div>
                                         <!--===== ACTIVITY 1 =====-->
+                @foreach ($data_activity as $item)
                 <div class="activity">
-                    <img src="https://cdn.icon-icons.com/icons2/2796/PNG/512/drink_glass_icon_178118.png">
-                    <h4>@yield('recent-activity-1')</h4>
+                    {{-- <img src="https://cdn.icon-icons.com/icons2/2796/PNG/512/drink_glass_icon_178118.png"> --}}
+                    <h4>{{$item->activity_name}}</h4>
                     <div class="object">
                         <p></p>
-                        <small class="text-muted">@yield('recent-activity-amount-1')</small>
+                        <small class="text-muted">{{$item->activity_amount}}</small>
                     </div>
                     <div class="time">
-                        <p>@yield('recent-time-1')</p>
-                        <small class="text-muted">23/5</small>
+                        <p>{{$item->time}}</p>
                     </div>
                     <div class="calories">
-                        <h4 class="success">@yield('recent-calories-1') KCal</h4>
+                        <h4 class="success">{{$item->kcal}} KCal</h4>
                         <small class="success"></small>
                     </div>
-                </div>
-                                        <!--===== ACTIVITY 2 =====-->
-                <div class="activity">
-                    <img src="https://cdn-icons-png.flaticon.com/512/4669/4669353.png">
-                    <h4>@yield('recent-activity-2')</h4>
-                    <div class="object">
-                        <p></p>
-                        <small class="text-muted">@yield('recent-activity-amount-2')</small>
+                    <div>
+                        <form action="{{url('fitgo/'.$item->id)}}" 
+                            method="post" 
+                            onsubmit="return confirm('apakah yakin akan menghapus data?')"
+                            class="d-inline">
+                            @csrf
+                            @method('delete')
+                        <button type="submit" name="submit" class="btn btn-danger btn-sm">Del</button>
+                        </form>
                     </div>
-                    <div class="time">
-                        <p>@yield('recent-time-2')</p>
-                        <small class="text-muted">23/5</small>
-                    </div>
-                    <div class="calories">
-                        <h4>@yield('recent-calories-2') KCal</h4>
-                        <small class="danger">Added</small>
-                    </div>
-                </div>
-                                        <!--===== ACTIVITY 3 =====-->
-                <div class="activity">
-                    <img src="https://cdn-icons-png.flaticon.com/512/4669/4669353.png">
-                    <h4>@yield('recent-activity-3')</h4>
-                    <div class="object">
-                        <p></p>
-                        <small class="text-muted">@yield('recent-activity-amount-3')</small>
-                    </div>
-                    <div class="time">
-                        <p>@yield('recent-time-3')</p>
-                        <small class="text-muted">23/5</small>
-                    </div>
-                    <div class="calories">
-                        <h4>@yield('recent-calories-3') KCal</h4>
-                        <small class="danger">Added</small>
-                    </div>
-                </div>
-                                        <!--===== ACTIVITY 4 =====-->
-                <div class="activity">
-                    <img src="https://cdn-icons-png.flaticon.com/512/4669/4669353.png">
-                    <h4>@yield('recent-activity-4')</h4>
-                    <div class="object">
-                        <p></p>
-                        <small class="text-muted">@yield('recent-activity-amount-4')</small>
-                    </div>
-                    <div class="time">
-                        <p>@yield('recent-time-4')</p>
-                        <small class="text-muted">23/5</small>
-                    </div>
-                    <div class="calories">
-                        <h4>@yield('recent-calories-4') KCal</h4>
-                        <small class="danger">Added</small>
-                    </div>
-                </div>
-                                        <!--===== ACTIVITY 5 =====-->
-                <div class="activity">
-                    <img src="https://cdn-icons-png.flaticon.com/512/4669/4669353.png">
-                    <h4>@yield('recent-activity-5')</h4>
-                    <div class="object">
-                        <p></p>
-                        <small class="text-muted">@yield('recent-activity-amount-5')</small>
-                    </div>
-                    <div class="time">
-                        <p>@yield('recent-time-5')</p>
-                        <small class="text-muted">23/5</small>
-                    </div>
-                    <div class="calories">
-                        <h4>@yield('recent-calories-5') KCal</h4>
-                        <small class="danger">Added</small>
-                    </div>
-                </div>
+                </div>  
+                @endforeach
+                
+               
             </div>
         </section>
     </main>

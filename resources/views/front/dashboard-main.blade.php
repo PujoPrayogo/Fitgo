@@ -22,7 +22,7 @@ https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280
 
 
 @section('daily-intake-water')
-
+{{$data['water']}}
 @endsection
 
 
@@ -40,11 +40,21 @@ https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280
 
                                         <!--YOUR GOALS-->
 @section('your-goals-weight-type')
-Lose
+
 @endsection
 
 @section('your-goals-weight-amount')
-{{$data['weight_change']}}
+<?php 
+    $weight_change = '';
+    if($data['weight_change'] == 0){
+        $weight_change = "Maintain Your Weight!";
+    }elseif ($data['weight_change'] <  0) {
+        $weight_change = "Lose ".abs($data['weight_change']);
+    }elseif($data['weight_change'] >  0){
+        $weight_change = "Gain ".$data['weight_change'];
+    }
+?>
+{{$weight_change}}
 @endsection
 
 @section('your-goals-weight-percentage')
@@ -57,6 +67,10 @@ Lose
 
 @section('workouts-perweek')
 4
+@endsection
+
+@section('BMI')
+    {{number_format($data['bmi'], 1)}}
 @endsection
 
                                         <!--QUOTE-->
