@@ -31,14 +31,14 @@
                             <span class="material-icons-outlined">close</span>
                         </button>
                         <div class="sidebar">
-                            <a href="#" class="active">
+                            <a href="/" class="active">
                                 <span class="material-icons-outlined">home</span>
                             </a>
-                            <a href="#">
+                            <a href="/fitgo/intake/{user}">
                                 <span class="material-icons-outlined">fitness_center</span>
                             </a>
                             <a href="#">
-                                <span class="material-icons-outlined">tune</span>
+                                <span class="material-icons-outlined">person</span>
                             </a>
                     </aside>
                 </div>
@@ -130,7 +130,7 @@
                         
                     </div>
                     <div class="middle">
-                        <h1 style="font-size: 2.5rem;">@yield('target-workout')</h1>
+                        <h1 style="font-size: 2.5rem;text-transform: capitalize;">@yield('target-workout')</h1>
                         
                     </div>
                     <div class="bottom">
@@ -178,22 +178,20 @@
 
 
             <div class="your-goals">
-                <span class="material-icons-sharp">auto_awesome</span>
+                <span class="material-icons-sharp" style="padding-top: 0.8rem; padding-left: 0.7rem">auto_awesome</span>
                 <h2>Your Goals</h2>
                 <!-- BADGE -->
-                <div class="badge">
+                <div class="badge goals-card">
                     <div class="goal">
                         <span class="material-icons-sharp">scale</span>
                         <h3 class="goal-title">@yield('your-goals-weight-type') @yield('your-goals-weight-amount')kg</h3>
-                        <h3 style="color: var(--color-warning);">@yield('your-goals-weight-percentage')%</h3>
                     </div>
                 </div>
                 <!-- BADGE -->
-                <div class="badge">
+                <div class="badge goals-card">
                     <div class="goal">
                         <span class="material-icons-sharp">fitness_center</span>
-                        <h3 class="goal-title">Train 4 Days/week</h3>
-                        <h3 style="color: yellowgreen;">@yield('your-goals-sessions-percentage')%</h3>
+                        <h3 class="goal-title">Train @yield('workouts-perweek') Days/week</h3>
                     </div>
                 </div>
             </div>
@@ -215,6 +213,7 @@
         <!--========== RIGHT ==========-->
         <section class="right">
                     <!--========== WEIGHT CHART ==========-->
+            
             <canvas id="chart">
             </canvas>
             

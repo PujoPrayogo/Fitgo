@@ -1,7 +1,7 @@
 @extends('layout/main-aplikasi')
 
 
-                                        //HEADER
+                                        <!--HEADER -->
 @section('profile-photo')
 https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png
 @endsection
@@ -11,7 +11,7 @@ Mamat
 @endsection
 
 
-                                        //DAILY GOAL (yang 2)
+                                        <!-- DAILY GOAL (yang 2)-->
 @section('target-kcal')
 2000
 @endsection
@@ -22,7 +22,7 @@ back
 
 
 
-                                        //DAILY INTAKE (4)
+                                        <!--DAILY INTAKE (4)-->
 @section('daily-cal')
 2200
 @endsection
@@ -33,7 +33,7 @@ back
 
 
 
-                                        //YOUR GOALS
+                                        <!--YOUR GOALS-->
 @section('your-goals-weight-type')
 Lose
 @endsection
@@ -50,7 +50,11 @@ Lose
 75
 @endsection
 
-                                        //QUOTE
+@section('workouts-perweek')
+4
+@endsection
+
+                                        <!--QUOTE-->
 @section('quote')
 I've failed over and over and over again in my life and that is why I succeed.
 @endsection
@@ -60,8 +64,8 @@ Mike Tyson
 @endsection
 
 
-                                //      RECENT ACTIVITIES (sampai 5)
-                                //  1
+                                <!--      RECENT ACTIVITIES (sampai 5)-->
+                                <!--  1-->
 @section('recent-activity-1')
 Drink Water
 @endsection
@@ -78,7 +82,7 @@ Drink Water
 0
 @endsection
 
-                                //  2
+                                <!--  2-->
 @section('recent-activity-2')
 Eat Snack
 @endsection
@@ -95,7 +99,7 @@ Eat Snack
 280
 @endsection
 
-                                //  3
+                                <!--  3-->
 @section('recent-activity-3')
 Eat Snack
 @endsection
@@ -112,7 +116,7 @@ Eat Snack
 280
 @endsection
 
-                                //  4
+                                <!--  4-->
 @section('recent-activity-4')
 Eat Snack
 @endsection
@@ -129,7 +133,7 @@ Eat Snack
 280
 @endsection
 
-                                //  5
+                                <!-- 5 -->
 @section('recent-activity-5')
 Eat Snack
 @endsection

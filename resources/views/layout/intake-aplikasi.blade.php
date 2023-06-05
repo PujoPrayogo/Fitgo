@@ -28,7 +28,8 @@
     <main>
         <div class="col-sm-auto bg-dark sticky-top" style="background-color: black; color: white;">
             <div class="d-flex flex-sm-column flex-row flex-nowrap bg-dark align-items-center sticky-top">
-                    <!-- SIDEBAR  -->
+                    
+                        <!-- SIDEBAR  -->
                 <aside>
                     <button id="close-btn">
                         <span class="material-icons-outlined">close</span>
@@ -41,7 +42,7 @@
                             <span class="material-icons-outlined">fitness_center</span>
                         </a>
                         <a href="#">
-                            <span class="material-icons-outlined">tune</span>
+                            <span class="material-icons-outlined">person</span>
                         </a>
                 </aside>
             </div>
