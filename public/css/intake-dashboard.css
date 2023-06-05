@@ -330,35 +330,43 @@
                 
                         #show-arms:checked ~ .update-container {
                             display: block;
+                            transition: all 400ms ease;
                         }
                 
                         #show-chest:checked ~ .update-container {
                             display: block;
+                            transition: all 400ms ease;
                         }
                 
                         #show-full:checked ~ .update-container {
                             display: block;
+                            transition: all 400ms ease;
                         }
                 
                         #show-legs:checked ~ .update-container {
                             display: block;
+                            transition: all 400ms ease;
                         }
                 
                         #show-back:checked ~ .update-container {
                             display: block;
+                            transition: all 400ms ease;
                         }
                         
                 
                         #show2:checked ~ .update-container {
                             display: block;
+                            transition: all 400ms ease;
                         }
                 
                         #show3:checked ~ .update-container {
                             display: block;
+                            transition: all 400ms ease;
                         }
                 
                         #show4:checked ~ .update-container {
                             display: block;
+                            transition: all 400ms ease;
                         }
                 
                         input[type="checkbox"] {

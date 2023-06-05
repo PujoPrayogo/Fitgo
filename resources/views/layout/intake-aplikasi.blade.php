@@ -400,8 +400,8 @@
                             <div class="col-12" >
                                 <div class="card-body text-white text-center">
                                     <h5 class="card-title my-auto">
-                                        Calories : @yield('intake-calories') kcal<br>
-                                        Protein  : @yield('intake-protein') grams
+                                        Calories : 2500 kcal<br>
+                                        Protein  : 120 grams
                                     </h5>
                                     <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                                 </div>
@@ -409,39 +409,44 @@
                         </div>
                     </div>
 
-            <!--===== BREAKFAST =====-->
+            <!--===== Breakfast =====-->
             <div class="center">
-                <input type="checkbox" id="show2">
-                <label for="show2" class="show-btn">
-                    <div class="card py-2 my-2 " style="min-width: 100%;width: auto; background-color: black;border-radius:6px;" >
+                <input type="checkbox" id="show4">
+                <label for="show4" class="show-btn">
+                    <div class="cardpy-2 my-2" style="min-width: 100%;width: auto; background-color: black;border-radius:6px;" >
                         <div class="row no-gutters">
                             <div class="col-6">
-                                <div class="card-body text-white" style="height:100%">
+                                <div class="card-body text-white">
                                     <h5 class="card-title-nutrition">Breakfast</h5>
-                                    <p class="card-text">@yield('breakfast-name')</p>
+                                    <p class="card-text">Bubur Ayam</p>
                                     <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                                 </div>
                             </div>
                             <div class="col-6" >
-                                <img src="@yield('breakfast-picture')" class="card-img" alt="..." style="height: 100%;">
+                                <img src="https://img.freepik.com/free-photo/healthy-breakfast-table_144627-43540.jpg?w=2000" class="card-img" alt="..." style="height: 100%;">
                             </div>
                         </div>
                     </div>
                 </label>
                 <div class="update-container">
-                    <label for="show2" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
-                    <div class="text text">@yield('breakfast-name')</div>
+                    <label for="show4" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
+                    <div class="text text" style="font-size: 2rem">Breakfast</div>
+                    <!-- div class="text text" style="font-size: 15px;">Bubur Ayam</div> -->
+                    <select name="membership" id="membership" style="width: 100%; height: 20px;">
+                        <option value="grilled" selected name="grilled" class="text-center">Grilled</option>
+                        <option value="salad-sandwich" name="salad-sandwich" class="text-center">Salad Sandwhich</option>
+                      </select>
                     <form action="#">
-                        <div class="data">
-                            <img src="@yield('breakfast-picture')" style="height: 100%; width: auto;"><img src="" alt="">
-                            <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : @yield('breakfast-calories')KCal</h3>
+                        <div class="data text-center" style="margin-bottom: 20px;">
+                            <img src="https://img.freepik.com/free-photo/healthy-breakfast-table_144627-43540.jpg?w=2000" style="height: 100px; width: auto;"><img src="" alt="">
+                            <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : 220KCal</h3>
+                            <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Protein  : 10gr</h3>
                         </div>
-                        <div class="btn">
+                        <div class="btn" style="margin-top: 0px;">
                             <div class="inner"></div>
-                            <a href="@yield('breakfast-recipe')">RECIPE</a>
+                            <a href="https://cookpad.com/id/resep/16813402-creamy-tomato-chicken-pasta?ref=search&search_term=creamy%20chicken%20pasta">RECIPE</a>
                         </div>
                     </form>
-                </div>
                 </div>
             </div>
                     
@@ -454,27 +459,33 @@
                             <div class="col-6">
                                 <div class="card-body text-white">
                                     <h5 class="card-title-nutrition">Lunch</h5>
-                                    <p class="card-text">@yield('lunch-name')</p>
+                                    <p class="card-text">Grilled</p>
                                     <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                                 </div>
                             </div>
                             <div class="col-6" >
-                                <img src="@yield('lunch-picture')" class="card-img" alt="..." style="height: 100%;">
+                                <img src="https://www.realsimple.com/thmb/rwSxx97nZcOoBb-dZ1ouGqSn-Q4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/gut-healthy-lunch-GettyImages-1042075090-b21164b3fffe49af8868078e224a3e79.jpg" class="card-img" alt="..." style="height: 100%;">
                             </div>
                         </div>
                     </div>
                 </label>
                 <div class="update-container">
                     <label for="show4" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
-                    <div class="text text">@yield('lunch-name')</div>
+                    <div class="text text">Lunch</div>
+                    <!-- div class="text text" style="font-size: 15px;">Bubur Ayam</div> -->
+                    <select name="membership" id="membership" style="width: 100%; height: 20px;">
+                        <option value="grilled" selected name="grilled" class="text-center">Grilled</option>
+                        <option value="salad-sandwich" name="salad-sandwich" class="text-center">Salad Sandwhich</option>
+                      </select>
                     <form action="#">
-                        <div class="data">
-                            <img src="@yield('lunch-picture')" style="height: 100%; width: auto;"><img src="" alt="">
-                            <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : @yield('lunch-calories')KCal</h3>
+                        <div class="data text-center" style="margin-bottom: 20px;">
+                            <img src="https://www.realsimple.com/thmb/rwSxx97nZcOoBb-dZ1ouGqSn-Q4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/gut-healthy-lunch-GettyImages-1042075090-b21164b3fffe49af8868078e224a3e79.jpg" style="height: 100px; width: auto;"><img src="" alt="">
+                            <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : 220KCal</h3>
+                            <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Protein  : 10gr</h3>
                         </div>
-                        <div class="btn">
+                        <div class="btn" style="margin-top: 0px;">
                             <div class="inner"></div>
-                            <a href="@yield('lunch-recipe')">RECIPE</a>
+                            <a href="https://cookpad.com/id/resep/16813402-creamy-tomato-chicken-pasta?ref=search&search_term=creamy%20chicken%20pasta">RECIPE</a>
                         </div>
                     </form>
                 </div>
@@ -489,90 +500,42 @@
                             <div class="col-6">
                                 <div class="card-body text-white" style="height:100%">
                                     <h5 class="card-title-nutrition">Dinner</h5>
-                                    <p class="card-text">@yield('dinner-name')</p>
+                                    <p class="card-text">Chicken Pasta</p>
                                     <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                                 </div>
                             </div>
                             <div class="col-6" >
-                                <img src="@yield('dinner-picture')" class="card-img" alt="..." style="height: 100%;">
+                                <img src="https://images.squarespace-cdn.com/content/v1/5be122d8f8370ab91d93d1c3/1666561374013-0YCQSNM24VPJV0C835VS/Dinner20222173.jpg" class="card-img" alt="..." style="height: 100%;">
                             </div>
                         </div>
                     </div>
                 </label>
                 <div class="update-container">
                     <label for="show3" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
-                    <div class="text text">@yield('dinner-name')</div>
+                    <div class="text text">Dinner</div>
+                    <!-- div class="text text" style="font-size: 15px;">Bubur Ayam</div> -->
+                    <select name="membership" id="membership" style="width: 100%; height: 20px;">
+                        <option value="chicken-pasta" selected name="chicken-pasta" class="text-center">Chicken Pasta</option>
+                        <option value="quinoa-bowl" name="quinoa-bowl" class="text-center">Quinoa Bowl</option>
+                      </select>
                     <form action="#">
-                        <div class="data">
-                            <img src="@yield('dinner-picture')" style="height: 100%; width: auto;"><img src="" alt="">
-                            <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : @yield('dinner-calories')KCal</h3>
+                        <div class="data text-center" style="margin-bottom: 20px;">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5be122d8f8370ab91d93d1c3/1666561374013-0YCQSNM24VPJV0C835VS/Dinner20222173.jpg" style="height: 100px; width: auto;"><img src="" alt="">
+                            <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : 220KCal</h3>
+                            <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Protein  : 10gr</h3>
                         </div>
-                        <div class="btn">
+                        <div class="btn" style="margin-top: 0px;">
                             <div class="inner"></div>
-                            <a href="@yield('dinner-recipe')">RECIPE</a>
+                            <a href="https://cookpad.com/id/resep/16813402-creamy-tomato-chicken-pasta?ref=search&search_term=creamy%20chicken%20pasta">RECIPE</a>
                         </div>
                     </form>
                 </div>
             </div>
+
         </section>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        const chart = document.querySelector("#chart").getContext('2d');
     
-        // CREATE NEW CHART INSTANCE
-        new Chart(chart, {
-            type: 'line',
-            data: {
-                labels: ['-6 Weeks', '-5 Weeks', '-4 Weeks', '-3 weeks',
-                    '-2 Weeks', 'Last Week', 'Current'],
-                datasets: [
-                    {
-                        label: 'Weight (Kg)',
-                        data: [72.5, 71.5, 71.7, 71, 70.5, 70.2, 69],
-                        backgroundColor: ['black', 'black', 'black', 'black', 'black', 'black', 'blue'],
-                        borderColor: ['black', 'black', 'black', 'black', 'black', 'black', 'blue'],
-                        borderWidth: 2
-                    },
-    
-                    {
-                        label: "Weight before",
-                        data: [],
-                        borderColor: 'blue',
-                        borderWidth: 2
-                    }
-                ]
-            },
-            options: {
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'Weight Tracks',
-                        font: {
-                            size: 24
-                        }
-                    },
-                    legend: {
-                        labels: {
-                            generateLabels: function(chart) {
-                                const labels = Chart.defaults.plugins.legend.labels.generateLabels(chart);
-                                labels[1].text = 'Current: ' + chart.data.datasets[0].data[6].toFixed(2) + ' Kgs';
-                                labels.push({
-                                    text: 'Last 6 Weeks: ' + (chart.data.datasets[0].data[6] - chart.data.datasets[0].data[0]).toFixed(2) + ' Kgs',
-                                    fillStyle: 'green',
-                                    strokeStyle: 'green',
-                                    lineWidth: 2
-                                });
-                                labels[1].fillStyle = 'blue';
-                                labels[1].strokeStyle = 'blue';
-                                return labels;
-                            }
-                        }
-                    }
-                },
-                responsive: true
-            }
-        })
+     <script>
     </script>
 </body>
 </html>
