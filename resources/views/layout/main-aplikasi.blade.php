@@ -31,13 +31,13 @@
                             <span class="material-icons-outlined">close</span>
                         </button>
                         <div class="sidebar">
-                            <a href="/" class="active">
+                            <a href="/fitgo/{user}" class="active">
                                 <span class="material-icons-outlined">home</span>
                             </a>
                             <a href="/fitgo/intake/{user}">
                                 <span class="material-icons-outlined">fitness_center</span>
                             </a>
-                            <a href="#">
+                            <a href="/fitgo/profile/{id}">
                                 <span class="material-icons-outlined">person</span>
                             </a>
                     </aside>
