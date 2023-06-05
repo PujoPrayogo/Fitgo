@@ -697,6 +697,22 @@
                             margin-top: 2rem;
                             margin-right: 2rem;
                         }
+
+                        .weight-update-container {
+                            position: absolute;
+                            top: 100%;
+                            right: 10%;
+                            width: 320px;
+                            max-height: 3rem;
+                            overflow: hidden;
+                        }
+
+                        .weight-update-form {
+                            color: white;
+                            background: var(--color-dark);
+                            padding: 20px;
+                            margin: 10px;
+                        }
                 
                                         /*========== RECENT ACTIVITIES ==========*/
                         main section.right .recent-activities {

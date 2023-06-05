@@ -218,7 +218,7 @@
                     <div class="center">
                         <input type="checkbox" id="show2">
                         <label for="show2" class="show-btn2">
-                            <canvas id="chart" style="width: 1029px; height:513px">
+                            <canvas id="chart" style="width: 1029px; height:300px">
                             </canvas>
                         </label>
                         <div class="update-container2">
@@ -236,6 +236,15 @@
                             </div>
                         </form>
                         </div>
+                    </div>
+
+                    <div class="weight-update-container">
+                        <form action="#" class="weight-update-form">
+                            <div class="data">
+                                <label for="update-weight" class="text-question">Current Weight</label>
+                                <input type="text" id="update-weight" name="update-weight">
+                            </div>
+                        </form>
                     </div>
             
                                     <!--========== RECENT ACTIVITIES ==========-->
