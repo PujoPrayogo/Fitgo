@@ -7,16 +7,22 @@ https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280
 @endsection
 
 @section('profile-name')
-Mamat
+{{$data['name']}}
 @endsection
 
                                         //DAILY GOAL (yang 2)
 @section('target-kcal')
-2000
+{{$data['bmr']}}
 @endsection
 
 @section('target-workout')
-back
+{{$data['workout']}}
+@endsection
+
+
+
+@section('daily-intake-water')
+
 @endsection
 
 
@@ -27,7 +33,7 @@ back
 @endsection
 
 @section('daily-protein')
-100
+{{$data['protein']}}
 @endsection
 
 
@@ -38,7 +44,7 @@ Lose
 @endsection
 
 @section('your-goals-weight-amount')
-6
+{{$data['weight_change']}}
 @endsection
 
 @section('your-goals-weight-percentage')

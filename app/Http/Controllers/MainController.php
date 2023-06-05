@@ -29,10 +29,62 @@ class MainController extends Controller
         ]);
         $data = json_decode($response->getBody(), true);
 
-        return response()->json($data);
+        $id = $data['id'];
+        $name = $data['name'];
+        $bmr = (66.5 + (13.7 * $data['bodyweight']) + (5 * $data['height']) - (6.8 * $data['age']));
+        $water = ($data['bodyweight']*30);
+        $protein = ($data['bodyweight']*0.8);
+        $workout = $this->workout();
+        $bmi = ($data['bodyweight'] / (($data['height']*0.01)*($data['height']*0.01)));
+        $ideal_weight = (22/ (($data['height']*0.01)*($data['height']*0.01)));
+        if($bmi < 18.5){
+            $weight_change = $ideal_weight - $data['bodyweight'];
+        }elseif($bmi > 25){
+            $weight_change = $data['bodyweight']- $ideal_weight;
+        }else{
+            $weight_change = 0;
+        }
+
+        $data = [
+            'name' => $name,
+            'bmr' => $bmr,
+            'workout' => $workout,
+            'protein' => $protein,
+            'water' => $water,
+            'weight_change' => $weight_change,
+        ];
 
 
+        return view('front/dashboard-main')->with('data', $data);
 
+        // return response()->json( $data);
+
+    }
+
+    public function workout(){
+        $today = Carbon::now();
+        $workout = '';
+
+        switch ($today->dayOfWeek) {
+            case Carbon::MONDAY:
+                $workout = 'Back Workout';
+                break;
+            case Carbon::TUESDAY:
+                $workout = 'Chest Workout';
+                break;
+            case Carbon::WEDNESDAY:
+                $workout = 'Leg Workout';
+                break;
+            case Carbon::THURSDAY:
+                $workout = 'Rest';
+                break;
+            // Tambahkan case lainnya sesuai kebutuhan
+            default:
+                $workout = 'No workout scheduled';
+                break;
+    }
+
+        return $workout;
     }
 
     /**

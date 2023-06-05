@@ -162,7 +162,7 @@
                 <!-- WATER -->
                 <div class="goal">
                     <div>
-                        <h2>2.5L</h2>
+                        <h2>@yield('daily-intake-water')L</h2>
                         <h5>Water</h5>
                     </div>
                 </div>
