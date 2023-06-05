@@ -11,9 +11,15 @@ class UserController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($id)
     {
-        //
+        $client = new Client();
+        $url = "http://127.0.0.1:8000/api/profile/{$id}";
+        $response = $client->request('GET', $url);
+        $content = $response->getBody()->getContents();
+        $contentArray = json_decode($content, true);
+        $data = $contentArray['data'];
+        return view('front/profile', ['data'=> $data]);
     }
 
     /**
@@ -57,11 +63,17 @@ class UserController extends Controller
         $user_id = $data->id;
         $name = $request->name;
         $email = $request->email;
+        $height = $request->height;
+        $bodyweight = $request->bodyweight;
+        $age = $request->age;
 
         $parameter = [
             'id'=>$user_id,
             'name'=>$name,
             'email '=>$email,
+            'height'=> $height,
+            'bodyweight'=> $bodyweight,
+            'age'=> $age,
         ];
 
         $client = new Client();

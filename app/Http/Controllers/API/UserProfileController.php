@@ -12,9 +12,14 @@ class UserProfileController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($id)
     {
-        //
+        $data = User::find($id);
+        return response()->json([
+            "status"=>true,
+            "massage"=>"data ditemukan",
+            "data"=>$data
+        ],200);
     }
 
     /**
@@ -48,8 +53,7 @@ class UserProfileController extends Controller
         }
 
         $rules = [
-            'email'=> "required",
-            'name'=> "required",
+            
         ];
 
         $validator = Validator::make($request->all(), $rules);
@@ -63,6 +67,9 @@ class UserProfileController extends Controller
 
         $data_user->name = $request->name;
         $data_user->email = $request->email;
+        $data_user->bodyweight = $request->bodyweight;
+        $data_user->height= $request->height;
+        $data_user->age= $request->age;
         $data_user->id = $request->id;
        
         $post = $data_user->save();

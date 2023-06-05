@@ -34,4 +34,5 @@ Route::post('store_weight', [WeightController::class, 'store']);
 Route::delete('delete_weight/{id}', [WeightController::class, 'destroy']);
 Route::put('update_weight/{id}', [WeightController::class, 'update']);
 
+Route::get('profile/{id}', [UserProfileController::class, 'index']);
 Route::put('update_profile/{id}', [UserProfileController::class, 'update']);
