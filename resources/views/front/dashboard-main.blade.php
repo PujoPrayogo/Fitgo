@@ -11,7 +11,7 @@ https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280
 @endsection
 
 @section('target-kcal')
-{{$data['bmr']}}
+{{$data['bmr_static']}}
 @endsection
 
 @section('target-workout')
@@ -28,7 +28,7 @@ https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280
 
                                         <!--DAILY INTAKE (4)-->
 @section('daily-cal')
-2200
+{{$data['bmr']}}
 @endsection
 
 @section('daily-protein')

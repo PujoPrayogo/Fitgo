@@ -34,6 +34,14 @@ Route::get("fitgo/{token}", [MainController::class, "index"])-> middleware('auth
 Route::post("fitgo/{token}", [MainController::class, "create"])-> middleware('auth:sanctum');
 Route::delete('fitgo/{id}', [MainController::class, "destroy"])-> middleware('auth:sanctum');
 
+Route::post('weight_track/{id}', [MainController::class, "create"])-> middleware('auth:sanctum');
+Route::put('weight_track/{id}', [MainController::class, "update_weight"])-> middleware('auth:sanctum');
+Route::delete('weight_track/{id}', [MainController::class, "destroy_weight"])-> middleware('auth:sanctum');
 
 //INTAKE CONTROLLER
-Route::get("fitgo/intake/{user}", [IntakeController::class, "index"]);
+Route::get("fitgo/intake/{id}", [IntakeController::class, "index"]);
+
+
+//USER PROFILE CONTROLLER
+Route::get("fitgo/profile/{id}", [IntakeController::class, "index"]);
+Route::put("fitgo/profile/{id}", [IntakeController::class, "update"]);

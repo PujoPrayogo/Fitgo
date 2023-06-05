@@ -32,7 +32,8 @@ class MainController extends Controller
 
         
         $name = $data->name;
-        $bmr = (66.5 + (13.7 * $data->bodyweight) + (5 * $data->height) - (6.8 * $data->age)) - $kcalsum;
+        $bmr = (66.5 + (13.7 * $data->bodyweight) + (5 * $data->height) - (6.8 * $data->age));
+        $bmr_static = $bmr - $kcalsum;
         $water = ($data->bodyweight*0.03);
         $protein = ($data->bodyweight*0.8);
         $workout = $this->workout();
@@ -47,6 +48,7 @@ class MainController extends Controller
         $data = [
             'name' => $name,
             'bmr' => number_format($bmr, 1),
+            'bmr_static' => number_format($bmr_static, 1),
             'workout' => $workout,
             'protein' => number_format($protein, 1),
             'water' => number_format($water, 1),
@@ -143,6 +145,90 @@ class MainController extends Controller
 
     }
 
+    public function create_weight(Request $request)
+    {
+        $data = Auth::user();
+        $user_id = $data->id;
+        $name = $data->name;
+        $weight_atm = $request->weight_atm;
+
+        $parameter = [
+            'user_id'=>$user_id,
+            'weight_atm'=>$weight_atm,
+        ];
+        
+        $client = new Client();
+        $url = "http://127.0.0.1:8000/api/store_weight";
+        $response = $client->request('POST', $url, [
+            'headers'=>['content-type'=>'application/json'],
+            'body'=>json_encode($parameter)
+        ]);
+        $content = $response->getBody()->getContents();
+        $contentArray = json_decode($content, true);
+
+        
+        if($contentArray["status"] != true) {
+            $error = $contentArray['massage'];
+            return redirect()->to('fitgo/'.$name)->withErrors($error)->withInput();
+
+        } else{
+            return redirect()->to('fitgo/'.$name)->with('success', 'Berhasil memasukan data');
+        }
+
+    }
+
+    public function destroy_weight(string $id)
+    {
+        $client = new Client();
+        $url = "http://127.0.0.1:8000/api/delete_weight/{$id}";
+        $response = $client->request('DELETE', $url);
+        $content = $response->getBody()->getContents();
+        $contentArray = json_decode($content, true);
+
+        $data = Auth::user();
+        $name = $data->name;
+        
+        if($contentArray["status"] != true) {
+            $error = $contentArray['massage'];
+            return redirect()->to('fitgo/'.$name)->withErrors($error)->withInput();
+
+        } else{
+            return redirect()->to('fitgo/'.$name)->with('success', 'Berhasil hapus data');
+        }
+    }
+
+     public function update_weight(Request $request, string $id)
+    {
+        $data = Auth::user();
+        $user_id = $data->id;
+        $weight_atm = $request->weight_atm;
+
+        $parameter = [
+            'user_id'=>$user_id,
+            'weight_atm'=>$weight_atm,
+        ];
+
+        $client = new Client();
+        $url = "http://127.0.0.1:8000/api/update_weight/{$id}";
+        $response = $client->request('PUT', $url, [
+            'headers'=>['content-type'=>'application/json'],
+            'body'=>json_encode($parameter)
+        ]);
+        $content = $response->getBody()->getContents();
+        $contentArray = json_decode($content, true);
+    
+        $name = $data->name;
+        
+        if($contentArray["status"] != true) {
+            $error = $contentArray['massage'];
+            return redirect()->to('fitgo/'.$name)->withErrors($error)->withInput();
+
+        } else{
+            return redirect()->to('fitgo/'.$name)->with('success', 'Berhasil update data');
+        }
+        
+    }
+
     /**
      * Store a newly created resource in storage.
      */
@@ -187,14 +273,14 @@ class MainController extends Controller
         $contentArray = json_decode($content, true);
 
         $data = Auth::user();
-        $token = $data->name;
+        $name = $data->name;
         
         if($contentArray["status"] != true) {
             $error = $contentArray['massage'];
-            return redirect()->to('fitgo/'.$token)->withErrors($error)->withInput();
+            return redirect()->to('fitgo/'.$name)->withErrors($error)->withInput();
 
         } else{
-            return redirect()->to('fitgo/'.$token)->with('success', 'Berhasil hapus data');
+            return redirect()->to('fitgo/'.$name)->with('success', 'Berhasil hapus data');
         }
     }
 }
