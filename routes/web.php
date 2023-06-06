@@ -39,13 +39,14 @@ Route::delete('fitgo/{name}', [MainController::class, "destroy"])-> middleware('
 Route::post('weight_track/{id}', [MainController::class, "create"])-> middleware('isLoggedin');
 Route::put('weight_track/{id}', [MainController::class, "update_weight"])-> middleware('isLoggedin');
 Route::delete('weight_track/{id}', [MainController::class, "destroy_weight"])-> middleware('isLoggedin');
+Route::get("fitgo/weight-tracks/{user}", [MainController::class, "show_weight"]);
 
 
-Route::get("/fitgo/weight-tracks/{user}", [SessionController::class, "wTracks"]);
+// Route::get("/fitgo/weight-tracks/{user}", [SessionController::class, "wTracks"]);
 
 //INTAKE CONTROLLER
 Route::get("fitgo/intake/{id}", [IntakeController::class, "index"])-> middleware('isLoggedin');
 
 //USER PROFILE CONTROLLER
-Route::get("fitgo/profile/{id}", [IntakeController::class, "index"])-> middleware('isLoggedin');
-Route::put("fitgo/profile/{id}", [IntakeController::class, "update"])-> middleware('isLoggedin');
+Route::get("fitgo/profile/{id}", [UserProfileController::class, "index"])-> middleware('isLoggedin');
+Route::put("fitgo/profile/{id}", [UserProfileController::class, "update"])-> middleware('isLoggedin');

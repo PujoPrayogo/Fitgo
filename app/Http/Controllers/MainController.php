@@ -243,9 +243,16 @@ class MainController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show_weight(string $id)
     {
-        //
+        $client = new Client();
+        $url = "http://127.0.0.1:8000/api/index_weight/{$id}";
+        $response = $client->request('GET', $url);
+        $content = $response->getBody()->getContents();
+        $contentArray = json_decode($content, true);
+        $data = $contentArray['data'];
+
+        return view('front/weightTracks', ['data'=>$data]);
     }
 
     /**

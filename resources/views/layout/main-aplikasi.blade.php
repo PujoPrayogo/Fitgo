@@ -30,14 +30,15 @@
                         <button id="close-btn">
                             <span class="material-icons-outlined">close</span>
                         </button>
+
                         <div class="sidebar">
-                            <a href={{'fitgo/'.$name}} class="active">
+                            <a href='fitgo/'. @yield('profile-name') class="active">
                                 <span class="material-icons-outlined">home</span>
                             </a>
-                            <a href={{'fitgo/intake/'.$name}}>
+                            <a href='intake/'. @yield('profile-name')>
                                 <span class="material-icons-outlined">fitness_center</span>
                             </a>
-                            <a href={{'fitgo/profile/'.$name}}>
+                            <a href='profile/'. @yield('profile-name')>
                                 <span class="material-icons-outlined">person</span>
                             </a>
                     </aside>
