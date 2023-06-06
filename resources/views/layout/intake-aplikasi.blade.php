@@ -44,6 +44,11 @@
                         <a href="#">
                             <span class="material-icons-outlined">person</span>
                         </a>
+                        <!-- LOGOUT -->
+                        <!-- <a href="#"></a> -->
+                        <button class="btn btn-light text-dark">
+                            <span class="material-icons-outlined">logout</span>
+                        </button>
                 </aside>
             </div>
         </div>
@@ -439,29 +444,29 @@
                             </div>
                             <form action="#">
                                 <div class="data text-center" style="margin-bottom: 20px; height:auto;">
-                                    <img src="https://img.freepik.com/free-photo/healthy-breakfast-table_144627-43540.jpg?w=2000" style="height: 100px; width: auto;"><img src="" alt="">
+                                    <img src="https://img-global.cpcdn.com/recipes/79f5a4eb8896b411/640x640sq70/photo.webp" style="height: 100px; width: auto;"><img src="" alt="">
                                     <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : 220KCal</h3>
                                     <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Protein  : 10gr</h3>
                                 </div>
                                 <div class="btn" style="margin-top: 0px;height:auto;">
                                     <div class="inner"></div>
-                                    <a href="https://cookpad.com/id/resep/16813402-creamy-tomato-chicken-pasta?ref=search&search_term=creamy%20chicken%20pasta">RECIPE</a>
+                                    <a href="https://cookpad.com/id/resep/16913843-bubur-ayam-bandung?ref=search&search_term=bubur%20ayam">RECIPE</a>
                                 </div>
                             </form>
                         </div>
                         <div class="col-6">
                         <div class="container">
-                                <h3 class="text-center text-light">Grilled</h3>
+                                <h3 class="text-center text-light">Nasi Uduk</h3>
                             </div>
                             <form action="#">
                                 <div class="data text-center" style="margin-bottom: 20px;height:auto;">
-                                    <img src="https://www.realsimple.com/thmb/rwSxx97nZcOoBb-dZ1ouGqSn-Q4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/gut-healthy-lunch-GettyImages-1042075090-b21164b3fffe49af8868078e224a3e79.jpg" style="height: 100px; width: auto;"><img src="" alt="">
+                                    <img src="https://img-global.cpcdn.com/recipes/b0a4fba73f24da84/1280x1280sq70/photo.webp" style="height: 100px; width: auto;"><img src="" alt="">
                                     <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : 220KCal</h3>
                                     <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Protein  : 10gr</h3>
                                 </div>
                                 <div class="btn" style="margin-top: 0px;height:auto;">
                                     <div class="inner"></div>
-                                    <a href="https://cookpad.com/id/resep/16813402-creamy-tomato-chicken-pasta?ref=search&search_term=creamy%20chicken%20pasta">RECIPE</a>
+                                    <a href="https://cookpad.com/id/resep/16875130-nasi-uduk-rice-cooker-simple-71?ref=search&search_term=nasi%20uduk">RECIPE</a>
                                 </div>
                             </form>
                         </div>

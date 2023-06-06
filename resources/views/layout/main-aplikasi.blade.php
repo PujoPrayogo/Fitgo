@@ -41,6 +41,9 @@
                             <a href='profile/'. @yield('profile-name')>
                                 <span class="material-icons-outlined">person</span>
                             </a>
+                            <button class="btn btn-light text-dark">
+                                <span class="material-icons-outlined">logout</span>
+                            </button>
                     </aside>
                 </div>
             </div>
