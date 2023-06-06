@@ -491,7 +491,7 @@
                 </label>
                 <div class="update-container" style="width: 700px;">
                     <label for="show5" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
-                    <div class="text text" style="font-size: 2rem">Breakfast</div>
+                    <div class="text text" style="font-size: 2rem">Lunch</div>
                     <!-- div class="text text" style="font-size: 15px;">Bubur Ayam</div> -->
                     <div class="row">
                         <div class="col-6" style="border-right: 3px solid #ffffff;">
