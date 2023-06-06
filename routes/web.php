@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\UserProfileController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\IntakeController;
