@@ -57,7 +57,8 @@ class MainController extends Controller
             'bmi'=> $bmi,
         ];
 
-        return view('front/dashboard-main', ['data'=> $data], ['data_activity'=> $data_activity], ['data_weight'=> $data_weight]);
+        return view('front/dashboard-main', ['data'=> $data], ['data_activity'=> $data_activity], ['data_weight'=> $data_weight], ['name'=> $name]);
+
         }else{
             return "not authorized";
         }
@@ -145,6 +146,7 @@ class MainController extends Controller
         }
 
     }
+
 
     public function create_weight(Request $request)
     {

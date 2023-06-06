@@ -19,7 +19,7 @@ class UserController extends Controller
         $content = $response->getBody()->getContents();
         $contentArray = json_decode($content, true);
         $data = $contentArray['data'];
-        return view('front/profile', ['data'=> $data]);
+        return view('front/profile/{id}', ['data'=> $data]);
     }
 
     /**

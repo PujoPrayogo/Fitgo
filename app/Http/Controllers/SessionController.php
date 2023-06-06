@@ -68,6 +68,8 @@ class SessionController extends Controller
     }
 
 
+
+
     function register_continue(Request $request){
 
         $email = $request->email;

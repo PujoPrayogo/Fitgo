@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class IntakeController extends Controller
 {
@@ -11,7 +12,12 @@ class IntakeController extends Controller
      */
     public function index()
     {
-        return view('front/dashboard-intake');
+        if(auth()->check()){
+        $data = Auth::user();
+
+        $name = $data->name;
+        return view('front/dashboard-intake', ['name'=>$name]);
+        }
     }
 
     /**

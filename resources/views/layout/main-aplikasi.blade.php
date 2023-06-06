@@ -31,13 +31,13 @@
                             <span class="material-icons-outlined">close</span>
                         </button>
                         <div class="sidebar">
-                            <a href="/fitgo/{user}" class="active">
+                            <a href={{'fitgo/'.$name}} class="active">
                                 <span class="material-icons-outlined">home</span>
                             </a>
-                            <a href="/fitgo/intake/{user}">
+                            <a href={{'fitgo/intake/'.$name}}>
                                 <span class="material-icons-outlined">fitness_center</span>
                             </a>
-                            <a href="/fitgo/profile/{id}">
+                            <a href={{'fitgo/profile/'.$name}}>
                                 <span class="material-icons-outlined">person</span>
                             </a>
                     </aside>
