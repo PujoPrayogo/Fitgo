@@ -28,7 +28,8 @@ Route::post("sesi/register_continue", [SessionController::class, "register_conti
 Route::get("sesi/logout", [SessionController::class, "logout"]);
 Route::post("sesi/create", [SessionController::class, "create"]);
 Route::post("login", [SessionController::class, "login"]);
-Route::get("about", [SessionController::class, 'about']);
+Route::get("about", [SessionController::class, "about"]);
+Route::get("sesi/landingPage", [SessionController::class, "landingPage"]);
 
 //MAIN CONTROLLER
 Route::get("fitgo/{name}", [MainController::class, "index"])-> middleware('isLoggedin');
@@ -38,6 +39,9 @@ Route::delete('fitgo/{name}', [MainController::class, "destroy"])-> middleware('
 Route::post('weight_track/{id}', [MainController::class, "create"])-> middleware('isLoggedin');
 Route::put('weight_track/{id}', [MainController::class, "update_weight"])-> middleware('isLoggedin');
 Route::delete('weight_track/{id}', [MainController::class, "destroy_weight"])-> middleware('isLoggedin');
+
+
+Route::get("/fitgo/weight-tracks/{user}", [SessionController::class, "wTracks"]);
 
 //INTAKE CONTROLLER
 Route::get("fitgo/intake/{id}", [IntakeController::class, "index"])-> middleware('isLoggedin');

@@ -99,6 +99,9 @@
                         </form>
                     </div>
                 </div>
+                <div class="center">
+                    <label class="show-btn" ><a href="/fitgo/weight-tracks/{user}" class="text-light" style="text-decoration:none;">Weight Tracks</a></label>
+                </div>
             </div>
 
                                 <!--========== CARDS TODAYS TARGET ==========-->
@@ -182,19 +185,19 @@
                 <span class="material-icons-sharp" style="padding-top: 0.8rem; padding-left: 0.7rem">auto_awesome</span>
                 <h2>Your Goals</h2>
                 <!-- BADGE -->
-                <div class="badge goals-card">
+                <div class="badge goals-card" style="width:100%">
                     <div class="goal">
-                        <span class="material-icons-sharp">scale</span>
-                        <h3 class="goal-title">@yield('your-goals-weight-type') @yield('your-goals-weight-amount')Kg</h3>
+                        <span class="material-icons-sharp ">scale</span>
+                        <h3 class="goal-title" style="font-size: calc(1.3rem + .6vw);">@yield('your-goals-weight-type') @yield('your-goals-weight-amount')Kg</h3>
                     </div>
                 </div>
                 <!-- BADGE -->
-                <div class="badge goals-card">
+                <!-- <div class="badge goals-card">
                     <div class="goal">
                         <span class="material-icons-sharp">fitness_center</span>
                         <h3 class="goal-title">Train @yield('workouts-perweek') Days/week</h3>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <div class="your-goals" style="margin-top: 0.5rem;">
@@ -215,7 +218,7 @@
         <section class="right">
                     <!--========== WEIGHT CHART ==========-->
             
-                    <div class="center">
+                    <!-- <div class="center">
                         <input type="checkbox" id="show2">
                         <label for="show2" class="show-btn2">
                             <canvas id="chart" onclick="toggleMenu()" style="width: 1029px; height:300px">
@@ -249,11 +252,11 @@
                             </form>
                         </div>
                 
-                    </div>
+                    </div> -->
 
                                     <!--========== RECENT ACTIVITIES ==========-->
-            <div class="recent-activities">
-                <div class="recent-header">
+            <div class="recent-activities" style="margin-top: 10%;">
+                <div class="recent-header" style="width:auto;">
                     <h1>Recent Activities</h1>
                 </div>
                 <div class="recent-activity-top-divider"></div>

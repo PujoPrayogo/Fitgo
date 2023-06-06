@@ -428,27 +428,53 @@
                         </div>
                     </div>
                 </label>
-                <div class="update-container">
-                    <label for="show2" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
-                    <div class="text text">@yield('breakfast-name')</div>
-                    <form action="#">
-                        <div class="data">
-                            <img src="@yield('breakfast-picture')" style="height: 100%; width: auto;"><img src="" alt="">
-                            <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : @yield('breakfast-calories')KCal</h3>
+                <div class="update-container" style="width: 700px;">
+                    <label for="show4" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
+                    <div class="text text" style="font-size: 2rem">Breakfast</div>
+                    <!-- div class="text text" style="font-size: 15px;">Bubur Ayam</div> -->
+                    <div class="row">
+                        <div class="col-6" style="border-right: 3px solid #ffffff;">
+                            <div class="container">
+                                <h3 class="text-center text-light">Bubur Ayam</h3>
+                            </div>
+                            <form action="#">
+                                <div class="data text-center" style="margin-bottom: 20px; height:auto;">
+                                    <img src="https://img.freepik.com/free-photo/healthy-breakfast-table_144627-43540.jpg?w=2000" style="height: 100px; width: auto;"><img src="" alt="">
+                                    <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : 220KCal</h3>
+                                    <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Protein  : 10gr</h3>
+                                </div>
+                                <div class="btn" style="margin-top: 0px;height:auto;">
+                                    <div class="inner"></div>
+                                    <a href="https://cookpad.com/id/resep/16813402-creamy-tomato-chicken-pasta?ref=search&search_term=creamy%20chicken%20pasta">RECIPE</a>
+                                </div>
+                            </form>
                         </div>
-                        <div class="btn">
-                            <div class="inner"></div>
-                            <a href="@yield('breakfast-recipe')">RECIPE</a>
+                        <div class="col-6">
+                        <div class="container">
+                                <h3 class="text-center text-light">Grilled</h3>
+                            </div>
+                            <form action="#">
+                                <div class="data text-center" style="margin-bottom: 20px;height:auto;">
+                                    <img src="https://www.realsimple.com/thmb/rwSxx97nZcOoBb-dZ1ouGqSn-Q4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/gut-healthy-lunch-GettyImages-1042075090-b21164b3fffe49af8868078e224a3e79.jpg" style="height: 100px; width: auto;"><img src="" alt="">
+                                    <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : 220KCal</h3>
+                                    <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Protein  : 10gr</h3>
+                                </div>
+                                <div class="btn" style="margin-top: 0px;height:auto;">
+                                    <div class="inner"></div>
+                                    <a href="https://cookpad.com/id/resep/16813402-creamy-tomato-chicken-pasta?ref=search&search_term=creamy%20chicken%20pasta">RECIPE</a>
+                                </div>
+                            </form>
                         </div>
-                    </form>
+                    </div>
+                    
                 </div>
                 </div>
             </div>
                     
             <!--===== LUNCH =====-->
             <div class="center">
-                <input type="checkbox" id="show4">
-                <label for="show4" class="show-btn">
+                <input type="checkbox" id="show5">
+                <label for="show5" class="show-btn">
                     <div class="cardpy-2 my-2" style="min-width: 100%;width: auto; background-color: black;border-radius:6px;" >
                         <div class="row no-gutters">
                             <div class="col-6">
@@ -464,9 +490,54 @@
                         </div>
                     </div>
                 </label>
-                <div class="update-container">
+                <div class="update-container" style="width: 700px;">
+                    <label for="show5" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
+                    <div class="text text" style="font-size: 2rem">Lunch</div>
+                    <!-- div class="text text" style="font-size: 15px;">Bubur Ayam</div> -->
+                    <div class="row">
+                        <div class="col-6" style="border-right: 3px solid #ffffff;">
+                            <div class="container">
+                                <h3 class="text-center text-light">Menu1</h3>
+                            </div>
+                            <form action="#">
+                                <div class="data text-center" style="margin-bottom: 20px; height:auto;">
+                                    <img src="https://img.freepik.com/free-photo/healthy-breakfast-table_144627-43540.jpg?w=2000" style="height: 100px; width: auto;"><img src="" alt="">
+                                    <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : 220KCal</h3>
+                                    <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Protein  : 10gr</h3>
+                                </div>
+                                <div class="btn" style="margin-top: 0px;height:auto;">
+                                    <div class="inner"></div>
+                                    <a href="https://cookpad.com/id/resep/16813402-creamy-tomato-chicken-pasta?ref=search&search_term=creamy%20chicken%20pasta">RECIPE</a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-6">
+                        <div class="container">
+                                <h3 class="text-center text-light">Menu2</h3>
+                            </div>
+                            <form action="#">
+                                <div class="data text-center" style="margin-bottom: 20px;height:auto;">
+                                    <img src="https://www.realsimple.com/thmb/rwSxx97nZcOoBb-dZ1ouGqSn-Q4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/gut-healthy-lunch-GettyImages-1042075090-b21164b3fffe49af8868078e224a3e79.jpg" style="height: 100px; width: auto;"><img src="" alt="">
+                                    <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : 220KCal</h3>
+                                    <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Protein  : 10gr</h3>
+                                </div>
+                                <div class="btn" style="margin-top: 0px;height:auto;">
+                                    <div class="inner"></div>
+                                    <a href="https://cookpad.com/id/resep/16813402-creamy-tomato-chicken-pasta?ref=search&search_term=creamy%20chicken%20pasta">RECIPE</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- <div class="update-container">
                     <label for="show4" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
-                    <div class="text text">@yield('lunch-name')</div>
+                    <div class="text text">Lunch</div>
+                    
+                    <select name="membership" id="membership" style="width: 100%; height: 20px;">
+                        <option value="grilled" selected name="grilled" class="text-center">Grilled</option>
+                        <option value="salad-sandwich" name="salad-sandwich" class="text-center">Salad Sandwhich</option>
+                      </select>
                     <form action="#">
                         <div class="data">
                             <img src="@yield('lunch-picture')" style="height: 100%; width: auto;"><img src="" alt="">
@@ -477,7 +548,8 @@
                             <a href="@yield('lunch-recipe')">RECIPE</a>
                         </div>
                     </form>
-                </div>
+                </div> -->
+                <!-- div class="text text" style="font-size: 15px;">Bubur Ayam</div> -->
             </div>
 
             <!--===== DINNER =====-->
@@ -499,9 +571,54 @@
                         </div>
                     </div>
                 </label>
-                <div class="update-container">
+                <div class="update-container" style="width: 700px;">
                     <label for="show3" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
-                    <div class="text text">@yield('dinner-name')</div>
+                    <div class="text text" style="font-size: 2rem">Dinner</div>
+                    <!-- div class="text text" style="font-size: 15px;">Bubur Ayam</div> -->
+                    <div class="row">
+                        <div class="col-6" style="border-right: 3px solid #ffffff;">
+                            <div class="container">
+                                <h3 class="text-center text-light">1Menu</h3>
+                            </div>
+                            <form action="#">
+                                <div class="data text-center" style="margin-bottom: 20px; height:auto;">
+                                    <img src="https://img.freepik.com/free-photo/healthy-breakfast-table_144627-43540.jpg?w=2000" style="height: 100px; width: auto;"><img src="" alt="">
+                                    <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : 220KCal</h3>
+                                    <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Protein  : 10gr</h3>
+                                </div>
+                                <div class="btn" style="margin-top: 0px;height:auto;">
+                                    <div class="inner"></div>
+                                    <a href="https://cookpad.com/id/resep/16813402-creamy-tomato-chicken-pasta?ref=search&search_term=creamy%20chicken%20pasta">RECIPE</a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-6">
+                        <div class="container">
+                                <h3 class="text-center text-light">2Menu</h3>
+                            </div>
+                            <form action="#">
+                                <div class="data text-center" style="margin-bottom: 20px;height:auto;">
+                                    <img src="https://www.realsimple.com/thmb/rwSxx97nZcOoBb-dZ1ouGqSn-Q4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/gut-healthy-lunch-GettyImages-1042075090-b21164b3fffe49af8868078e224a3e79.jpg" style="height: 100px; width: auto;"><img src="" alt="">
+                                    <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : 220KCal</h3>
+                                    <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Protein  : 10gr</h3>
+                                </div>
+                                <div class="btn" style="margin-top: 0px;height:auto;">
+                                    <div class="inner"></div>
+                                    <a href="https://cookpad.com/id/resep/16813402-creamy-tomato-chicken-pasta?ref=search&search_term=creamy%20chicken%20pasta">RECIPE</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- <div class="update-container">
+                    <label for="show3" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
+                    <div class="text text">Dinner</div>
+                    
+                    <select name="membership" id="membership" style="width: 100%; height: 20px;">
+                        <option value="chicken-pasta" selected name="chicken-pasta" class="text-center">Chicken Pasta</option>
+                        <option value="quinoa-bowl" name="quinoa-bowl" class="text-center">Quinoa Bowl</option>
+                      </select>
                     <form action="#">
                         <div class="data">
                             <img src="@yield('dinner-picture')" style="height: 100%; width: auto;"><img src="" alt="">
@@ -512,7 +629,8 @@
                             <a href="@yield('dinner-recipe')">RECIPE</a>
                         </div>
                     </form>
-                </div>
+                </div> -->
+                <!-- div class="text text" style="font-size: 15px;">Bubur Ayam</div> -->
             </div>
         </section>
     </main>
