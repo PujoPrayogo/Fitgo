@@ -99,6 +99,9 @@
                         </form>
                     </div>
                 </div>
+                <div class="center">
+                    <label class="show-btn" ><a href="/fitgo/weight-tracks/{user}" class="text-light" style="text-decoration:none;">Weight Tracks</a></label>
+                </div>
             </div>
 
                                 <!--========== CARDS TODAYS TARGET ==========-->
