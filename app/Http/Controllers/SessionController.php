@@ -67,6 +67,14 @@ class SessionController extends Controller
         return view("front/register");
     }
 
+    function about(){
+        return view("front/about");
+    }
+
+    function landingPage(){
+        return view("front/landingPage");
+    }
+
 
     function register_continue(Request $request){
 

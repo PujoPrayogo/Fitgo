@@ -27,7 +27,8 @@ Route::post("sesi/register_continue", [SessionController::class, "register_conti
 Route::get("sesi/logout", [SessionController::class, "logout"]);
 Route::post("sesi/create", [SessionController::class, "create"]);
 Route::post("login", [SessionController::class, "login"]);
-Route::get("about", [SessionController::class, 'about']);
+Route::get("about", [SessionController::class, "about"]);
+Route::get("sesi/landingPage", [SessionController::class, "landingPage"]);
 
 //MAIN CONTROLLER
 Route::get("fitgo/{token}", [MainController::class, "index"])-> middleware('isLoggedin');
