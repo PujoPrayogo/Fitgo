@@ -41,6 +41,11 @@
                             <a href='{{'profile/'.$data['name']}}'>
                                 <span class="material-icons-outlined">person</span>
                             </a>
+                            <!-- LOGOUT -->
+                        <!-- <a href="#"></a> -->
+                        <button class="btn btn-light text-dark">
+                            <span class="material-icons-outlined">logout</span>
+                        </button>
                     </aside>
                 </div>
             </div>

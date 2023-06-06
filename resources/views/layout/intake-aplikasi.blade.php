@@ -35,15 +35,15 @@
                         <span class="material-icons-outlined">close</span>
                     </button>
                     <div class="sidebar">
-                        <a href="#">
-                            <span class="material-icons-outlined">home</span>
-                        </a>
-                        <a href="#" class="active">
-                            <span class="material-icons-outlined">fitness_center</span>
-                        </a>
-                        <a href="#">
-                            <span class="material-icons-outlined">person</span>
-                        </a>
+                    <a href='{{'fitgo/'.$name}}' >
+                                <span class="material-icons-outlined">home</span>
+                            </a>
+                            <a href='{{'intake/'.$name}}' class="active">
+                                <span class="material-icons-outlined">fitness_center</span>
+                            </a>
+                            <a href='{{'profile/'.$name}}'>
+                                <span class="material-icons-outlined">person</span>
+                            </a>
                         <!-- LOGOUT -->
                         <!-- <a href="#"></a> -->
                         <button class="btn btn-light text-dark">
@@ -416,19 +416,19 @@
 
             <!--===== BREAKFAST =====-->
             <div class="center">
-                <input type="checkbox" id="show2">
-                <label for="show2" class="show-btn">
-                    <div class="card py-2 my-2 " style="min-width: 100%;width: auto; background-color: black;border-radius:6px;" >
+                <input type="checkbox" id="show4">
+                <label for="show4" class="show-btn">
+                    <div class="cardpy-2 my-2" style="min-width: 100%;width: auto; background-color: black;border-radius:6px;" >
                         <div class="row no-gutters">
                             <div class="col-6">
-                                <div class="card-body text-white" style="height:100%">
+                                <div class="card-body text-white">
                                     <h5 class="card-title-nutrition">Breakfast</h5>
-                                    <p class="card-text">@yield('breakfast-name')</p>
+                                    <p class="card-text"></p>
                                     <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                                 </div>
                             </div>
                             <div class="col-6" >
-                                <img src="@yield('breakfast-picture')" class="card-img" alt="..." style="height: 100%;">
+                                <img src="https://img.freepik.com/free-photo/healthy-breakfast-table_144627-43540.jpg?w=2000" class="card-img" alt="..." style="height: 100%;">
                             </div>
                         </div>
                     </div>
@@ -444,35 +444,34 @@
                             </div>
                             <form action="#">
                                 <div class="data text-center" style="margin-bottom: 20px; height:auto;">
-                                    <img src="https://img-global.cpcdn.com/recipes/79f5a4eb8896b411/640x640sq70/photo.webp" style="height: 100px; width: auto;"><img src="" alt="">
-                                    <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : 220KCal</h3>
+                                <img src="https://img-global.cpcdn.com/recipes/79f5a4eb8896b411/640x640sq70/photo.webp" style="height: 100px; width: auto;"><img src="" alt="">
+                                <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : 220KCal</h3>
                                     <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Protein  : 10gr</h3>
                                 </div>
                                 <div class="btn" style="margin-top: 0px;height:auto;">
                                     <div class="inner"></div>
-                                    <a href="https://cookpad.com/id/resep/16913843-bubur-ayam-bandung?ref=search&search_term=bubur%20ayam">RECIPE</a>
-                                </div>
+                                    <a href="https://cookpad.com/id/resep/16913843-bubur-ayam-bandung?ref=search&search_term=bubur%20ayam" target="_blank" rel="noopener noreferrer">RECIPE</a>
+                                    </div>
                             </form>
                         </div>
                         <div class="col-6">
                         <div class="container">
-                                <h3 class="text-center text-light">Nasi Uduk</h3>
+                        <h3 class="text-center text-light">Nasi Uduk</h3>
                             </div>
                             <form action="#">
                                 <div class="data text-center" style="margin-bottom: 20px;height:auto;">
-                                    <img src="https://img-global.cpcdn.com/recipes/b0a4fba73f24da84/1280x1280sq70/photo.webp" style="height: 100px; width: auto;"><img src="" alt="">
+                                <img src="https://img-global.cpcdn.com/recipes/b0a4fba73f24da84/1280x1280sq70/photo.webp" style="height: 100px; width: auto;"><img src="" alt="">
                                     <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : 220KCal</h3>
                                     <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Protein  : 10gr</h3>
                                 </div>
                                 <div class="btn" style="margin-top: 0px;height:auto;">
                                     <div class="inner"></div>
-                                    <a href="https://cookpad.com/id/resep/16875130-nasi-uduk-rice-cooker-simple-71?ref=search&search_term=nasi%20uduk">RECIPE</a>
+                                    <a href="https://cookpad.com/id/resep/16875130-nasi-uduk-rice-cooker-simple-71?ref=search&search_term=nasi%20uduk" target="_blank" rel="noopener noreferrer">RECIPE</a>
                                 </div>
                             </form>
                         </div>
                     </div>
                     
-                </div>
                 </div>
             </div>
                     
@@ -485,12 +484,12 @@
                             <div class="col-6">
                                 <div class="card-body text-white">
                                     <h5 class="card-title-nutrition">Lunch</h5>
-                                    <p class="card-text">@yield('lunch-name')</p>
+                                    <p class="card-text"></p>
                                     <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                                 </div>
                             </div>
                             <div class="col-6" >
-                                <img src="@yield('lunch-picture')" class="card-img" alt="..." style="height: 100%;">
+                                <img src="https://www.realsimple.com/thmb/rwSxx97nZcOoBb-dZ1ouGqSn-Q4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/gut-healthy-lunch-GettyImages-1042075090-b21164b3fffe49af8868078e224a3e79.jpg" class="card-img" alt="..." style="height: 100%;">
                             </div>
                         </div>
                     </div>
@@ -502,33 +501,33 @@
                     <div class="row">
                         <div class="col-6" style="border-right: 3px solid #ffffff;">
                             <div class="container">
-                                <h3 class="text-center text-light">Menu1</h3>
+                                <h3 class="text-center text-light">Beef Teriyaki</h3>
                             </div>
                             <form action="#">
                                 <div class="data text-center" style="margin-bottom: 20px; height:auto;">
-                                    <img src="https://img.freepik.com/free-photo/healthy-breakfast-table_144627-43540.jpg?w=2000" style="height: 100px; width: auto;"><img src="" alt="">
+                                    <img src="https://img-global.cpcdn.com/recipes/c125b287c718ad89/1280x1280sq70/photo.webp" style="height: 100px; width: auto;"><img src="" alt="">
                                     <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : 220KCal</h3>
                                     <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Protein  : 10gr</h3>
                                 </div>
                                 <div class="btn" style="margin-top: 0px;height:auto;">
                                     <div class="inner"></div>
-                                    <a href="https://cookpad.com/id/resep/16813402-creamy-tomato-chicken-pasta?ref=search&search_term=creamy%20chicken%20pasta">RECIPE</a>
+                                    <a href="https://cookpad.com/id/resep/15029232-beef-teriyaki-simple?ref=search&search_term=Beef%20Teriyaki." target="_blank" rel="noopener noreferrer">RECIPE</a>
                                 </div>
                             </form>
                         </div>
                         <div class="col-6">
                         <div class="container">
-                                <h3 class="text-center text-light">Menu2</h3>
+                                <h3 class="text-center text-light">Chicken Salad</h3>
                             </div>
                             <form action="#">
                                 <div class="data text-center" style="margin-bottom: 20px;height:auto;">
-                                    <img src="https://www.realsimple.com/thmb/rwSxx97nZcOoBb-dZ1ouGqSn-Q4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/gut-healthy-lunch-GettyImages-1042075090-b21164b3fffe49af8868078e224a3e79.jpg" style="height: 100px; width: auto;"><img src="" alt="">
+                                    <img src="https://img-global.cpcdn.com/recipes/ec3a68b6b7b9821d/1280x1280sq70/photo.webp" style="height: 100px; width: auto;"><img src="" alt="">
                                     <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : 220KCal</h3>
                                     <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Protein  : 10gr</h3>
                                 </div>
                                 <div class="btn" style="margin-top: 0px;height:auto;">
                                     <div class="inner"></div>
-                                    <a href="https://cookpad.com/id/resep/16813402-creamy-tomato-chicken-pasta?ref=search&search_term=creamy%20chicken%20pasta">RECIPE</a>
+                                    <a href="https://cookpad.com/id/resep/16753291-grilled-chicken-salad?ref=search&search_term=Salad%20Ayam" target="_blank" rel="noopener noreferrer">RECIPE</a>
                                 </div>
                             </form>
                         </div>
@@ -544,19 +543,19 @@
                         <option value="salad-sandwich" name="salad-sandwich" class="text-center">Salad Sandwhich</option>
                       </select>
                     <form action="#">
-                        <div class="data">
-                            <img src="@yield('lunch-picture')" style="height: 100%; width: auto;"><img src="" alt="">
-                            <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : @yield('lunch-calories')KCal</h3>
+                        <div class="data text-center" style="margin-bottom: 20px;">
+                            <img src="https://www.realsimple.com/thmb/rwSxx97nZcOoBb-dZ1ouGqSn-Q4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/gut-healthy-lunch-GettyImages-1042075090-b21164b3fffe49af8868078e224a3e79.jpg" style="height: 100px; width: auto;"><img src="" alt="">
+                            <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : 220KCal</h3>
+                            <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Protein  : 10gr</h3>
                         </div>
-                        <div class="btn">
+                        <div class="btn" style="margin-top: 0px;">
                             <div class="inner"></div>
-                            <a href="@yield('lunch-recipe')">RECIPE</a>
+                            <a href="https://cookpad.com/id/resep/16813402-creamy-tomato-chicken-pasta?ref=search&search_term=creamy%20chicken%20pasta">RECIPE</a>
                         </div>
                     </form>
                 </div> -->
                 <!-- div class="text text" style="font-size: 15px;">Bubur Ayam</div> -->
             </div>
-
             <!--===== DINNER =====-->
             <div class="center">
                 <input type="checkbox" id="show3">
@@ -566,12 +565,12 @@
                             <div class="col-6">
                                 <div class="card-body text-white" style="height:100%">
                                     <h5 class="card-title-nutrition">Dinner</h5>
-                                    <p class="card-text">@yield('dinner-name')</p>
+                                    <p class="card-text"></p>
                                     <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                                 </div>
                             </div>
                             <div class="col-6" >
-                                <img src="@yield('dinner-picture')" class="card-img" alt="..." style="height: 100%;">
+                                <img src="https://images.squarespace-cdn.com/content/v1/5be122d8f8370ab91d93d1c3/1666561374013-0YCQSNM24VPJV0C835VS/Dinner20222173.jpg" class="card-img" alt="..." style="height: 100%;">
                             </div>
                         </div>
                     </div>
@@ -583,40 +582,40 @@
                     <div class="row">
                         <div class="col-6" style="border-right: 3px solid #ffffff;">
                             <div class="container">
-                                <h3 class="text-center text-light">1Menu</h3>
+                                <h3 class="text-center text-light">Omelette Sayur</h3>
                             </div>
                             <form action="#">
                                 <div class="data text-center" style="margin-bottom: 20px; height:auto;">
-                                    <img src="https://img.freepik.com/free-photo/healthy-breakfast-table_144627-43540.jpg?w=2000" style="height: 100px; width: auto;"><img src="" alt="">
+                                    <img src="https://img-global.cpcdn.com/recipes/fbc5203f119defd6/1280x1280sq70/photo.webp" style="height: 100px; width: auto;"><img src="" alt="">
                                     <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : 220KCal</h3>
                                     <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Protein  : 10gr</h3>
                                 </div>
                                 <div class="btn" style="margin-top: 0px;height:auto;">
                                     <div class="inner"></div>
-                                    <a href="https://cookpad.com/id/resep/16813402-creamy-tomato-chicken-pasta?ref=search&search_term=creamy%20chicken%20pasta">RECIPE</a>
+                                    <a href="https://cookpad.com/id/resep/16917336-resep-omelet-sayur?ref=search&search_term=Omelette%20Sayur" target="_blank" rel="noopener noreferrer">RECIPE</a>
                                 </div>
                             </form>
                         </div>
                         <div class="col-6">
                         <div class="container">
-                                <h3 class="text-center text-light">2Menu</h3>
+                                <h3 class="text-center text-light">Salmon Steak</h3>
                             </div>
                             <form action="#">
                                 <div class="data text-center" style="margin-bottom: 20px;height:auto;">
-                                    <img src="https://www.realsimple.com/thmb/rwSxx97nZcOoBb-dZ1ouGqSn-Q4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/gut-healthy-lunch-GettyImages-1042075090-b21164b3fffe49af8868078e224a3e79.jpg" style="height: 100px; width: auto;"><img src="" alt="">
+                                    <img src="https://img-global.cpcdn.com/recipes/2d7432d67210b091/1280x1280sq70/photo.webp" style="height: 100px; width: auto;"><img src="" alt="">
                                     <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : 220KCal</h3>
                                     <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Protein  : 10gr</h3>
                                 </div>
                                 <div class="btn" style="margin-top: 0px;height:auto;">
                                     <div class="inner"></div>
-                                    <a href="https://cookpad.com/id/resep/16813402-creamy-tomato-chicken-pasta?ref=search&search_term=creamy%20chicken%20pasta">RECIPE</a>
+                                    <a href="https://cookpad.com/id/resep/14614464-salmon-steak-with-creamy-sauce?ref=search&search_term=Steak%20Salmon%20Saus%20Krim" target="_blank" rel="noopener noreferrer">RECIPE</a>
                                 </div>
                             </form>
                         </div>
                     </div>
                     
                 </div>
-                <!-- <div class="update-container">
+                 <!-- <div class="update-container">
                     <label for="show3" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
                     <div class="text text">Dinner</div>
                     
@@ -625,13 +624,14 @@
                         <option value="quinoa-bowl" name="quinoa-bowl" class="text-center">Quinoa Bowl</option>
                       </select>
                     <form action="#">
-                        <div class="data">
-                            <img src="@yield('dinner-picture')" style="height: 100%; width: auto;"><img src="" alt="">
-                            <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : @yield('dinner-calories')KCal</h3>
+                        <div class="data text-center" style="margin-bottom: 20px;">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5be122d8f8370ab91d93d1c3/1666561374013-0YCQSNM24VPJV0C835VS/Dinner20222173.jpg" style="height: 100px; width: auto;"><img src="" alt="">
+                            <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Calories : 220KCal</h3>
+                            <h3 class="text text" style="font-size: 1rem; margin-top: 1rem;">Protein  : 10gr</h3>
                         </div>
-                        <div class="btn">
+                        <div class="btn" style="margin-top: 0px;">
                             <div class="inner"></div>
-                            <a href="@yield('dinner-recipe')">RECIPE</a>
+                            <a href="https://cookpad.com/id/resep/16813402-creamy-tomato-chicken-pasta?ref=search&search_term=creamy%20chicken%20pasta">RECIPE</a>
                         </div>
                     </form>
                 </div> -->
