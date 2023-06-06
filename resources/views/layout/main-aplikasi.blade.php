@@ -40,6 +40,9 @@
                             <a href="/fitgo/profile/{id}">
                                 <span class="material-icons-outlined">person</span>
                             </a>
+                            <button class="btn btn-light text-dark">
+                                <span class="material-icons-outlined">logout</span>
+                            </button>
                     </aside>
                 </div>
             </div>
