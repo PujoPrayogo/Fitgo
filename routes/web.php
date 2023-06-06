@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Api\UserProfileController;
+use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\IntakeController;
@@ -34,20 +34,21 @@ Route::get("sesi/landingPage", [SessionController::class, "landingPage"]);
 
 //MAIN CONTROLLER
 Route::get("fitgo/{name}", [MainController::class, "index"])-> middleware('isLoggedin');
+Route::get("fitgo", [MainController::class, "index"])-> middleware('isLoggedin');
 Route::post("fitgo/{name}", [MainController::class, "create"])-> middleware('isLoggedin');
 Route::delete('fitgo/{name}', [MainController::class, "destroy"])-> middleware('isLoggedin');
 
-Route::post('weight_track/{id}', [MainController::class, "create"])-> middleware('isLoggedin');
-Route::put('weight_track/{id}', [MainController::class, "update_weight"])-> middleware('isLoggedin');
-Route::delete('weight_track/{id}', [MainController::class, "destroy_weight"])-> middleware('isLoggedin');
-Route::get("fitgo/weight-tracks/{user}", [MainController::class, "show_weight"]);
+Route::post('weight_track/{name}', [MainController::class, "create"])-> middleware('isLoggedin');
+Route::put('weight_track/{name}', [MainController::class, "update_weight"])-> middleware('isLoggedin');
+Route::delete('weight_track/{name}', [MainController::class, "destroy_weight"])-> middleware('isLoggedin');
+Route::get("fitgo/weight-tracks/{name}", [MainController::class, "show_weight"]);
 
 
 // Route::get("/fitgo/weight-tracks/{user}", [SessionController::class, "wTracks"]);
 
 //INTAKE CONTROLLER
-Route::get("fitgo/intake/{id}", [IntakeController::class, "index"])-> middleware('isLoggedin');
+Route::get("fitgo/intake/{name}", [IntakeController::class, "index"])-> middleware('isLoggedin');
 
 //USER PROFILE CONTROLLER
-Route::get("fitgo/profile/{id}", [UserProfileController::class, "index"])-> middleware('isLoggedin');
-Route::put("fitgo/profile/{id}", [UserProfileController::class, "update"])-> middleware('isLoggedin');
+Route::get("fitgo/profile/{name}", [UserProfileController::class, "index"])-> middleware('isLoggedin');
+Route::put("fitgo/profile/update/{name}", [UserProfileController::class, "update"])-> middleware('isLoggedin');

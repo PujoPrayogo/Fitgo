@@ -32,18 +32,15 @@
                         </button>
 
                         <div class="sidebar">
-                            <a href='fitgo/'. @yield('profile-name') class="active">
+                            <a href='{{'fitgo/'.$data['name']}}' class="active">
                                 <span class="material-icons-outlined">home</span>
                             </a>
-                            <a href='intake/'. @yield('profile-name')>
+                            <a href='{{'intake/'.$data['name']}}'>
                                 <span class="material-icons-outlined">fitness_center</span>
                             </a>
-                            <a href='profile/'. @yield('profile-name')>
+                            <a href='{{'profile/'.$data['name']}}'>
                                 <span class="material-icons-outlined">person</span>
                             </a>
-                            <button class="btn btn-light text-dark">
-                                <span class="material-icons-outlined">logout</span>
-                            </button>
                     </aside>
                 </div>
             </div>
