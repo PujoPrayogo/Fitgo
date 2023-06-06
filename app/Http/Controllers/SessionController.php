@@ -75,6 +75,10 @@ class SessionController extends Controller
         return view("front/landingPage");
     }
 
+    function wTracks(){
+        return view("front/weightTracks");
+    }
+
 
     function register_continue(Request $request){
 
