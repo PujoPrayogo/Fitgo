@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitgo</title>
+    <title>Intake</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
@@ -35,10 +35,10 @@
                         <span class="material-icons-outlined">close</span>
                     </button>
                     <div class="sidebar">
-                        <a href="/fitgo/{user}" class="active">
+                        <a href="/fitgo/{user}">
                             <span class="material-icons-outlined">home</span>
                         </a>
-                        <a href="/fitgo/intake/{user}">
+                        <a href="/fitgo/intake/{user}" class="active">
                             <span class="material-icons-outlined">fitness_center</span>
                         </a>
                         <a href="/fitgo/profile/{id}">

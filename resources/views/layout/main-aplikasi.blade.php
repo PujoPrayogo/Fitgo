@@ -220,6 +220,18 @@
                         <label for="show2" class="show-btn2">
                             <canvas id="chart" onclick="toggleMenu()" style="width: 1029px; height:300px">
                             </canvas>
+                            <div class="weight-update-container" id="subMenu">
+                                <form action="#" class="weight-update-form">
+                                    <div class="data">
+                                        <label for="update-weight" class="text-question">Current Weight (Kg)</label>
+                                        <input type="text" id="update-weight" name="update-weight">
+                                    </div>
+                                    <div class="btn">
+                                        <div class="inner"></div>
+                                        <button type="submit">Update</button>
+                                    </div>
+                                </form>
+                            </div>
                         </label>
                         <div class="update-container2">
                             <label for="show2" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
@@ -236,25 +248,13 @@
                             </div>
                         </form>
                         </div>
-                        <div class="weight-update-container" id="subMenu">
-                            <form action="#" class="weight-update-form">
-                                <div class="data">
-                                    <label for="update-weight" class="text-question">Current Weight (Kg)</label>
-                                    <input type="text" id="update-weight" name="update-weight">
-                                </div>
-                                <div class="btn">
-                                    <div class="inner"></div>
-                                    <button type="submit">Update</button>
-                                </div>
-                            </form>
-                        </div>
                 
                     </div>
 
                                     <!--========== RECENT ACTIVITIES ==========-->
             <div class="recent-activities">
                 <div class="recent-header">
-                    <h1>Recent Activities</h1>
+                    <h2>Recent Activities</h2>
                 </div>
                 <div class="recent-activity-top-divider"></div>
                                         <!--===== ACTIVITY 1 =====-->
