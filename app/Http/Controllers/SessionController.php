@@ -50,7 +50,7 @@ class SessionController extends Controller
             print_r($contentArray);
             $user_data = Auth::user();
             $name = $user_data->name;
-            return redirect()->to('fitgo/'.$name)->with('success', 'Berhasil Login');
+            return redirect()->to('fitgo/'.$name)->with('success', 'Berhasil Login')->with('name', $name);
         }
     }else{
         return redirect()->to('/');
@@ -66,6 +66,20 @@ class SessionController extends Controller
     function register(){
         return view("front/register");
     }
+
+    function about(){
+        return view("front/about");
+    }
+
+    function landingPage(){
+        return view("front/landingPage");
+    }
+
+    function wTracks(){
+        return view("front/weightTracks");
+    }
+
+
 
 
     function register_continue(Request $request){

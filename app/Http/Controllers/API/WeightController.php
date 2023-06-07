@@ -15,10 +15,9 @@ class WeightController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($id)
     {
-        $user = Auth::user();
-        $data = user_weight_overtime::where('user_id', $user->id)->get();
+        $data = user_weight_overtime::where('user_id', $id)->get();
         return response()->json([
             "status"=>true,
             "massage"=>"data ditemukan",

@@ -57,7 +57,8 @@ class MainController extends Controller
             'bmi'=> $bmi,
         ];
 
-        return view('front/dashboard-main', ['data'=> $data], ['data_activity'=> $data_activity], ['data_weight'=> $data_weight]);
+        return view('front/dashboard-main', ['data'=> $data], ['data_activity'=> $data_activity], ['data_weight'=> $data_weight], ['name'=> $name]);
+
         }else{
             return "not authorized";
         }
@@ -145,6 +146,7 @@ class MainController extends Controller
         }
 
     }
+
 
     public function create_weight(Request $request)
     {
@@ -241,9 +243,16 @@ class MainController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show_weight(string $id)
     {
-        //
+        $client = new Client();
+        $url = "http://127.0.0.1:8000/api/index_weight/{$id}";
+        $response = $client->request('GET', $url);
+        $content = $response->getBody()->getContents();
+        $contentArray = json_decode($content, true);
+        $data = $contentArray['data'];
+
+        return view('front/weightTracks', ['data'=>$data]);
     }
 
     /**

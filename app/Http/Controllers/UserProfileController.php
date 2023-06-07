@@ -6,7 +6,7 @@ use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class UserController extends Controller
+class UserProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,7 +19,10 @@ class UserController extends Controller
         $content = $response->getBody()->getContents();
         $contentArray = json_decode($content, true);
         $data = $contentArray['data'];
-        return view('front/profile', ['data'=> $data]);
+
+        return view('front/dashboard-profile', ['data'=> $data]);
+
+       
     }
 
     /**
