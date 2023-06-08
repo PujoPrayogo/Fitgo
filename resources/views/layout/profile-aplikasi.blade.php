@@ -258,9 +258,10 @@
    }
    .show-btn {
     background: var(--color-dark);
-    margin-top: 10px;
+    margin-top: 3rem;
+    margin-left: 3rem;
     color: white;
-    padding: 0.3rem 1rem;
+    padding: 0.5rem 1.2rem;
     font-size: 16px;
     cursor: pointer;
     font-weight: 500;
@@ -808,7 +809,7 @@
                 <!-- PROTEIN -->
                 <div class="goal goal-2">
                     <div>
-                        <h2>@yield('email')gr</h2>
+                        <h2>@yield('email')</h2>
                         <h5>Email</h5>
                     </div>
                 </div>
@@ -816,7 +817,7 @@
                 <!-- WATER -->
                 <div class="goal goal-3">
                     <div>
-                        <h2>@yield('age') L</h2>
+                        <h2>@yield('age')</h2>
                         <h5>Age</h5>
                     </div>
                 </div>
@@ -876,28 +877,7 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="cards">
-                                    <!-- CARD 1-->
-                                    <div class="card">
-                                        <div class="top">
-                                            <div class="left">
-                                                <img src="https://img.uxwing.com/wp-content/themes/uxwing/download/fitness-gym-yoga-spa/body-weight-scales-icon.png">
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="middle">
-                                            <h1 style="font-size: 2.5rem;">@yield('target-kcal')</h1>
-                                            
-                                        </div>
-                                        <div class="bottom">
-                                            <div class="left">
-                                                <h4 style="font-size: 1.2rem; color: var(--color-gray-dark);">KCal left</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="show-btn">Logout</button>
-                                </div>
+                                <button class="show-btn">Logout</button>
 
                                                         <!--========== DAILY INTAKE ===========-->
                                 
