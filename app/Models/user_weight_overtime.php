@@ -10,5 +10,5 @@ class user_weight_overtime extends Model
     use HasFactory;
 
     protected $table = "user_weight_overtime";
-    protected $fillable = ["weight_atm", 'user_id'];
+    protected $fillable = ["weight_atm", 'user_id', "created_at"];
 }

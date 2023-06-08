@@ -153,11 +153,14 @@ class MainController extends Controller
         $data = Auth::user();
         $user_id = $data->id;
         $id = $data->id;
-        $weight_atm = $request->weight_atm;
+        $weight_atm = $request->weight;
+        $created_at = $request->created_at;
+
 
         $parameter = [
             'user_id'=>$user_id,
             'weight_atm'=>$weight_atm,
+            'created_at'=>$created_at
         ];
         
         $client = new Client();
@@ -172,10 +175,10 @@ class MainController extends Controller
         
         if($contentArray["status"] != true) {
             $error = $contentArray['massage'];
-            return redirect()->to('fitgo/'.$id)->withErrors($error)->withInput();
+            return redirect()->to('fitgo/weight-tracks/'.$id)->withErrors($error)->withInput();
 
         } else{
-            return redirect()->to('fitgo/'.$id)->with('success', 'Berhasil memasukan data');
+            return redirect()->to('fitgo/weight-tracks/'.$id)->with('success', 'Berhasil memasukan data');
         }
 
     }
@@ -193,10 +196,10 @@ class MainController extends Controller
         
         if($contentArray["status"] != true) {
             $error = $contentArray['massage'];
-            return redirect()->to('fitgo/'.$id)->withErrors($error)->withInput();
+            return redirect()->to('fitgo/weight-tracks/'.$id)->withErrors($error)->withInput();
 
         } else{
-            return redirect()->to('fitgo/'.$id)->with('success', 'Berhasil hapus data');
+            return redirect()->to('fitgo/weight-tracks/'.$id)->with('success', 'Berhasil hapus data');
         }
     }
 
@@ -219,15 +222,13 @@ class MainController extends Controller
         ]);
         $content = $response->getBody()->getContents();
         $contentArray = json_decode($content, true);
-    
-        $name = $data->name;
         
         if($contentArray["status"] != true) {
             $error = $contentArray['massage'];
-            return redirect()->to('fitgo/'.$id)->withErrors($error)->withInput();
+            return redirect()->to('fitgo/weight-tracks/'.$id)->withErrors($error)->withInput();
 
         } else{
-            return redirect()->to('fitgo/'.$id)->with('success', 'Berhasil update data');
+            return redirect()->to('fitgo/weight-tracks/'.$id)->with('success', 'Berhasil update data');
         }
         
     }
@@ -254,7 +255,7 @@ class MainController extends Controller
         $contentArray = json_decode($content, true);
         $data = $contentArray['data'];
 
-        return view('front/weightTracks', ['data'=>$data]);
+        return view('front/weightTracks', ['data'=>$data])->with('id', $id);
     }
 
     /**

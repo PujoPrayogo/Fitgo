@@ -46,23 +46,24 @@
                 
             @endif
 
-            <form action='' method='post'>
-                <!-- @csrf
-                @if (Route::current()->uri == 'buku/{id}')
+            <form action={{'/fitgo/weight_track/create/'.$id}} method='post'>
+            @csrf
+                
+                {{-- @if (Route::current()->uri == '/fitgo/weight_track/update/{id}')
                     @method('put')
                 @endif
-                @method('put') -->
+                @method('put') --}}
 
                 <div class="mb-3 row">
                     <label for="weight" class="col-sm-2 col-form-label">Weight (Kg)</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name='weight' id="weight" value="{{ isset($data['weight'])?$data['weight']:old('weight')}}">
+                        <input type="text" class="form-control" name='weight' id="weight" value="">
                     </div>
                 </div>
                 <div class="mb-3 row">
                     <label for="date_add_weight" class="col-sm-2 col-form-label">Date Add Weight</label>
                     <div class="col-sm-10">
-                        <input type="date" class="form-control w-50" name='tanggal_publikasi' id="tanggal_publikasi" value="{{ isset($data['tanggal_publikasi'])?$data['tanggal_publikasi']:old('tanggal_publikasi')}}">
+                        <input type="date" class="form-control w-50" name='created_at' id="tanggal_publikasi" value="">
                     </div>
                 </div>
                 <div class="mb-3 row">
@@ -72,6 +73,8 @@
                 </div>
             </form>
         </div>
+
+        {{-- @if (Route::current()->uri == '/fitgo/weight-tracks/6') --}}
 
         <div class="my-3 p-3 bg-body rounded shadow-sm">
             <table class="table table-striped">
@@ -84,18 +87,42 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php $i = 1 ?>
+                    @foreach ($data as $item)
+                        <tr>
+                            <td>{{$i}}</td>
+                        <td>{{$item["weight_atm"]}}</td>
+                        <td>{{$item["created_at"]}}</td>
+                        <td>
+                            
+                            
+                            <form action={{"/fitgo/weight_track/".$item['id']}} 
+                            method="post" 
+                            onsubmit="return confirm('apakah yakin akan menghapus data?')"
+                            class="d-inline">
+                                @csrf
+                                @method('delete')
+                                <button type="submit" name="submit" class="btn btn-danger btn-sm">Del</button>
+                            </form>
+                            
+                        </td>
+                        </tr>
+                    <?php $i++ ?>
+                    @endforeach
                     
             
                 </tbody>
             </table>
 
         </div>
+    
         <!-- AKHIR FORM -->
 
             
         <!-- START DATA -->
         
         <!-- AKHIR DATA -->
+       
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
@@ -107,6 +134,8 @@
 
         const chart = document.querySelector("#chart").getContext('2d');
 
+        var data = @json($data)
+
 
         // CREATE NEW CHART INSTANCE
         new Chart(chart, {
@@ -116,7 +145,7 @@
                     datasets: [
                         {
                             label: 'Weight',
-                            data: [72.5, 71, 71.2, 70, 68, 67.2, 74.5],
+                            data: [data[0]['weight_atm'], data[1]['weight_atm'], data[2]['weight_atm'], data[3]['weight_atm'], data[4]['weight_atm'], data[5]['weight_atm'], data[6]['weight_atm']],
                             backgroundColor: ['black', 'black', 'black', 'black', 'black', 'black', 'rgb(160, 99, 245)'],
                             borderColor: ['black', 'black', 'black', 'black', 'black', 'black', 'rgb(160, 99, 245)'],
                             borderWidth: 2

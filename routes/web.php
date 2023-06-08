@@ -38,9 +38,9 @@ Route::get("fitgo", [MainController::class, "index"])-> middleware('isLoggedin')
 Route::post("fitgo/{name}", [MainController::class, "create"])-> middleware('isLoggedin');
 Route::delete('fitgo/{name}', [MainController::class, "destroy"])-> middleware('isLoggedin');
 
-Route::post('weight_track/{name}', [MainController::class, "create"])-> middleware('isLoggedin');
-Route::put('weight_track/{name}', [MainController::class, "update_weight"])-> middleware('isLoggedin');
-Route::delete('weight_track/{name}', [MainController::class, "destroy_weight"])-> middleware('isLoggedin');
+Route::post('fitgo/weight_track/create/{name}', [MainController::class, "create_weight"])-> middleware('isLoggedin');
+Route::put('fitgo/weight_track/update/{name}', [MainController::class, "update_weight"])-> middleware('isLoggedin');
+Route::delete('fitgo/weight_track/{name}', [MainController::class, "destroy_weight"])-> middleware('isLoggedin');
 Route::get("fitgo/weight-tracks/{name}", [MainController::class, "show_weight"]);
 
 
