@@ -110,32 +110,32 @@
                               <th>Reps</th>
                             </tr>
                             <tr>
-                              <td>1.  <a href="https://www.tiktok.com/@delonixsen/video/7232138041597431066?q=cara%20shoulder%20press&t=1685225923734">Shoulder Press</a></td>
+                              <td>1.  <a href="https://www.tiktok.com/@delonixsen/video/7232138041597431066?q=cara%20shoulder%20press&t=1685225923734" target="_blank" rel="noopener noreferrer">Shoulder Press</a></td>
                               <td>2</td>
                               <td>6-10</td>
                             </tr>
                             <tr>
-                              <td>2. <a href="https://www.tiktok.com/@davinyonathan_/video/7126802671620738330?q=cara%20bicep%20curl&t=1685225483697">Biceps Curl</a></td>
+                              <td>2. <a href="https://www.tiktok.com/@davinyonathan_/video/7126802671620738330?q=cara%20bicep%20curl&t=1685225483697" target="_blank" rel="noopener noreferrer">Biceps Curl</a></td>
                               <td>3</td>
                               <td>6-12</td>
                             </tr>
                             <tr>
-                              <td>3. <a href="https://www.tiktok.com/@itsismailm/video/7204051963619609882?q=cara%20lateral%20raise&t=1685225540545">Lateral Raise</a></td>
+                              <td>3. <a href="https://www.tiktok.com/@itsismailm/video/7204051963619609882?q=cara%20lateral%20raise&t=1685225540545" target="_blank" rel="noopener noreferrer">Lateral Raise</a></td>
                               <td>3</td>
                               <td>6-15</td>
                             </tr>
                             <tr>
-                              <td>4. <a href="https://www.tiktok.com/@enriquedustin/video/7235587509051198725?q=cara%20triceps%20pushdown&t=1685225579300">Triceps Pushdown</a></td>
+                              <td>4. <a href="https://www.tiktok.com/@enriquedustin/video/7235587509051198725?q=cara%20triceps%20pushdown&t=1685225579300" target="_blank" rel="noopener noreferrer">Triceps Pushdown</a></td>
                               <td>3</td>
                               <td>6-12</td>
                             </tr>
                             <tr>
-                              <td>5. <a href="https://www.tiktok.com/@petermiljak/video/7222056950404549893?q=cara%20rear%20delts%20fly&t=1685225619939">Rear Delts Fly</a></td>
+                              <td>5. <a href="https://www.tiktok.com/@petermiljak/video/7222056950404549893?q=cara%20rear%20delts%20fly&t=1685225619939" target="_blank" rel="noopener noreferrer">Rear Delts Fly</a></td>
                               <td>3</td>
                               <td>6-10</td>
                             </tr>
                             <tr>
-                              <td>6. <a href="https://www.tiktok.com/@petermiljak/video/7203523591130877190?q=cara%20hammer%20curl&t=1685225689625">Hammer Curl</a></td>
+                              <td>6. <a href="https://www.tiktok.com/@petermiljak/video/7203523591130877190?q=cara%20hammer%20curl&t=1685225689625" target="_blank" rel="noopener noreferrer">Hammer Curl</a></td>
                               <td>2-3</td>
                               <td>6-10</td>
                             </tr>
@@ -186,27 +186,27 @@
                               <th>Reps</th>
                             </tr>
                             <tr>
-                              <td>1. <a href="https://www.tiktok.com/@ucan.fit/video/7183707661702073626?q=cara%20bench%20press&t=1685225287594">Bench Press</a></td>
+                              <td>1. <a href="https://www.tiktok.com/@ucan.fit/video/7183707661702073626?q=cara%20bench%20press&t=1685225287594" target="_blank" rel="noopener noreferrer">Bench Press</a></td>
                               <td>3</td>
                               <td>5-8</td>
                             </tr>
                             <tr>
-                              <td>2. <a href="https://www.tiktok.com/@itsismailm/video/7204051963619609882?q=cara%20lateral%20raise&t=1685225540545">Lateral Raise</a></td>
+                              <td>2. <a href="https://www.tiktok.com/@itsismailm/video/7204051963619609882?q=cara%20lateral%20raise&t=1685225540545" target="_blank" rel="noopener noreferrer">Lateral Raise</a></td>
                               <td>3</td>
                               <td>6-12</td>
                             </tr>
                             <tr>
-                              <td>3. <a href="https://www.tiktok.com/@ucan.fit/video/7194794679056010522?q=cara%20chest%20fly&t=1685226031028">Chest Fly</a></td>
+                              <td>3. <a href="https://www.tiktok.com/@ucan.fit/video/7194794679056010522?q=cara%20chest%20fly&t=1685226031028" target="_blank" rel="noopener noreferrer">Chest Fly</a></td>
                               <td>3</td>
                               <td>6-12</td>
                             </tr>
                             <tr>
-                              <td>4. <a href="https://www.tiktok.com/@delonixsen/video/7232138041597431066?q=cara%20shoulder%20press&t=1685225923734">Shoulder Press</a></td>
+                              <td>4. <a href="https://www.tiktok.com/@delonixsen/video/7232138041597431066?q=cara%20shoulder%20press&t=1685225923734" target="_blank" rel="noopener noreferrer">Shoulder Press</a></td>
                               <td>2</td>
                               <td>6-12</td>
                             </tr>
                             <tr>
-                              <td>5. <a href="https://www.tiktok.com/@enriquedustin/video/7235587509051198725?q=cara%20triceps%20pushdown&t=1685225579300">Triceps Pushdown</a></td>
+                              <td>5. <a href="https://www.tiktok.com/@enriquedustin/video/7235587509051198725?q=cara%20triceps%20pushdown&t=1685225579300" target="_blank" rel="noopener noreferrer">Triceps Pushdown</a></td>
                               <td>3</td>
                               <td>6-12</td>
                             </tr>
@@ -241,32 +241,32 @@
                               <th>Reps</th>
                             </tr>
                             <tr>
-                                <td>1. <a href="https://www.tiktok.com/@ucan.fit/video/7183707661702073626?q=cara%20bench%20press&t=1685225287594">Bench Press</a></td>
+                                <td>1. <a href="https://www.tiktok.com/@ucan.fit/video/7183707661702073626?q=cara%20bench%20press&t=1685225287594" target="_blank" rel="noopener noreferrer">Bench Press</a></td>
                                 <td>3</td>
                                 <td>5-8</td>
                             </tr>
                             <tr>
-                              <td>2. <a href="https://www.tiktok.com/@just.smoll/video/7193678534794218779?q=cara%20squat&t=1685226350839">Barbell/Dumbbell Squat</a></td>
+                              <td>2. <a href="https://www.tiktok.com/@just.smoll/video/7193678534794218779?q=cara%20squat&t=1685226350839" target="_blank" rel="noopener noreferrer">Barbell/Dumbbell Squat</a></td>
                               <td>3</td>
                               <td>5-8</td>
                             </tr>
                             <tr>
-                              <td>3. <a href="https://www.tiktok.com/@neveres_id/video/7190603734978694427?q=cara%20lat%20pulldown&t=1685226404862">Lat Pulldown</a></td>
+                              <td>3. <a href="https://www.tiktok.com/@neveres_id/video/7190603734978694427?q=cara%20lat%20pulldown&t=1685226404862" target="_blank" rel="noopener noreferrer">Lat Pulldown</a></td>
                               <td>3</td>
                               <td>6-12</td>
                             </tr>
                             <tr>
-                                <td>4. <a href="https://www.tiktok.com/@enriquedustin/video/7235587509051198725?q=cara%20triceps%20pushdown&t=1685225579300">Triceps Pushdown</a></td>
+                                <td>4. <a href="https://www.tiktok.com/@enriquedustin/video/7235587509051198725?q=cara%20triceps%20pushdown&t=1685225579300" target="_blank" rel="noopener noreferrer">Triceps Pushdown</a></td>
                                 <td>3</td>
                                 <td>6-12</td>
                             </tr>
                             <tr>
-                                <td>5. <a href="https://www.tiktok.com/@davinyonathan_/video/7126802671620738330?q=cara%20bicep%20curl&t=1685225483697">Biceps Curl</a></td>
+                                <td>5. <a href="https://www.tiktok.com/@davinyonathan_/video/7126802671620738330?q=cara%20bicep%20curl&t=1685225483697" target="_blank" rel="noopener noreferrer">Biceps Curl</a></td>
                                 <td>3</td>
                                 <td>6-12</td>
                             </tr>
                             <tr>
-                              <td>6. <a href="https://www.tiktok.com/@windysonora/video/7200692918980529435?q=cara%20bulgarian%20split%20squat&t=1685226585277">Bulgarian Split Squat</a></td>
+                              <td>6. <a href="https://www.tiktok.com/@windysonora/video/7200692918980529435?q=cara%20bulgarian%20split%20squat&t=1685226585277" target="_blank" rel="noopener noreferrer">Bulgarian Split Squat</a></td>
                               <td>2-3</td>
                               <td>6-12</td>
                             </tr>
@@ -303,27 +303,27 @@
                               <th>Reps</th>
                             </tr>
                             <tr>
-                                <td>1. <a href="https://www.tiktok.com/@just.smoll/video/7193678534794218779?q=cara%20squat&t=1685226350839">Barbell/Dumbbell Squat</a></td>
+                                <td>1. <a href="https://www.tiktok.com/@just.smoll/video/7193678534794218779?q=cara%20squat&t=1685226350839" target="_blank" rel="noopener noreferrer">Barbell/Dumbbell Squat</a></td>
                                 <td>3</td>
                                 <td>5-8</td>
                             </tr>
                             <tr>
-                              <td>2. <a href="https://www.tiktok.com/@seazny/video/7185401608036027674?q=cara%20legs%20curl&t=1685226753526">Legs curl</a></td>
+                              <td>2. <a href="https://www.tiktok.com/@seazny/video/7185401608036027674?q=cara%20legs%20curl&t=1685226753526" target="_blank" rel="noopener noreferrer">Legs curl</a></td>
                               <td>3</td>
                               <td>6-12</td>
                             </tr>
                             <tr>
-                              <td>3. <a href="https://www.tiktok.com/@vinnie.hasan/video/7185338468136963355?q=cara%20legs%20extension&t=1685226688095">Legs Extension</a></td>
+                              <td>3. <a href="https://www.tiktok.com/@vinnie.hasan/video/7185338468136963355?q=cara%20legs%20extension&t=1685226688095" target="_blank" rel="noopener noreferrer">Legs Extension</a></td>
                               <td>3</td>
                               <td>6-15</td>
                             </tr>
                             <tr>
-                              <td>4. <a href="https://www.tiktok.com/@windysonora/video/7200692918980529435?q=cara%20bulgarian%20split%20squat&t=1685226585277">Bulgarian Split Squat</a></td>
+                              <td>4. <a href="https://www.tiktok.com/@windysonora/video/7200692918980529435?q=cara%20bulgarian%20split%20squat&t=1685226585277" target="_blank" rel="noopener noreferrer">Bulgarian Split Squat</a></td>
                               <td>2-3</td>
                               <td>6-10</td>
                             </tr>
                             <tr>
-                              <td>5. <a href="https://www.tiktok.com/@reinaldy.atmanegara/video/7162368644163407105?q=cara%20calf%20raise%20&t=1685226850375">Calves Raise</a> Fly</td>
+                              <td>5. <a href="https://www.tiktok.com/@reinaldy.atmanegara/video/7162368644163407105?q=cara%20calf%20raise%20&t=1685226850375" target="_blank" rel="noopener noreferrer">Calves Raise</a> Fly</td>
                               <td>2-3</td>
                               <td>6-15</td>
                             </tr>
@@ -359,32 +359,32 @@
                               <th>Reps</th>
                             </tr>
                             <tr>
-                                <td>1. <a href="https://www.tiktok.com/@neveres_id/video/7190603734978694427?q=cara%20lat%20pulldown&t=1685226404862">Lat Pulldown</a></td>
+                                <td>1. <a href="https://www.tiktok.com/@neveres_id/video/7190603734978694427?q=cara%20lat%20pulldown&t=1685226404862" target="_blank" rel="noopener noreferrer">Lat Pulldown</a></td>
                                 <td>3</td>
                                 <td>6-12</td>
                             </tr>
                             <tr>
-                              <td>2. <a href="https://www.tiktok.com/@just.smoll/video/7225957033101643034?q=cara%20cable%20row&t=1685227015059">Cable/Dumbbell Rows</a></td>
+                              <td>2. <a href="https://www.tiktok.com/@just.smoll/video/7225957033101643034?q=cara%20cable%20row&t=1685227015059" target="_blank" rel="noopener noreferrer">Cable/Dumbbell Rows</a></td>
                               <td>3</td>
                               <td>6-12</td>
                             </tr>
                             <tr>
-                                <td>3. <a href="https://www.tiktok.com/@davinyonathan_/video/7126802671620738330?q=cara%20bicep%20curl&t=1685225483697">Biceps Curl</a></td>
+                                <td>3. <a href="https://www.tiktok.com/@davinyonathan_/video/7126802671620738330?q=cara%20bicep%20curl&t=1685225483697" target="_blank" rel="noopener noreferrer">Biceps Curl</a></td>
                                 <td>3-4</td>
                                 <td>6-12</td>
                             </tr>
                             <tr>
-                              <td>4. <a href="https://www.tiktok.com/@megafit.id/video/7233741947586825478?q=cara%20face%20pull&t=1685227210892">Face pull</a></td>
-                              <td>3-4</td>
+                              <td>4. <a href="https://www.tiktok.com/@megafit.id/video/7233741947586825478?q=cara%20face%20pull&t=1685227210892" target="_blank" rel="noopener noreferrer">Face pull</a></td>
+                              <td>3-4</td> 
                               <td>6-12</td>
                             </tr>
                             <tr>
-                                <td>5. <a href="https://www.tiktok.com/@petermiljak/video/7203523591130877190?q=cara%20hammer%20curl&t=1685225689625">Hammer Curl</a></td>
+                                <td>5. <a href="https://www.tiktok.com/@petermiljak/video/7203523591130877190?q=cara%20hammer%20curl&t=1685225689625" target="_blank" rel="noopener noreferrer">Hammer Curl</a></td>
                                 <td>3</td>
                                 <td>6-12</td>
                               </tr>
                             <tr>
-                              <td>6. (Opsional)<a href="https://www.tiktok.com/@beanieguylifting/video/7133535418305432859?q=cara%20single%20arm%20lat%20pulldown&t=1685227359432">Single arm lat-pulldown</a></td>
+                              <td>6. (Opsional)<a href="https://www.tiktok.com/@beanieguylifting/video/7133535418305432859?q=cara%20single%20arm%20lat%20pulldown&t=1685227359432" target="_blank" rel="noopener noreferrer">Single arm lat-pulldown</a></td>
                               <td>2-3</td>
                               <td>6-12</td>
                             </tr>
