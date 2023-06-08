@@ -15,11 +15,21 @@ class UserProfileController extends Controller
     public function index($id)
     {
         $data = User::find($id);
+
+        if(empty($data)){
+            return response()->json([
+                "status"=>false,
+                'massage'=>"data tidak ditemukan",
+                'data'=> null
+            ]);
+        }
+
+        
         return response()->json([
             "status"=>true,
             "massage"=>"data ditemukan",
             "data"=>$data
-        ],200);
+        ]);
     }
 
     /**

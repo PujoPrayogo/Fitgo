@@ -57,7 +57,7 @@ class MainController extends Controller
             'bmi'=> $bmi,
         ];
 
-        return view('front/dashboard-main', ['data'=> $data], ['data_activity'=> $data_activity], ['data_weight'=> $data_weight], ['name'=> $name]);
+        return view('front/dashboard-main', ['data'=> $data], ['data_activity'=> $data_activity], ['data_weight'=> $data_weight], ['name'=> $name])->with('id', $id);
 
         }else{
             return "not authorized";
@@ -152,7 +152,7 @@ class MainController extends Controller
     {
         $data = Auth::user();
         $user_id = $data->id;
-        $name = $data->name;
+        $id = $data->id;
         $weight_atm = $request->weight_atm;
 
         $parameter = [
@@ -172,10 +172,10 @@ class MainController extends Controller
         
         if($contentArray["status"] != true) {
             $error = $contentArray['massage'];
-            return redirect()->to('fitgo/'.$name)->withErrors($error)->withInput();
+            return redirect()->to('fitgo/'.$id)->withErrors($error)->withInput();
 
         } else{
-            return redirect()->to('fitgo/'.$name)->with('success', 'Berhasil memasukan data');
+            return redirect()->to('fitgo/'.$id)->with('success', 'Berhasil memasukan data');
         }
 
     }
@@ -189,14 +189,14 @@ class MainController extends Controller
         $contentArray = json_decode($content, true);
 
         $data = Auth::user();
-        $name = $data->name;
+        $id = $data->id;
         
         if($contentArray["status"] != true) {
             $error = $contentArray['massage'];
-            return redirect()->to('fitgo/'.$name)->withErrors($error)->withInput();
+            return redirect()->to('fitgo/'.$id)->withErrors($error)->withInput();
 
         } else{
-            return redirect()->to('fitgo/'.$name)->with('success', 'Berhasil hapus data');
+            return redirect()->to('fitgo/'.$id)->with('success', 'Berhasil hapus data');
         }
     }
 
@@ -224,10 +224,10 @@ class MainController extends Controller
         
         if($contentArray["status"] != true) {
             $error = $contentArray['massage'];
-            return redirect()->to('fitgo/'.$name)->withErrors($error)->withInput();
+            return redirect()->to('fitgo/'.$id)->withErrors($error)->withInput();
 
         } else{
-            return redirect()->to('fitgo/'.$name)->with('success', 'Berhasil update data');
+            return redirect()->to('fitgo/'.$id)->with('success', 'Berhasil update data');
         }
         
     }
@@ -243,9 +243,11 @@ class MainController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show_weight(string $id)
+    public function show_weight()
     {
         $client = new Client();
+        $data = Auth::user();
+        $id = $data->id;
         $url = "http://127.0.0.1:8000/api/index_weight/{$id}";
         $response = $client->request('GET', $url);
         $content = $response->getBody()->getContents();
@@ -283,14 +285,14 @@ class MainController extends Controller
         $contentArray = json_decode($content, true);
 
         $data = Auth::user();
-        $name = $data->name;
+        $id = $data->id;
         
         if($contentArray["status"] != true) {
             $error = $contentArray['massage'];
-            return redirect()->to('fitgo/'.$name)->withErrors($error)->withInput();
+            return redirect()->to('fitgo/'.$id)->withErrors($error)->withInput();
 
         } else{
-            return redirect()->to('fitgo/'.$name)->with('success', 'Berhasil hapus data');
+            return redirect()->to('fitgo/'.$id)->with('success', 'Berhasil hapus data');
         }
     }
 }

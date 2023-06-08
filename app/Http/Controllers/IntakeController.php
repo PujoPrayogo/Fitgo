@@ -15,8 +15,8 @@ class IntakeController extends Controller
         if(auth()->check()){
         $data = Auth::user();
 
-        $name = $data->name;
-        return view('front/dashboard-intake', ['name'=>$name]);
+        $id = $data->id;
+        return view('front/dashboard-intake', ['id'=>$id]);
         }
     }
 

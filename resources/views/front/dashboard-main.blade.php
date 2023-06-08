@@ -36,7 +36,7 @@ https://marketplace.canva.com/EAFEits4-uw/1/0/1600w/canva-boy-cartoon-gamer-anim
 @endsection
 
 
-
+<input type="hidden" name="id" value="{{$id}}">
                                         <!--YOUR GOALS-->
 @section('your-goals-weight-type')
 

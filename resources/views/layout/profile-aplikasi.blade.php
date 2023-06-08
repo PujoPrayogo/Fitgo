@@ -780,15 +780,20 @@
                             <span class="material-icons-outlined">close</span>
                         </button>
                         <div class="sidebar">
-                            <a href="/fitgo/{user}">
+                             <a href={{"/fitgo/".$id}} >
                                 <span class="material-icons-outlined">home</span>
                             </a>
-                            <a href="/fitgo/intake/{user}">
+                            <a href={{"/fitgo/intake/".$id}}>
                                 <span class="material-icons-outlined">fitness_center</span>
                             </a>
-                            <a href="/fitgo/profile/{id}" class="active">
+                            <a href={{"/fitgo/profile/".$id}} class="active">
                                 <span class="material-icons-outlined">person</span>
                             </a>
+                            <form action="/logout">
+                            <button class="btn btn-light text-dark">
+                                <span class="material-icons-outlined">logout</span>
+                            </button>
+                            </form>
                     </aside>
                 </div>
             </div>

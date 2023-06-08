@@ -30,7 +30,7 @@ Route::post('insert_weight', [WeightController::class, 'store']);
 Route::post('store', [RecentActivitiesController::class, 'store']);
 Route::delete('delete/{id}', [RecentActivitiesController::class, 'destroy']);
 
-Route::get('index_weight', [WeightController::class, 'index']);
+Route::get('index_weight/{id}', [WeightController::class, 'index']);
 Route::post('store_weight', [WeightController::class, 'store']);
 Route::delete('delete_weight/{id}', [WeightController::class, 'destroy']);
 Route::put('update_weight/{id}', [WeightController::class, 'update']);

@@ -16,13 +16,25 @@ class WeightController extends Controller
      * Display a listing of the resource.
      */
     public function index($id)
+
+
     {
-        $data = user_weight_overtime::where('user_id', $id)->get();
+        
+
+        $data = user_weight_overtime::where('user_id', $id)->orderBy('created_at', 'desc')->take(7)->get();
+
+        if(empty($data)){
+            return response()->json([
+                "status"=>false,
+                'massage'=>"data tidak ditemukan",
+                'data'=> null
+            ]);
+        }
         return response()->json([
             "status"=>true,
             "massage"=>"data ditemukan",
             "data"=>$data
-        ],200);
+        ]);
 
         
     }

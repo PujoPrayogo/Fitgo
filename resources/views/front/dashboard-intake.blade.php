@@ -48,6 +48,7 @@ https://www.realsimple.com/thmb/rwSxx97nZcOoBb-dZ1ouGqSn-Q4=/1500x0/filters:no_u
 500
 @endsection
 
+
 @section('lunch-recipe')
 https://cookpad.com/id/resep/16916453-sayur-sup-ayam-jagung?ref=search&search_term=sop%20ayam%20sayur
 @endsection

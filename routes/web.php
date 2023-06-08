@@ -26,7 +26,7 @@ Route::get("sesi/register", [SessionController::class, "register"])-> middleware
 Route::get("sesi/register2", [SessionController::class, "register2"])-> middleware('isNotLoggedin');
 Route::post("sesi/register_continue", [SessionController::class, "register_continue"]);
 
-Route::get("sesi/logout", [SessionController::class, "logout"]);
+Route::get("logout", [SessionController::class, "logout"]);
 Route::post("sesi/create", [SessionController::class, "create"]);
 Route::post("login", [SessionController::class, "login"]);
 Route::get("about", [SessionController::class, "about"]);

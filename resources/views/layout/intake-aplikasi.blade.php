@@ -35,20 +35,23 @@
                         <span class="material-icons-outlined">close</span>
                     </button>
                     <div class="sidebar">
-                    <a href='{{'fitgo/'.$name}}' >
+                             <a href={{"/fitgo/".$id}} >
                                 <span class="material-icons-outlined">home</span>
                             </a>
-                            <a href='{{'intake/'.$name}}' class="active">
+                            <a href={{"/fitgo/intake/".$id}} class="active">
                                 <span class="material-icons-outlined">fitness_center</span>
                             </a>
-                            <a href='{{'profile/'.$name}}'>
+                            <a href={{"/fitgo/profile/".$id}} >
                                 <span class="material-icons-outlined">person</span>
                             </a>
                         <!-- LOGOUT -->
-                        <!-- <a href="#"></a> -->
-                        <button class="btn btn-light text-dark">
+                       
+                        <form action="/logout">
+                        <button class="btn btn-light text-dark" >
                             <span class="material-icons-outlined">logout</span>
                         </button>
+                        </form>
+                       
                 </aside>
             </div>
         </div>

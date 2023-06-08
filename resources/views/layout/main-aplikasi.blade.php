@@ -32,20 +32,22 @@
                         </button>
 
                         <div class="sidebar">
-                            <a href='{{'fitgo/'.$data['name']}}' class="active">
+                             <a href={{"/fitgo/".$id}} class="active">
                                 <span class="material-icons-outlined">home</span>
                             </a>
-                            <a href='{{'intake/'.$data['name']}}'>
+                            <a href={{"/fitgo/intake/".$id}}>
                                 <span class="material-icons-outlined">fitness_center</span>
                             </a>
-                            <a href='{{'profile/'.$data['name']}}'>
+                            <a href={{"/fitgo/profile/".$id}} >
                                 <span class="material-icons-outlined">person</span>
                             </a>
                             <!-- LOGOUT -->
                         <!-- <a href="#"></a> -->
-                        <button class="btn btn-light text-dark">
+                        <form action="/logout">
+                        <button class="btn btn-light text-dark" >
                             <span class="material-icons-outlined">logout</span>
                         </button>
+                        </form>
                     </aside>
                 </div>
             </div>

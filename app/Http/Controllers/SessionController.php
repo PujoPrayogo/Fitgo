@@ -49,8 +49,8 @@ class SessionController extends Controller
         } else{
             print_r($contentArray);
             $user_data = Auth::user();
-            $name = $user_data->name;
-            return redirect()->to('fitgo/'.$name)->with('success', 'Berhasil Login')->with('name', $name);
+            $id = $user_data->id;
+            return redirect()->to('fitgo/'.$id)->with('success', 'Berhasil Login')->with('id', $id);
         }
     }else{
         return redirect()->to('/');

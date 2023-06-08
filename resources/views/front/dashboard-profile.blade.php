@@ -1,3 +1,5 @@
+<?php $id = $id ?>
+
 @extends('layout/profile-aplikasi')
 
 @section('profile-picture')

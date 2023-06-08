@@ -13,6 +13,8 @@ class UserProfileController extends Controller
      */
     public function index($id)
     {
+        $user = Auth::user();
+        $id = $user->id;
         $client = new Client();
         $url = "http://127.0.0.1:8000/api/profile/{$id}";
         $response = $client->request('GET', $url);
@@ -20,7 +22,7 @@ class UserProfileController extends Controller
         $contentArray = json_decode($content, true);
         $data = $contentArray['data'];
 
-        return view('front/dashboard-profile', ['data'=> $data]);
+        return view('front/dashboard-profile', ['data'=> $data], ['id'=>$id]);
 
        
     }
