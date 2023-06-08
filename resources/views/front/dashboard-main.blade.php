@@ -18,13 +18,9 @@ https://marketplace.canva.com/EAFEits4-uw/1/0/1600w/canva-boy-cartoon-gamer-anim
 {{$data['workout']}}
 @endsection
 
-
-
 @section('daily-intake-water')
 {{$data['water']}}
 @endsection
-
-
 
                                         <!--DAILY INTAKE (4)-->
 @section('daily-cal')
@@ -35,8 +31,6 @@ https://marketplace.canva.com/EAFEits4-uw/1/0/1600w/canva-boy-cartoon-gamer-anim
 {{$data['protein']}}
 @endsection
 
-
-<input type="hidden" name="id" value="{{$id}}">
                                         <!--YOUR GOALS-->
 @section('your-goals-weight-type')
 
@@ -48,9 +42,9 @@ https://marketplace.canva.com/EAFEits4-uw/1/0/1600w/canva-boy-cartoon-gamer-anim
     if($data['weight_change'] == 0){
         $weight_change = "Maintain Your Weight!";
     }elseif ($data['weight_change'] <  0) {
-        $weight_change = "Lose ".abs($data['weight_change']);
+        $weight_change = "Lose ".abs($data['weight_change']." kg");
     }elseif($data['weight_change'] >  0){
-        $weight_change = "Gain ".$data['weight_change'];
+        $weight_change = "Gain ".$data['weight_change']." kg";
     }
 ?>
 {{$weight_change}}

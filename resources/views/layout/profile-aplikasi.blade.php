@@ -60,8 +60,9 @@
                 <div class="update-container">
                         <label for="show" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
                         <div class="text text">Account Update</div>
-                        <form action="{token}" method='POST'>
+                        <form action={{'/fitgo/profile/update/'.$id}} method='post'>
                         @csrf
+                        @method('put')
                             <div class="data">          <!--  WEIGHT  -->
                                 <label for="update-weight" class="text-question">Weight</label>
                                 <input type="text" id="update-weight" name="weight">

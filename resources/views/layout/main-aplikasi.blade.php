@@ -108,7 +108,7 @@
                     </div>
                 </div>
                 <div class="center">
-                    <label class="show-btn" ><a href="/fitgo/weight-tracks/{user}" class="text-light" style="text-decoration:none;">Weight Tracks</a></label>
+                    <label class="show-btn" ><a href={{"/fitgo/weight-tracks/".$id}} class="text-light" style="text-decoration:none;">Weight Tracks</a></label>
                 </div>
             </div>
 
@@ -196,7 +196,7 @@
                 <div class="badge goals-card" style="width:100%">
                     <div class="goal">
                         <span class="material-icons-sharp ">scale</span>
-                        <h3 class="goal-title" style="font-size: calc(1.3rem + .6vw);">@yield('your-goals-weight-type') @yield('your-goals-weight-amount')Kg</h3>
+                        <h3 class="goal-title" style="font-size: calc(1.3rem + .6vw);">@yield('your-goals-weight-type') @yield('your-goals-weight-amount')</h3>
                     </div>
                 </div>
                 <!-- BADGE -->

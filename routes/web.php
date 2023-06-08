@@ -50,5 +50,5 @@ Route::get("fitgo/weight-tracks/{name}", [MainController::class, "show_weight"])
 Route::get("fitgo/intake/{name}", [IntakeController::class, "index"])-> middleware('isLoggedin');
 
 //USER PROFILE CONTROLLER
-Route::get("fitgo/profile/{name}", [UserProfileController::class, "index"])-> middleware('isLoggedin');
-Route::put("fitgo/profile/update/{name}", [UserProfileController::class, "update"])-> middleware('isLoggedin');
+Route::get("fitgo/profile/{id}", [UserProfileController::class, "index"])-> middleware('isLoggedin');
+Route::put("fitgo/profile/update/{id}", [UserProfileController::class, "update"])-> middleware('isLoggedin');

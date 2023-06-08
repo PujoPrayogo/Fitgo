@@ -66,16 +66,15 @@ class UserProfileController extends Controller
     {
         $data = Auth::user();
         $user_id = $data->id;
-        $name = $request->name;
-        $email = $request->email;
+
+        $name = $request->username;
         $height = $request->height;
-        $bodyweight = $request->bodyweight;
+        $bodyweight = $request->weight;
         $age = $request->age;
 
         $parameter = [
             'id'=>$user_id,
             'name'=>$name,
-            'email '=>$email,
             'height'=> $height,
             'bodyweight'=> $bodyweight,
             'age'=> $age,
@@ -90,14 +89,14 @@ class UserProfileController extends Controller
         $content = $response->getBody()->getContents();
         $contentArray = json_decode($content, true);
     
-        $name = $data->name;
+        $id = $data->id;
         
         if($contentArray["status"] != true) {
             $error = $contentArray['massage'];
-            return redirect()->to('fitgo/profile/'.$name)->withErrors($error)->withInput();
-
+            // return redirect()->to('fitgo/profile/'.$id)->withErrors($error)->withInput();
+            return "gagal update";
         } else{
-            return redirect()->to('fitgo/profile/'.$name)->with('success', 'Berhasil update data');
+            return redirect()->to('fitgo/profile/'.$id)->with('success', 'Berhasil update data');
         }
     }
 

@@ -24,7 +24,7 @@ class UserProfileController extends Controller
             ]);
         }
 
-        
+
         return response()->json([
             "status"=>true,
             "massage"=>"data ditemukan",
@@ -76,11 +76,9 @@ class UserProfileController extends Controller
         }
 
         $data_user->name = $request->name;
-        $data_user->email = $request->email;
         $data_user->bodyweight = $request->bodyweight;
         $data_user->height= $request->height;
         $data_user->age= $request->age;
-        $data_user->id = $request->id;
        
         $post = $data_user->save();
 

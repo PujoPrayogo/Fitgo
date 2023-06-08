@@ -1,27 +1,27 @@
-<?php $id = $id ?>
 
 @extends('layout/profile-aplikasi')
 
 @section('username')
-Mamat
+{{$data['name']}}
 @endsection
 
 @section('email')
-pujoganteng@gmail.com
+{{$data['email']}}
 @endsection
 
 @section('age')
-21
+{{$data['age']}}
 @endsection
 
 @section('height')
-180
+{{$data['height']}}
 @endsection
 
 @section('weight')
-80
+{{$data['bodyweight']}}
 @endsection
 
 @section('bmi')
-24
+<?php $bmi = ($data['bodyweight']/(($data['height']*0.01)*($data['height']*0.01))); ?>
+{{number_format($bmi, 1)}}
 @endsection
