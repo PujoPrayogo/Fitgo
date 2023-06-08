@@ -84,8 +84,33 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
-            
+                    <?php $i = 1 ?>
+
+                    //inserting using foreach
+
+                    <tr>
+                        //number of column
+                        <td>1</td>
+                        //for weight
+                        <td>25</td>
+                        //for date
+                        <td>08/06/1010</td>
+                        //for action to edit or delete
+                        <td>
+                            <a href="#" class="btn btn-warning btn-sm">Edit</a>
+                            
+                            <form action="#" 
+                            method="post" 
+                            onsubmit="return confirm('apakah yakin akan menghapus data?')"
+                            class="d-inline">
+                                @csrf
+                                @method('delete')
+                                <button type="submit" name="submit" class="btn btn-danger btn-sm">Del</button>
+                            </form>
+                        </td>
+                        
+                    </tr>
+                <?php $i++ ?>
                 </tbody>
             </table>
 
