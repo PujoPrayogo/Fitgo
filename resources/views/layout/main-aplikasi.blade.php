@@ -263,7 +263,7 @@
                     </div> -->
 
                                     <!--========== RECENT ACTIVITIES ==========-->
-            <div class="recent-activities" style="margin-top: 10%;">
+            <div class="recent-activities" style="margin-top: 10%; height:100%">
                 <div class="recent-header" style="width:auto;">
                     <h1>Recent Activities</h1>
                 </div>
