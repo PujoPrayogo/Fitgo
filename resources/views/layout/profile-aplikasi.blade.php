@@ -119,7 +119,6 @@
                     </div>
                 </div>
             </div>
-            <button class="show-btn">Logout</button>
         </section>
         <!--========== RIGHT ==========-->
         <section class="right">
@@ -185,10 +184,10 @@
         var data_weight = []
 
         for (var i = 0; i < 7; i++) {
-            if(data[i]['weight_atm']==null){
-                data_weight[i] = 0
+            if(!data.hasOwnProperty(i)){
+                data_weight[i] = 0;
             }else{
-                data_weight[i] = data[i]['weight_atm']
+                data_weight[i] = data[i]['weight_atm'];
             }
         }
 

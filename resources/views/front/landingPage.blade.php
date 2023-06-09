@@ -41,7 +41,7 @@
             </div>
             <div class="row">
                 <div class="col-12" style="padding-top: 20%;text-align: center">
-                    <p class="text-white fs-4">Click to continue...</p> 
+                    <p class="text-white fs-4 fw-bold">Click <span style="color:blue">Login</span> or <span style="color:blue">Register</span> above to continue...</p> 
                 </div>
             </div>
         </div>
