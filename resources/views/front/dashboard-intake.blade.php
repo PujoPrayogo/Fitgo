@@ -5,19 +5,19 @@ https://marketplace.canva.com/EAFEits4-uw/1/0/1600w/canva-boy-cartoon-gamer-anim
 @endsection
 
 @section('profile-name')
-
+{{$data['name']}}
 @endsection
 
 @section('workout-calories-burned')
-300
+{{$data['bmr']}}
 @endsection
 
 @section('intake-calories')
-2200
+{{$data['bmr']}}
 @endsection
 
 @section('intake-protein')
-120
+{{$data['protein']}}
 @endsection
 
 @section('breakfast-name')

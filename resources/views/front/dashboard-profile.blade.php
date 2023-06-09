@@ -1,4 +1,3 @@
-
 @extends('layout/profile-aplikasi')
 
 @section('username')

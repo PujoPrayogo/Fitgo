@@ -22,7 +22,8 @@ class UserProfileController extends Controller
         $contentArray = json_decode($content, true);
         $data = $contentArray['data'];
 
-        return view('front/dashboard-profile', ['data'=> $data], ['id'=>$id]);
+
+        return view('front/dashboard-profile', ['data'=> $data['user']], ['data_weight'=>$data['user_weight']] )->with('id', $id);
 
        
     }
