@@ -213,7 +213,7 @@
                             <div class="dropdown" style="padding-bottom: 5%;">
                                 <div class="styled-select">
                                     <select id="select" name="gender" placeholder="Gender">
-                                    <option value=""><center>Gender</center></option>
+                                    <option value="" disabled selected hidden><center>Gender</center></option>
                                     <option value="Male" name="gender"><center>Male</center></option>
                                     <option value="Female" name="gender"><center>Female</center></option>
                                     </select>
@@ -230,7 +230,7 @@
                             <div class="dropdown" style="padding-bottom: 5%;">
                                 <div class="styled-select">
                                     <select id="select" name="bodygoals" placeholder="Body-Goals">
-                                    <option value=""><center>Body Goal</center></option>
+                                    <option value="" disabled selected hidden><center>Body Goal</center></option>
                                     <option value="Gain Weight" id="goal" name="bodygoals"><center>Gain Weight</center></option>
                                     <option value="Lose Weight" id="goal" name="bodygoals"><center>Lose Weight</center></option>
                                     </select>
