@@ -23,9 +23,6 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-link active">
-                        <a class="nav-link active text-white" href="{{'sesi/landingPage'}}">Home</a>
-                    </li>
-                    <li class="nav-link active">
                         <a class="nav-link text-white" href="{{'about'}}">About</a>
                     </li>
                 </ul>
