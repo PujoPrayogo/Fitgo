@@ -327,7 +327,7 @@
     
     <nav class="navbar navbar-expand-lg bg-dark navbar-fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand text-white fw-bold" href="{{'sesi/landingPage'}}" id="WebNavBrand" style="font-size: 27px;">FITGO</a>
+            <a class="navbar-brand text-white fw-bold" href="{{'/sesi/landingPage'}}" id="WebNavBrand" style="font-size: 27px;">FITGO</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -340,8 +340,8 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <a class="nav-link active text-white" href="{{'sesi'}}">Login</a>
-                    <a class="btn btn-outline-primary text-white" href="{{'sesi/register'}}">Register</a>
+                    <a class="nav-link active text-white" href="{{'/'}}">Login</a>
+                    <a class="btn btn-outline-primary text-white" href="{{'/sesi/register'}}">Register</a>
                 </form>
             </div>
         </div>

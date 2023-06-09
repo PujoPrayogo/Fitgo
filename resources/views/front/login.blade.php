@@ -23,12 +23,12 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-link active">
-                        <a class="nav-link text-white" href="{{'about'}}">About</a>
+                        <a class="nav-link text-white" href="{{'/about'}}">About</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <a class="nav-link active text-white" href="{{''}}">Login</a>
-                    <a class="btn btn-outline-primary text-white" href="{{'sesi/register'}}">Register</a>
+                    <a class="nav-link active text-white" href="{{'/'}}">Login</a>
+                    <a class="btn btn-outline-primary text-white" href="{{'/sesi/register'}}">Register</a>
                 </form>
             </div>
         </div>

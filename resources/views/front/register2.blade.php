@@ -176,8 +176,8 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <a class="nav-link active text-white" href="{{'sesi'}}">Login</a>
-                    <a class="btn btn-outline-primary text-white" href="{{'sesi/register'}}">Register</a>
+                    <a class="nav-link active text-white" href="{{'/sesi'}}">Login</a>
+                    <a class="btn btn-outline-primary text-white" href="{{'/sesi/register'}}">Register</a>
                 </form>
             </div>
         </div>

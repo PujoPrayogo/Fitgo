@@ -83,6 +83,15 @@ class MainController extends Controller
             case Carbon::THURSDAY:
                 $workout = 'Rest';
                 break;
+            case Carbon::FRIDAY:
+                $workout = 'Rest';
+                break;
+            case Carbon::SATURDAY:
+                $workout = 'Rest';
+                break;
+            case Carbon::SUNDAY:
+                $workout = 'Rest';
+                break;
             default:
                 $workout = 'No workout scheduled';
                 break;
