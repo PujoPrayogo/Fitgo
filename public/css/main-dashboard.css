@@ -660,7 +660,7 @@
     color: var(--color-light);
     display: flex;
     gap: 1.15rem;
-    align-self: center;
+    align-items: center;
    }
    
    main .your-goals .badge {
@@ -688,47 +688,6 @@
     height: fit-content;
    }
    
-                    /*===== ANALYTICS CHART =====*/
-   canvas#chart {
-    background: var(--color-white);
-    max-width: 100%;
-    margin-bottom: 1rem;
-    border-radius: var(--card-border-radius);
-    padding: var(--card-padding);
-    margin-top: 2rem;
-    margin-right: 2rem;
-   }
-
-   canvas#chart:hover {
-    cursor: pointer;
-   }
-   
-   .weight-update-container {
-    position: relative;
-    z-index: 999;
-    display: block;
-    top: 100%;
-    right: -25%;
-    width: 320px;
-    max-height: 0px;
-    overflow: hidden;
-    transition: max-height 0.5s;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 2rem;
-   
-   }
-   
-   .weight-update-container.open-menu{
-    max-height: 160px;
-   }
-   
-   .weight-update-form {
-    color: white;
-    background: var(--color-dark);
-    padding: 20px;
-   }
-   
                 /*========== RECENT ACTIVITIES ==========*/
    main section.right .recent-activities {
     background: var(--color-white);
@@ -738,10 +697,6 @@
     overflow: auto;
     height: 17rem;
     margin-bottom: 2rem;
-   }
-   
-   main section.right .recent-activities img {
-    width: 3.5rem;
    }
    
    main section.right .recent-activities .recent-header {
@@ -759,7 +714,7 @@
    
    main section.right .recent-activity-top-divider{
     width: auto;
-    height: 5.5rem;
+    height: 5rem;
    }
    
    main section.right .recent-activities .recent-header a{

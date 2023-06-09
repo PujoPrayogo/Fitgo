@@ -20,6 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="{{ '/css/main-dashboard.css' }}">
+    <link rel="stylesheet" href="{{ '/css/root-element.css' }}">
 </head>
 <body>
     <main>
@@ -120,7 +121,6 @@
                         <div class="left">
                             <img src="https://cdn-icons-png.flaticon.com/512/1690/1690429.png">
                         </div>
-                        
                     </div>
                     <div class="middle">
                         <h1 style="font-size: 2.5rem;">@yield('target-kcal')</h1>
@@ -150,7 +150,6 @@
                             <h4 style="font-size: 1.2rem; color: var(--color-gray-dark);">Workout</h4>
                         </div>
                         <div class="right">
-
                         </div>
                     </div>
                 </div>
@@ -179,7 +178,7 @@
                     </div>
                 </div>
 
-                <!-- SLEEP -->
+                <!-- BMI -->
                 <div class="goal">
                     <div>
                         <h2>@yield('BMI')</h2>
@@ -187,25 +186,16 @@
                     </div>
                 </div>
             </div>
-
-
             <div class="your-goals">
                 <span class="material-icons-sharp" style="padding-top: 0.8rem; padding-left: 0.7rem">auto_awesome</span>
                 <h2>Your Goals</h2>
                 <!-- BADGE -->
                 <div class="badge goals-card" style="width:100%">
                     <div class="goal">
-                        <span class="material-icons-sharp ">scale</span>
-                        <h3 class="goal-title" style="font-size: calc(1.3rem + .6vw);">@yield('your-goals-weight-type') @yield('your-goals-weight-amount')</h3>
+                        <span class="material-icons-sharp " style="margin-right: 0.7rem">scale</span>
+                        <h3 class="goal-title" style="font-size: calc(1.3rem + .6vw); text-align: center; flex: 1;">@yield('your-goals-weight-type') @yield('your-goals-weight-amount')</h3>
                     </div>
                 </div>
-                <!-- BADGE -->
-                <!-- <div class="badge goals-card">
-                    <div class="goal">
-                        <span class="material-icons-sharp">fitness_center</span>
-                        <h3 class="goal-title">Train @yield('workouts-perweek') Days/week</h3>
-                    </div>
-                </div> -->
             </div>
 
             <div class="your-goals" style="margin-top: 0.5rem;">
@@ -224,45 +214,7 @@
         </section>
         <!--========== RIGHT ==========-->
         <section class="right">
-                    <!--========== WEIGHT CHART ==========-->
-            
-                    <!-- <div class="center">
-                        <input type="checkbox" id="show2">
-                        <label for="show2" class="show-btn2">
-                            <canvas id="chart" onclick="toggleMenu()" style="width: 1029px; height:300px">
-                            </canvas>
-                            <div class="weight-update-container" id="subMenu">
-                                <form action="#" class="weight-update-form">
-                                    <div class="data">
-                                        <label for="update-weight" class="text-question">Current Weight (Kg)</label>
-                                        <input type="text" id="update-weight" name="update-weight">
-                                    </div>
-                                    <div class="btn">
-                                        <div class="inner"></div>
-                                        <button type="submit">Update</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </label>
-                        <div class="update-container2">
-                            <label for="show2" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
-                        <div class="text text">Update Weight</div>
-                        <form action="{token}" method='POST'>
-                        @csrf
-                            <div class="data">
-                                <label for="update-activity" class="text-question">Update Weight</label>
-                                <input type="number" id="update-weight" name="activity_weight">
-                            </div>
-                            <div class="btn">
-                                <div class="inner"></div>
-                                <button type="submit">Update</button>
-                            </div>
-                        </form>
-                        </div>
-                
-                    </div> -->
-
-                                    <!--========== RECENT ACTIVITIES ==========-->
+                                    <!--========= RECENT ACTIVITIES ==========-->
             <div class="recent-activities" style="margin-top: 10%; height:100%">
                 <div class="recent-header" style="width:auto;">
                     <h1>Recent Activities</h1>
