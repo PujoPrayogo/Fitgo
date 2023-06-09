@@ -21,6 +21,7 @@
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="{{ '/css/profile-dashboard.css' }}">
     <link rel="stylesheet" href="{{ '/css/root-element.css' }}">
+    <link rel="stylesheet" href="{{ '/css/sidebar-element.css' }}">
 </head>
 <body>
     <main>
