@@ -149,106 +149,7 @@
     font-size: 20px;
     padding: 8px 28px;
   }
-  /* dropdown menu resgister2.html 
-  
-  
-  .box {
-    position: relative;
-  }
-  .btn-dropdown {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    background: white;
-    color: black;
-    font-size: 1.25rem;
-    outline: none;
-    cursor: pointer;
-  }
-  .btn-dropdown::after {
-    display: inline-block;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    width: 8px;
-    height: 8px;
-    margin-left: 10px;
-    border-right: 2px solid #FFF;
-    border-bottom: 2px solid #FFF;
-    vertical-align: 4px;
-    content: '';
-  }
-  .btn-dropdown:hover {
-    opacity: .9;
-  }
-  .nav-dropdown {
-    display: none;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    right: 0;
-    padding: 10px 0;
-    border-radius: 4px;
-    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, .1);
-    background-color: #fff;
-  }
-  .nav-dropdown ul {
-    list-style-type: none;
-  }
-  .nav-dropdown ul li {
-    padding: 8px 0;
-    font-size: 18px;
-    text-align: center;
-    cursor: pointer;
-  }
-  .nav-dropdown ul li a {
-    display: block;
-    color: #3d3935;
-    text-decoration: none;
-  }
-  .nav-dropdown ul li:hover {
-    background-color: #6666e2;
-  }
-  .nav-dropdown ul li:hover a {
-    color: #fff;
-  }
-  .nav-dropdown.is-open {
-    display: block;
-  }
-  .btn-dropdown.is-open::after {
-    -webkit-transform: rotate(-135deg);
-    transform: rotate(-135deg);
-    vertical-align: middle;
-  }
-  @media screen and (max-width: 480px) {
-    #container {
-      align-items: flex-start;
-    }
-  } */
-  
-  /* .formButton {
-    float: center;
-      background-color:#ffffff;
-      display:inline-block;
-      color:#000000;
-      font-size:28px;
-      font-weight: 500;
-      padding:6px 24px;
-    margin-top: 15px;
-      text-decoration:none;
-    position: center;
-  }
-  
-  .formButton:hover {
-      background-color: #000000;
-    color:#ffffff;
-  }
-  
-  .formButton:active {
-      position:relative;
-      top:3px;
-  }
-      
-   */  
+
     </style>
     <title>Fitgo</title>
 </head>
@@ -283,7 +184,7 @@
                 </ul>
                 <form class="d-flex" role="search">
                     <a class="nav-link active text-white" href="{{'/'}}">Login</a>
-                    <a class="btn btn-outline-primary text-white" href="{{'/sesi/register'}}">Register</a>
+                    <a class="btn btn-outline-primary text-white" href="{{'#'}}">Register</a>
                 </form>
             </div>
         </div>
