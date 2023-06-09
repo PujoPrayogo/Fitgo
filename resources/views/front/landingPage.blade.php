@@ -13,7 +13,7 @@
 <body background="assets/img/img-home.png">
     <nav class="navbar navbar-expand-lg bg-dark navbar-fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand text-white fw-bold" href="landingPage.html" id="WebNavBrand" style="font-size: 27px;">FITGO</a>
+            <a class="navbar-brand text-white fw-bold" href="{{'sesi/landingPage'}}" id="WebNavBrand" style="font-size: 27px;">FITGO</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -21,9 +21,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-link active">
-                        <a class="nav-link active text-white" href="landingPage.html">Home</a>
-                    </li>
                     <li class="nav-link active">
                         <a class="nav-link text-white" href="/about">About</a>
                     </li>
@@ -44,7 +41,7 @@
             </div>
             <div class="row">
                 <div class="col-12" style="padding-top: 20%;text-align: center">
-                    <p class="text-white fs-4">Click to continue...</p> 
+                    <p class="text-white fs-4 fw-bold">Click <span style="color:blue">Login</span> or <span style="color:blue">Register</span> above to continue...</p> 
                 </div>
             </div>
         </div>

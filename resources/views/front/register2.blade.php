@@ -10,67 +10,12 @@
     <script src="assets/js/script.js"></script> 
     <style>
           
-/* .sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
-    padding: 90px 0 0;
-    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-    z-index: 99;
-  }
-  
-  @media (max-width: 767.98px) {
-    .sidebar {
-      top: 11.5rem;
-      padding: 0;
-    }
-  }
-  
-  .navbar {
-    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .1);
-  }
-  
-  @media (min-width: 767.98px) {
-    .navbar {
-      top: 0;
-      position: sticky;
-      z-index: 999;
-    }
-  }
-  
-  .sidebar .nav-link {
-    color: #333;
-  }
-  
-  .sidebar .nav-link.active {
-    color: #0d6efd;
-  } */
+
 
   #WebNavBrand{
     padding-left: 5vw;
   }
-  /* .hero{
-    position: relative; 
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   
-    &::before {  
-      content: "";
-      background-image: url('https://wallpapercave.com/wp/wp4250303.jpg');
-      background-size: cover;
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
-      opacity: 0.75;
-    }
-  } */
   
   .hero { 
     position: relative; 
@@ -207,106 +152,7 @@
     font-size: 20px;
     padding: 8px 28px;
   }
-  /* dropdown menu resgister2.html 
   
-  
-  .box {
-    position: relative;
-  }
-  .btn-dropdown {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    background: white;
-    color: black;
-    font-size: 1.25rem;
-    outline: none;
-    cursor: pointer;
-  }
-  .btn-dropdown::after {
-    display: inline-block;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    width: 8px;
-    height: 8px;
-    margin-left: 10px;
-    border-right: 2px solid #FFF;
-    border-bottom: 2px solid #FFF;
-    vertical-align: 4px;
-    content: '';
-  }
-  .btn-dropdown:hover {
-    opacity: .9;
-  }
-  .nav-dropdown {
-    display: none;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    right: 0;
-    padding: 10px 0;
-    border-radius: 4px;
-    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, .1);
-    background-color: #fff;
-  }
-  .nav-dropdown ul {
-    list-style-type: none;
-  }
-  .nav-dropdown ul li {
-    padding: 8px 0;
-    font-size: 18px;
-    text-align: center;
-    cursor: pointer;
-  }
-  .nav-dropdown ul li a {
-    display: block;
-    color: #3d3935;
-    text-decoration: none;
-  }
-  .nav-dropdown ul li:hover {
-    background-color: #6666e2;
-  }
-  .nav-dropdown ul li:hover a {
-    color: #fff;
-  }
-  .nav-dropdown.is-open {
-    display: block;
-  }
-  .btn-dropdown.is-open::after {
-    -webkit-transform: rotate(-135deg);
-    transform: rotate(-135deg);
-    vertical-align: middle;
-  }
-  @media screen and (max-width: 480px) {
-    #container {
-      align-items: flex-start;
-    }
-  } */
-  
-  /* .formButton {
-    float: center;
-      background-color:#ffffff;
-      display:inline-block;
-      color:#000000;
-      font-size:28px;
-      font-weight: 500;
-      padding:6px 24px;
-    margin-top: 15px;
-      text-decoration:none;
-    position: center;
-  }
-  
-  .formButton:hover {
-      background-color: #000000;
-    color:#ffffff;
-  }
-  
-  .formButton:active {
-      position:relative;
-      top:3px;
-  }
-      
-   */  
     </style>
     <title>Fitgo</title>
 </head>
@@ -317,7 +163,7 @@
     
     <nav class="navbar navbar-expand-lg bg-dark navbar-fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand text-white fw-bold" href="landingPage.html" id="WebNavBrand" style="font-size: 27px;">FITGO</a>
+            <a class="navbar-brand text-white fw-bold" href="{{'sesi/landingPage'}}" id="WebNavBrand" style="font-size: 27px;">FITGO</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -325,9 +171,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-link active">
-                        <a class="nav-link active text-white" href="landingPage.html">Home</a>
-                    </li>
                     <li class="nav-link active">
                         <a class="nav-link text-white" href="/about">About</a>
                     </li>

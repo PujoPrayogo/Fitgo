@@ -300,6 +300,7 @@
                             top: 50%;
                             left: 50%;
                             display: none;
+                            width: 70rem;
                 
                             transform: translate(-50%, -50%);
                             background: var(--color-dark);
@@ -321,6 +322,7 @@
                             font-size: 2.2rem;
                             color: white;
                             margin-bottom: 2rem;
+                            width:2px;
                         }
                 
                         .update-container td {

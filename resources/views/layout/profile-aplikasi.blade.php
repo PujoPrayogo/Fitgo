@@ -118,7 +118,6 @@
                     </div>
                 </div>
             </div>
-            <button class="show-btn">Logout</button>
         </section>
         <!--========== RIGHT ==========-->
         <section class="right">
