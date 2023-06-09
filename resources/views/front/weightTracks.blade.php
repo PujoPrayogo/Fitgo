@@ -131,6 +131,8 @@
 
         var data = @json($data)
 
+        var data_weight = []
+
         for (var i = 0; i < 7; i++) {
             if(!data.hasOwnProperty(i)){
                 data_weight[i] = 0;
@@ -148,7 +150,7 @@
                     datasets: [
                         {
                             label: 'Weight',
-                            data: [data[0]['weight_atm'], data[1]['weight_atm'], data[2]['weight_atm'], data[3]['weight_atm'], data[4]['weight_atm'], data[5]['weight_atm'], data[6]['weight_atm']],
+                            data: [data_weight[6], data_weight[5], data_weight[4], data_weight[3], data_weight[2], data_weight[1], data_weight[0]],
                             backgroundColor: ['black', 'black', 'black', 'black', 'black', 'black', 'rgb(160, 99, 245)'],
                             borderColor: ['black', 'black', 'black', 'black', 'black', 'black', 'rgb(160, 99, 245)'],
                             borderWidth: 2
