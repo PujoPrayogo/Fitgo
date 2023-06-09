@@ -49,11 +49,6 @@
             <form action={{'/fitgo/weight_track/create/'.$id}} method='post'>
             @csrf
                 
-                {{-- @if (Route::current()->uri == '/fitgo/weight_track/update/{id}')
-                    @method('put')
-                @endif
-                @method('put') --}}
-
                 <div class="mb-3 row">
                     <label for="weight" class="col-sm-2 col-form-label">Weight (Kg)</label>
                     <div class="col-sm-10">
@@ -136,28 +131,6 @@
 
         var data = @json($data)
 
-        var data_weight = []
-
-        function isVariableDeclared(variableName) {
-        try {
-            eval(variableName);
-        } catch (error) {
-            if (error instanceof ReferenceError) {
-            return false;
-            }
-        }
-        return true;
-        }
-
-
-        for (var i = 0; i < 7; i++) {
-            if(!data.hasOwnProperty(i)){
-                data_weight[i] = 0;
-            }else{
-                data_weight[i] = data[i]['weight_atm'];
-            }
-        }
-
 
         // CREATE NEW CHART INSTANCE
         new Chart(chart, {
@@ -167,7 +140,7 @@
                     datasets: [
                         {
                             label: 'Weight',
-                            data: [data_weight[6], data_weight[5], data_weight[4], data_weight[3], data_weight[2], data_weight[1], data_weight[0]],
+                            data: [data[0]['weight_atm'], data[1]['weight_atm'], data[2]['weight_atm'], data[3]['weight_atm'], data[4]['weight_atm'], data[5]['weight_atm'], data[6]['weight_atm']],
                             backgroundColor: ['black', 'black', 'black', 'black', 'black', 'black', 'rgb(160, 99, 245)'],
                             borderColor: ['black', 'black', 'black', 'black', 'black', 'black', 'rgb(160, 99, 245)'],
                             borderWidth: 2
