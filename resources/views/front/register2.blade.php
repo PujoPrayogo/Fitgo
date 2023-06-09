@@ -182,7 +182,7 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid hero bg-dark">
+    <div class="container-fluid hero bg-dark" style="height:100%;">
         <div class="container hero" style="display: block; height:100%;" >
             <div class="row">
                 <div class="col-12">
@@ -193,7 +193,7 @@
                 <div class="col-4"></div>
                 <div class="col-4">
                     
-                    <div class="container rounded-2" style="background-color:black;padding-top: 5vh;  padding-bottom:25px; opacity: 0.8;">
+                    <div class="container rounded-2" style="background-color:black;padding-top: 5vh;  padding-bottom:25px; opacity: 0.8;margin-bottom:5vh;">
                         <div>
                         <form action="create" method="POST">
                         @csrf

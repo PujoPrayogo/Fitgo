@@ -33,7 +33,7 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid hero bg-dark">
+    <div class="container-fluid hero bg-dark" style="height:100%;">
         <div class="container hero" style="display: block;height:100%;" >
             <div class="row">
                 <div class="col-12">

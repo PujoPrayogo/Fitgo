@@ -32,8 +32,8 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid hero" style="background-image: url('https://wallpapercave.com/wp/wp4250339.jpg');">
-        <div class="container hero" style="display: block;">
+    <div class="container-fluid hero bg-dark" style="height:100%;">
+        <div class="container hero" style="display: block;height:100%;">
             <div class="row">
                 <div class="col-12" style="padding-top: 5%; text-align: center;">
                     <h1 class="fw-bold text-white" style="font-size: 60px;"> Hello<br><span style="color:blue">User</span>,<br>Let's Be Fit<br>Together</h1>
