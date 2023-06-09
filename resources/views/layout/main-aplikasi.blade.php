@@ -202,8 +202,8 @@
             <div class="your-goals" style="margin-top: 0.5rem;">
                 <div class="badge" style="padding-bottom: 0px; margin-top: 0px;background: var(--color-purple); box-shadow: 0 0.5rem 1.5rem rgba( 0, 0, 0, 0.1);">
                     <div class="goal">
-                        <h4 class="goal-title" style="font-size: 1.1rem; color: white; ">"@yield('quote')"<br>
-                            - @yield('quote-speaker')</h4>
+                        <h4 class="goal-title" style="font-size: 1.1rem; color: white; ">@yield('quote')<br>
+                            
                     </div>
                 </div>
             </div>

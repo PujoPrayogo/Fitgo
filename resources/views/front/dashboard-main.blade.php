@@ -51,9 +51,5 @@ https://marketplace.canva.com/EAFEits4-uw/1/0/1600w/canva-boy-cartoon-gamer-anim
 
                                         <!--QUOTE-->
 @section('quote')
-I've failed over and over and over again in my life and that is why I succeed.
-@endsection
-
-@section('quote-speaker')
-Mike Tyson
+{{$quotes}}
 @endsection

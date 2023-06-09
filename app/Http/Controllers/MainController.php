@@ -38,6 +38,7 @@ class MainController extends Controller
         $water = ($data->bodyweight*0.03);
         $protein = ($data->bodyweight*0.8);
         $workout = $this->workout();
+        $quotes = $this->quotes();
         $bmi = ($data->bodyweight / (($data->height*0.01)*($data->height*0.01)));
         $ideal_weight = (22/ (($data['height']*0.01)*($data['height']*0.01)));
         if($bmi < 18.5 || $bmi > 25){
@@ -57,7 +58,7 @@ class MainController extends Controller
             'bmi'=> $bmi,
         ];
 
-        return view('front/dashboard-main', ['data'=> $data], ['data_activity'=> $data_activity], ['data_weight'=> $data_weight], ['name'=> $name])->with('id', $id);
+        return view('front/dashboard-main', ['data'=> $data], ['data_activity'=> $data_activity], ['data_weight'=> $data_weight], ['name'=> $name])->with('id', $id)->with('quotes', $quotes);
 
         }else{
             return "not authorized";
@@ -98,6 +99,40 @@ class MainController extends Controller
     }
 
         return $workout;
+    }
+
+    public function quotes(){
+        $today = Carbon::now();
+        $quotes = '';
+
+        switch ($today->dayOfWeek) {
+            case Carbon::MONDAY:
+                $quotes = '"Dont watch the clock; do what it does. Keep going." - Sam Levenson';
+                break;
+            case Carbon::TUESDAY:
+                $quotes = '"The body achieves what the mind believes." - Muhammad Ali';
+                break;
+            case Carbon::WEDNESDAY:
+                $quotes = '"The only bad workout is the one that didnt happen." - Daffa Alifiandi';
+                break;
+            case Carbon::THURSDAY:
+                $quotes = '"Its not who I am underneath, but what I do that defines me." - Batman';
+                break;
+            case Carbon::FRIDAY:
+                $quotes = '"Success is not the absence of failure; its the persistence through failure."-Alisha';
+                break;
+            case Carbon::SATURDAY:
+                $quotes = '"Why do we fall? So we can learn to pick ourselves up."  - Pujo Wayne';
+                break;
+            case Carbon::SUNDAY:
+                $quotes = '"Im ready, Im ready, Im ready!" - SpongeBob SquarePants';
+                break;
+            default:
+                $quotes = 'No quotes';
+                break;
+    }
+
+        return $quotes;
     }
 
     public function userData($token){
