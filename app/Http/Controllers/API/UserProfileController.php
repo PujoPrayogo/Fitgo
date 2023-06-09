@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\user_weight_overtime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -15,6 +16,7 @@ class UserProfileController extends Controller
     public function index($id)
     {
         $data = User::find($id);
+        $data_weight = user_weight_overtime::where('user_id', $id)->orderBy('created_at', 'desc')->take(7)->get();
 
         if(empty($data)){
             return response()->json([
@@ -24,6 +26,10 @@ class UserProfileController extends Controller
             ]);
         }
 
+        $data = [
+            'user'=>$data,
+            'user_weight' =>$data_weight
+        ];
 
         return response()->json([
             "status"=>true,

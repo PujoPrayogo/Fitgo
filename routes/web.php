@@ -24,13 +24,13 @@ use Illuminate\Support\Facades\Auth;
 Route::get("/", [SessionController::class, "index"])-> middleware('isNotLoggedin');
 Route::get("sesi/register", [SessionController::class, "register"])-> middleware('isNotLoggedin');
 Route::get("sesi/register2", [SessionController::class, "register2"])-> middleware('isNotLoggedin');
-Route::post("sesi/register_continue", [SessionController::class, "register_continue"]);
+Route::post("sesi/register_continue", [SessionController::class, "register_continue"])-> middleware('isNotLoggedin');
 
 Route::get("logout", [SessionController::class, "logout"]);
 Route::post("sesi/create", [SessionController::class, "create"]);
 Route::post("login", [SessionController::class, "login"]);
 Route::get("about", [SessionController::class, "about"]);
-Route::get("sesi/landingPage", [SessionController::class, "landingPage"]);
+Route::get("sesi/landingPage", [SessionController::class, "landingPage"])-> middleware('isNotLoggedin');
 
 //MAIN CONTROLLER
 Route::get("fitgo/{name}", [MainController::class, "index"])-> middleware('isLoggedin');
@@ -41,7 +41,7 @@ Route::delete('fitgo/{name}', [MainController::class, "destroy"])-> middleware('
 Route::post('fitgo/weight_track/create/{name}', [MainController::class, "create_weight"])-> middleware('isLoggedin');
 Route::put('fitgo/weight_track/update/{name}', [MainController::class, "update_weight"])-> middleware('isLoggedin');
 Route::delete('fitgo/weight_track/{name}', [MainController::class, "destroy_weight"])-> middleware('isLoggedin');
-Route::get("fitgo/weight-tracks/{name}", [MainController::class, "show_weight"]);
+Route::get("fitgo/weight-tracks/{name}", [MainController::class, "show_weight"])-> middleware('isLoggedin');
 
 
 // Route::get("/fitgo/weight-tracks/{user}", [SessionController::class, "wTracks"]);

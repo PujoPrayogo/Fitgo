@@ -14,9 +14,18 @@ class IntakeController extends Controller
     {
         if(auth()->check()){
         $data = Auth::user();
-
+        $protein = ($data->bodyweight*0.8);
+        $bmr = (66.5 + (13.7 * $data->bodyweight) + (5 * $data->height) - (6.8 * $data->age));
         $id = $data->id;
-        return view('front/dashboard-intake', ['id'=>$id]);
+
+        $data = [
+            'name' => $data->name,
+            'protein' => $protein,
+            'bmr' => $bmr
+        ];
+
+        
+        return view('front/dashboard-intake', ['data'=> $data])->with('id', $id);
         }
     }
 
