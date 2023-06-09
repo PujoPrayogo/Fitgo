@@ -149,7 +149,7 @@
                 <div class="card" style="min-width: 100%;width: auto; min-height: 100%;background-image: url('https://wallaland.com/wp-content/uploads/wallpapers/art/illustration/Emoji/Wallaland%20Emoji%20Fire.jpg');border-radius:6px;background-position-y: 65%; background-position-x: 50%; background-size: cover;">
                     <div class="row no-gutters my-auto">
                         <div class="col-4 text-white my-auto mx-auto ">
-                            <h1 class="text-center my-auto">@yield('calories-burned')</h1>
+                            <h1 class="text-center my-auto">@yield('workout-calories-burned')</h1>
                         </div>
                         <div class="col-8" >
                             <div class="card-body text-white">
