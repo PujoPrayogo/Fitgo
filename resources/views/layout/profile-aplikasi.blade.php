@@ -20,6 +20,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="{{ '/css/profile-dashboard.css' }}">
+    <link rel="stylesheet" href="{{ '/css/root-element.css' }}">
+    <link rel="stylesheet" href="{{ '/css/sidebar-element.css' }}">
 </head>
 <body>
     <main>
