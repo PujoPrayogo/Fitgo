@@ -183,7 +183,7 @@
         </div>
     </nav>
     <div class="container-fluid hero" style="background-image: url('https://wallpapercave.com/wp/wp4250294.jpg');">
-        <div class="container" >
+        <div class="container hero" style="display: block;" >
             <div class="row">
                 <div class="col-12">
                     <h1 class="fw-bold text-white text-center" style="font-size: 60px;">Fill in <span style="color: blue;">your data.</span></h1>
