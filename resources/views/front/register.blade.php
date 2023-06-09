@@ -191,8 +191,8 @@
     </nav>
     
     
-    <div class="container-fluid hero" style="background-image: url('https://wallpapercave.com/wp/wp4250294.jpg');">
-        <div class="container hero" style="display: block;" >
+    <div class="container-fluid hero bg-dark ">
+        <div class="container hero" style="display: block;height:100%;" >
             <div class="row">
                 <div class="col-12">
                     <h1 class="fw-bold text-white text-center" style="font-size: 60px;"><span style="color: blue;">Sign Up</span> to your<br>Journey.</h1>
