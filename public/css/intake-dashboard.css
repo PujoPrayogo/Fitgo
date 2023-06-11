@@ -346,6 +346,16 @@
                             cursor: pointer;
                         }
                 
+                        table a:hover{
+                            color: slategray;
+                            transition: all 150ms ease-in-out;
+                        }
+
+                        .update-container span:hover{
+                            color: slategray;
+                            transition: all 150ms ease-in-out;
+                        }
+
                         /* CARDS*/
                         main section.middle .header {
                             display: flex;

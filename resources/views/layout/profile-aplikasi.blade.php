@@ -55,10 +55,40 @@
         <section class="middle">
                                     <!--===== TODAYS TARGET =====--> 
             <div class="todays-target">
-                    <h1 style="font-size: 9.5rem;">About User<label for="show" class="show-btn">Update</label></h1>
+                <h1 style="font-size: 9.5rem;">About User<label for="show" class="show-btn">Update Account</label></h1>
                                                                 <!-- ===== UPDATE USER FORM ===== -->
+                <div class="daily-intake">
+                    <!-- CALORIES -->
+                    <div class="goal">
+                        <h2>@yield('username')</h2>
+                        <h5>Username</h5>
+                    </div>
+
+                    <!-- PROTEIN -->
+                    <div class="goal goal-2">
+                        <div>
+                            <h2>@yield('email')</h2>
+                            <h5>Email</h5>
+                        </div>
+                    </div>
+
+                    <!-- WATER -->
+                    <div class="goal goal-3">
+                        <div>
+                            <h2>@yield('age')</h2>
+                            <h5>Age</h5>
+                        </div>
+                    </div>
+
+                    <!-- SLEEP -->
+                    <div class="goal goal-4">
+                        <div>
+                            <h2>@yield('height')</h2>
+                            <h5>Height</h5>
+                        </div>
+                    </div>
+                </div>
                 <input type="checkbox" id="show">
-                
                 <div class="update-container">
                         <label for="show" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
                         <div class="text text">Account Update</div>
@@ -88,37 +118,7 @@
                         </form>
                     </div>
                 </div>
-
-                <div class="daily-intake">
-                    <!-- CALORIES -->
-                <div class="goal">
-                    <h2>@yield('username')</h2>
-                    <h5>Username</h5>
-                </div>
-
-                <!-- PROTEIN -->
-                <div class="goal goal-2">
-                    <div>
-                        <h2>@yield('email')</h2>
-                        <h5>Email</h5>
-                    </div>
-                </div>
-
-                <!-- WATER -->
-                <div class="goal goal-3">
-                    <div>
-                        <h2>@yield('age')</h2>
-                        <h5>Age</h5>
-                    </div>
-                </div>
-
-                <!-- SLEEP -->
-                <div class="goal goal-4">
-                    <div>
-                        <h2>@yield('height')</h2>
-                        <h5>Height</h5>
-                    </div>
-                </div>
+                
             </div>
         </section>
         <!--========== RIGHT ==========-->

@@ -80,18 +80,18 @@
                                 <!--========== UPDATE FORM ==========-->
                 <div class="center">
                     <input type="checkbox" id="show">
-                    <label for="show" class="show-btn">Update</label>
+                    <label for="show" class="show-btn">Update Intake</label>
                     <div class="update-container">
                         <label for="show" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
                         <div class="text text">Update</div>
                         <form action="{token}" method='POST'>
                         @csrf
                             <div class="data">
-                                <label for="update-activity" class="text-question">Activity</label>
+                                <label for="update-activity" class="text-question">Food/drink name</label>
                                 <input type="text" id="update-activity" name="activity_name">
                             </div>
                             <div class="data">
-                                <label for="activity-amount" class="text-question">Activity Amount:</label>
+                                <label for="activity-amount" class="text-question">Amount (gr/ml):</label>
                                 <input type="text" id="activity-amount" name="activity_amount"><br>
                             </div>  
                             <div class="data">
@@ -193,7 +193,7 @@
                 <!-- BADGE -->
                 <div class="badge goals-card" style="width:100%">
                     <div class="goal">
-                        <span class="material-icons-sharp " style="margin-right: 0.7rem">scale</span>
+                        <span class="material-icons-sharp" style="margin-right: 0.7rem">scale</span>
                         <h3 class="goal-title" style="font-size: calc(1.3rem + .6vw); text-align: center; flex: 1;">@yield('your-goals-weight-type') @yield('your-goals-weight-amount')</h3>
                     </div>
                 </div>
@@ -218,7 +218,7 @@
                                     <!--========= RECENT ACTIVITIES ==========-->
             <div class="recent-activities" style="margin-top: 10%; height:100%">
                 <div class="recent-header" style="width:auto;">
-                    <h1>Recent Activities</h1>
+                    <h1><span class="material-icons-sharp">fastfood</span>  Recent Intake</h1>
                 </div>
                 <div class="recent-activity-top-divider"></div>
                                         <!--===== ACTIVITY 1 =====-->
@@ -254,84 +254,7 @@
             </div>
         </section>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
 
-        let subMenu = document.getElementById("subMenu");
-
-        function toggleMenu(){
-            subMenu.classList.toggle("open-menu");
-        }
-
-        const chart = document.querySelector("#chart").getContext('2d');
-    
-        // CREATE NEW CHART INSTANCE
-        new Chart(chart, {
-            type: 'line',
-            data: {
-                labels: ['-6', '-5', '-4', '-3', '-2', 'Last', 'Current'],
-                datasets: [
-                    {
-                        label: 'Weight',
-                        data: [72.5, 71, 71.2, 70, 68, 67.2, 66.5],
-                        backgroundColor: ['black', 'black', 'black', 'black', 'black', 'black', 'rgb(160, 99, 245)'],
-                        borderColor: ['black', 'black', 'black', 'black', 'black', 'black', 'rgb(160, 99, 245)'],
-                        borderWidth: 2
-                    },
-    
-                    {
-                        label: "Weight before",
-                        data: [],
-                        borderColor: 'rgb(160, 99, 245)',
-                        borderWidth: 2
-                    }
-                ]
-            },
-            options: {
-                scales: {
-                    y: {
-                        title: {
-                            display: true,
-                            text: 'Kg'
-                        }
-                    },
-                    x: {
-                        title: {
-                            display: true,
-                            text: 'Weeks'
-                        }
-                    }
-                },
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'Weight Tracks',
-                        font: {
-                            size: 24
-                        }
-                    },
-                    legend: {
-                        labels: {
-                            generateLabels: function(chart) {
-                                const labels = Chart.defaults.plugins.legend.labels.generateLabels(chart);
-                                labels[1].text = 'Current: ' + chart.data.datasets[0].data[6].toFixed(2) + ' Kgs';
-                                labels.push({
-                                    text: 'Last 6 Weeks: ' + (chart.data.datasets[0].data[6] - chart.data.datasets[0].data[0]).toFixed(2) + ' Kgs',
-                                    fillStyle: 'yellowgreen',
-                                    strokeStyle: 'yellowgreen',
-                                    lineWidth: 2
-                                });
-                                labels[1].fillStyle = 'rgb(160, 99, 245)';
-                                labels[1].strokeStyle = 'rgb(160, 99, 245)';
-                                return labels;
-                            }
-                        }
-                    }
-                },
-                responsive: true
-            }
-        })
-    </script>
     
 </body>
 </html>
