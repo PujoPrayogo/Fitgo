@@ -102,7 +102,7 @@
                                 </div>
                             </div>
                     </label>
-                    <div class="update-container">
+                    <div class="update-container" style="width: 60rem;">
                         <label for="show-arms" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
                         <div class="text text">Arm & Shoulders Workout <a href="https://www.tiktok.com/@masido0212/video/7189174995258543386?q=sets%20reps&t=1686505157308" target="_blank" rel="noopener noreferrer" style="color: white;"><span class="material-icons-sharp">help</span></a></div>
                         <table>
@@ -178,7 +178,7 @@
                                 </div>
                             </div>
                     </label>
-                    <div class="update-container">
+                    <div class="update-container" style="width: 60rem;">
                         <label for="show-chest" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
                         <div class="text text">Chest & Triceps Workout <a href="https://www.tiktok.com/@masido0212/video/7189174995258543386?q=sets%20reps&t=1686505157308" target="_blank" rel="noopener noreferrer" style="color: white;"><span class="material-icons-sharp">help</span></a></div>
                         <table>
@@ -233,7 +233,7 @@
                                 </div>
                             </div>
                     </label>
-                    <div class="update-container">
+                    <div class="update-container" style="width: 60rem;">
                         <label for="show-full" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
                         <div class="text text">Full Body Workout <a href="https://www.tiktok.com/@masido0212/video/7189174995258543386?q=sets%20reps&t=1686505157308" target="_blank" rel="noopener noreferrer" style="color: white;"><span class="material-icons-sharp">help</span></a></div>
                         <table>
@@ -295,7 +295,7 @@
                                 </div>
                             </div>
                     </label>
-                    <div class="update-container">
+                    <div class="update-container" style="width: 60rem;">
                         <label for="show-legs" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
                         <div class="text text">Legs Workout <a href="https://www.tiktok.com/@masido0212/video/7189174995258543386?q=sets%20reps&t=1686505157308" target="_blank" rel="noopener noreferrer" style="color: white;"><span class="material-icons-sharp">help</span></a></div>
                         <table>
@@ -351,7 +351,7 @@
                                 </div>
                             </div>
                     </label>
-                    <div class="update-container">
+                    <div class="update-container" style="width: 60rem;">
                         <label for="show-back" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
                         <div class="text text">Back & Biceps Workout <a href="https://www.tiktok.com/@masido0212/video/7189174995258543386?q=sets%20reps&t=1686505157308" target="_blank" rel="noopener noreferrer" style="color: white;"><span class="material-icons-sharp">help</span></a></div>
                         <table>
@@ -440,7 +440,7 @@
                 </label>
                 <div class="update-container" style="width: 700px;">
                     <label for="show4" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
-                    <div class="text text" style="font-size: 2rem">Breakfast</div>
+                    <div class="text text" style="font-size: 2rem;margin-bottom:5vh;">Breakfast</div>
                     <!-- div class="text text" style="font-size: 15px;">Bubur Ayam</div> -->
                     <div class="row">
                         <div class="col-6" style="border-right: 3px solid #ffffff;">
@@ -501,7 +501,7 @@
                 </label>
                 <div class="update-container" style="width: 700px;">
                     <label for="show5" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
-                    <div class="text text" style="font-size: 2rem">Lunch</div>
+                    <div class="text text" style="font-size: 2rem;margin-bottom:5vh;">Lunch</div>
                     <!-- div class="text text" style="font-size: 15px;">Bubur Ayam</div> -->
                     <div class="row">
                         <div class="col-6" style="border-right: 3px solid #ffffff;">
@@ -582,7 +582,7 @@
                 </label>
                 <div class="update-container" style="width: 700px;">
                     <label for="show3" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
-                    <div class="text text" style="font-size: 2rem">Dinner</div>
+                    <div class="text text" style="font-size: 2rem;margin-bottom:5vh;">Dinner</div>
                     <!-- div class="text text" style="font-size: 15px;">Bubur Ayam</div> -->
                     <div class="row">
                         <div class="col-6" style="border-right: 3px solid #ffffff;">
