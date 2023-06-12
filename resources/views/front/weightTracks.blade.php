@@ -55,12 +55,12 @@
                         <input type="text" class="form-control" name='weight' id="weight" value="">
                     </div>
                 </div>
-                <div class="mb-3 row">
+                <!-- <div class="mb-3 row">
                     <label for="date_add_weight" class="col-sm-2 col-form-label">Date Add Weight</label>
                     <div class="col-sm-10">
                         <input type="date" class="form-control w-50" name='created_at' id="tanggal_publikasi" value="">
                     </div>
-                </div>
+                </div> -->
                 <div class="mb-3 row">
                     <label class="col-sm-2 col-form-label"></label>
                     <div class="col-sm-10"><button type="submit" class="btn btn-primary" name="submit">Add Weight</button>
