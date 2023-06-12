@@ -267,6 +267,7 @@
     text-align: center;
     display: flex; /* Add this line */
     flex-direction: column; /* Add this line */
+    height: 5.5rem;
    }
    
    main .daily-intake .goal:nth-child(1) {

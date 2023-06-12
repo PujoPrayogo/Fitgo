@@ -49,7 +49,7 @@
                         <!-- LOGOUT -->
                        
                         <form action="/logout">
-                        <button class="btn btn-light text-dark" >
+                        <button class="btn  text-dark" >
                             <span class="material-icons-outlined">logout</span>
                         </button>
                         </form>
@@ -64,7 +64,7 @@
                     <div class="profile-area">
                         <div class="greetings-title">
                             Hi,<span class="greetings-name">@yield('profile-name').</span> &nbsp; Let's get in shape.
-                        </div>
+                        </div>  
                         <div class="profile">
                             <div class="profile-photo">
                                 <img src="@yield('profile-photo')">
@@ -104,7 +104,7 @@
                     </label>
                     <div class="update-container">
                         <label for="show-arms" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
-                        <div class="text text">Arm & Shoulders Workout <a href="#" style="color: white;"><span class="material-icons-sharp">help</span></a></div>
+                        <div class="text text">Arm & Shoulders Workout <a href="https://www.tiktok.com/@masido0212/video/7189174995258543386?q=sets%20reps&t=1686505157308" target="_blank" rel="noopener noreferrer" style="color: white;"><span class="material-icons-sharp">help</span></a></div>
                         <table>
                             <tr>
                               <th>Exercises</th>
@@ -180,7 +180,7 @@
                     </label>
                     <div class="update-container">
                         <label for="show-chest" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
-                        <div class="text text">Chest & Triceps Workout <a href="#" style="color: white;"><span class="material-icons-sharp">help</span></a></div>
+                        <div class="text text">Chest & Triceps Workout <a href="https://www.tiktok.com/@masido0212/video/7189174995258543386?q=sets%20reps&t=1686505157308" target="_blank" rel="noopener noreferrer" style="color: white;"><span class="material-icons-sharp">help</span></a></div>
                         <table>
                             <tr>
                               <th>Exercises</th>
@@ -235,7 +235,7 @@
                     </label>
                     <div class="update-container">
                         <label for="show-full" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
-                        <div class="text text">Full Body Workout <a href="#" style="color: white;"><span class="material-icons-sharp">help</span></a></div>
+                        <div class="text text">Full Body Workout <a href="https://www.tiktok.com/@masido0212/video/7189174995258543386?q=sets%20reps&t=1686505157308" target="_blank" rel="noopener noreferrer" style="color: white;"><span class="material-icons-sharp">help</span></a></div>
                         <table>
                             <tr>
                               <th>Exercises</th>
@@ -297,7 +297,7 @@
                     </label>
                     <div class="update-container">
                         <label for="show-legs" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
-                        <div class="text text">Legs Workout <a href="#" style="color: white;"><span class="material-icons-sharp">help</span></a></div>
+                        <div class="text text">Legs Workout <a href="https://www.tiktok.com/@masido0212/video/7189174995258543386?q=sets%20reps&t=1686505157308" target="_blank" rel="noopener noreferrer" style="color: white;"><span class="material-icons-sharp">help</span></a></div>
                         <table>
                             <tr>
                               <th>Exercises</th>
@@ -335,7 +335,7 @@
 
 
                 <!-- BACK & BICEPS -->
-                <div class="center">
+                <div class="center" >
                     <input type="checkbox" id="show-back">
                     <label for="show-back" class="show-btn card bg-dark" style="min-width: 100%;width: auto; min-height: 100%;background-color: black;border-radius:6px;">
                             <div class="row no-gutters">
@@ -353,7 +353,7 @@
                     </label>
                     <div class="update-container">
                         <label for="show-back" class="update-close-btn"><span class="material-icons-sharp">close</span></label>
-                        <div class="text text">Back & Biceps Workout <a href="#" style="color: white;"><span class="material-icons-sharp">help</span></a></div>
+                        <div class="text text">Back & Biceps Workout <a href="https://www.tiktok.com/@masido0212/video/7189174995258543386?q=sets%20reps&t=1686505157308" target="_blank" rel="noopener noreferrer" style="color: white;"><span class="material-icons-sharp">help</span></a></div>
                         <table>
                             <tr>
                               <th>Exercises</th>
@@ -644,63 +644,6 @@
             </div>
         </section>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        const chart = document.querySelector("#chart").getContext('2d');
-    
-        // CREATE NEW CHART INSTANCE
-        new Chart(chart, {
-            type: 'line',
-            data: {
-                labels: ['-6 Weeks', '-5 Weeks', '-4 Weeks', '-3 weeks',
-                    '-2 Weeks', 'Last Week', 'Current'],
-                datasets: [
-                    {
-                        label: 'Weight (Kg)',
-                        data: [72.5, 71.5, 71.7, 71, 70.5, 70.2, 69],
-                        backgroundColor: ['black', 'black', 'black', 'black', 'black', 'black', 'blue'],
-                        borderColor: ['black', 'black', 'black', 'black', 'black', 'black', 'blue'],
-                        borderWidth: 2
-                    },
-    
-                    {
-                        label: "Weight before",
-                        data: [],
-                        borderColor: 'blue',
-                        borderWidth: 2
-                    }
-                ]
-            },
-            options: {
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'Weight Tracks',
-                        font: {
-                            size: 24
-                        }
-                    },
-                    legend: {
-                        labels: {
-                            generateLabels: function(chart) {
-                                const labels = Chart.defaults.plugins.legend.labels.generateLabels(chart);
-                                labels[1].text = 'Current: ' + chart.data.datasets[0].data[6].toFixed(2) + ' Kgs';
-                                labels.push({
-                                    text: 'Last 6 Weeks: ' + (chart.data.datasets[0].data[6] - chart.data.datasets[0].data[0]).toFixed(2) + ' Kgs',
-                                    fillStyle: 'green',
-                                    strokeStyle: 'green',
-                                    lineWidth: 2
-                                });
-                                labels[1].fillStyle = 'blue';
-                                labels[1].strokeStyle = 'blue';
-                                return labels;
-                            }
-                        }
-                    }
-                },
-                responsive: true
-            }
-        })
-    </script>
+
 </body>
 </html>
